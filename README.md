@@ -6,7 +6,7 @@ This repository is for coordination around the project - still in the startup ph
 ## Community Guidelines
 - Contributing: please read the **[guidelines](https://github.com/cherrytwist/.github/blob/master/CONTRIBUTING.md)** and check the **[project backlogs](https://github.com/orgs/cherrytwist/projects)** for open issues. Note: the project boards are empty at the moment but aiming to populate soon!
 - Security: the project is enforcing 2FA, and our **[security process](https://github.com/cherrytwist/.github/blob/master/SECURITY.md)** details out what to do in the event of a vulnerability being detected
-- Licensing: all contributors to the project are required to sign a **[Code License Agreement(CLA)](https://github.com/cherrytwist/.github/blob/master/CLA.md)** to ensure that the contents of the repository are covered from a legal perspective. The CLA process is enforced for all contributions. 
+- Licensing: all contributors to the project are required to sign a **[Contributor License Agreement (CLA)](https://github.com/cherrytwist/.github/blob/master/CLA.md)** to ensure that the contents of the repository are covered from a legal perspective. The CLA process is enforced for all contributions. 
 
 And last but not least, please feel free to reach out and **[ask us for support!](https://github.com/cherrytwist/.github/blob/master/SUPPORT.md)**
 
