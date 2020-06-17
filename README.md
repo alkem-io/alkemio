@@ -35,7 +35,7 @@ The solution space is still being actively framed / captured - but some aspects 
 
 And of course to do this while leveraging the latest technical capabilityes such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements etc etc - without exposing those details to the end user! 
 
-No small challenge - but one that can delivery huge value...
+No small challenge - but one that can deliver huge value...a step change in how we collaborate!
 
 If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
 
