@@ -1,7 +1,7 @@
 # CherryTwist
 Welcome to CherryTwist - an open source infractructure for multi-stakeholder collaboration leveraging digital ecosystems. 
 
-This repository is for coordination around the project - still in the startup phase but aiming to get the basics right from the get go so please do
+This repository is for coordination around the project - still in the startup phase but aiming to get the basics right from the get go so please do share any feedback / observations / suggestions you have!
 
 ## Community Guidelines
 - Contributing: please read the **[guidelines](https://github.com/cherrytwist/.github/blob/master/CONTRIBUTING.md)** and check the **[project backlogs](https://github.com/orgs/cherrytwist/projects)** for open issues. Note: the project boards are empty at the moment but aiming to populate soon!
