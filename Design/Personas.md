@@ -1,39 +1,45 @@
 # CherryTwist Personas
 This document captures the key personas that are currently identified and being elaborated for the CherryTwist.
 
-At a high level, there are two primary categories of personas identified:
-* Organisation: representing legal entities / groups of individuals
+At a high level, the following primary categories of personas identified:
+* Organisational: representing legal entities that are either driving a particular challenge or helping across challenges
 * Individual: a user, either contributing directly or via an organisation
+* Group: one or more individuals working together as a unit
 
 Note: these personas are currently heavily influenced from experience within the Odyssey ecosystem; it will be an on-going process to drive to generic representations / names for the different personas. 
 
 Note: In addition it should be feasible for Challenge Hosts to extend the set of roles that they support within their challenge template. 
 
+
 ## Organisational Personas
 
 |  Name   	|  Brief Description	| Long description  	| Roles   	|   Misc	|
-|---	|---	|---	|---	|---	
-| *Challenge Host*  	| Facilitating the challenge journey	| Assists the Challenge Lead / Affiliate with onboarding the challenge, and guiding all aspects of the challenge lifecycle; community mgmt | Community; Ecosystem Builder; Specialist Coordinator;   		|  |
-| *Challenge Leader*	| Experiences the problem to be solved, and willing to invest in solving it 	| Looking to build up a multi-stakeholder collaboration to take steps in addressing the challenge | Focal Point; Specialist;  	 	| Can be multiple leaders for a challenge; with one or more taking the primary role 	|   	
-| *Challenge Supporter*  	| Interested in the challenge and/or  needed for solving the challenge	| Can be either on demand or supply side for solutions 	|  |    	|
-| *Partner* | Providing a set of capabilities | Providing particular skill sets / enabling services that are relevant for challenges | Specialist; ... |   |
-
-## Group Personas
-| Name 	|  Brief Description	| Long description  	|  Misc	|
-|---	|---	|---	|---	|---	|
-| *Team* | A group of contributors | Solution focused, working on a particular aspect of a challenge | Team Captain; Team Member	|    |
+|---	|---	|---	|---	|--- |	
+| *Challenge Host*  	| Facilitating the challenge journey	| Assists the Challenge Lead / Affiliate with onboarding the challenge, and guiding all aspects of the challenge lifecycle; community mgmt | Challenge Coordinator; Partner Coordinator; Community (incl Specialist) coordinator;		|  |
+| *Challenge Leader*	| Experiences the problem to be solved, and willing to invest in solving it 	| Looking to build up a multi-stakeholder collaboration to take steps in addressing the challenge | Focal Point; Specialist; Supporter	 	| Can be multiple leaders for a challenge; with one or more taking the primary role 	|   	
+| *Challenge Stakeholder*  	| Interested in the challenge and/or  needed for solving the challenge	| Can be either on demand or supply side for solutions 	| Focal Point; Specialist; Supporter |    	|
+| *Partner* | Providing a set of capabilities | Providing particular skill sets / enabling services that are relevant for challenges | Focal Point; Specialist; Supporter  |   |
 
 
 ## Individual Personas
 | Name 	|  Brief Description	| Long description  	|  Misc	|
-|---	|---	|---	|---	|---	|
-| *Spectator* | Observing without being able to contribute / engage | Can request to be elevated to Curated User | ...| 
-| *Member* | Approved for membership by the Challenge Host (curation) | Can engage in one or more challenges; has a profile |   |
-| *Contributor* | A contributor to one or more teams | Needs to be a curated user; Typically 4+ members in a given team | ... |
-| *Focal Point* | The primary focal point within an organisation or team| Interfaces with the rest of the organisation |  |
-| *Stakeholder* | A influencer within a formal entity | Additional decision making roles within the organisation | ... |
+|---	|---	|---	|---	|
+| *Focal Point* | The primary contact point within an organisation or team | Interfaces with the rest of the organisation |  |
+| *Spectator* | Observing without being able to contribute / engage | Can request to be elevated to Contributor; no profile  | ...| 
+| *Contributor* | Approved for membership by the Challenge Host (curation) | Can engage in one or more teams / challenges; has a profile |   |
+| *Supporter* | A person within an org that helps with the support of that organisation | Additional decision making roles within the organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
 | *Specialist* | Posesses a particular skill set(s) | Assists one or more challenges; has a profile; either via an organisation or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
-| *Super specialist* | A specialist with an elevated role | 
+
+Note: the Challenge Host roles are still to be elaborated
+
+## Group Personas
+| Name 	|  Brief Description	| Long description  	|  Misc	|
+|---	|---	|---	|---	 |
+| *Team* | A group of contributors | Solution focused, working on a particular aspect of a challenge |    |
+
+Note: may need to move to a more generic term than Team.
+
+
 
 
 
