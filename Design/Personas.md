@@ -16,8 +16,8 @@ Note: In addition it should be feasible for Challenge Hosts to extend the set of
 |  Name   	|  Brief Description	| Long description  	| Roles   	|   Misc	|
 |---	|---	|---	|---	|--- |	
 | *Challenge Host*  	| Facilitating the challenge journey	| Assists the Challenge Lead / Affiliate with onboarding the challenge, and guiding all aspects of the challenge lifecycle; community mgmt | Challenge Coordinator; Partner Coordinator; Community (incl Specialist) coordinator;		|  |
-| *Challenge Leader*	| Experiences the problem to be solved, and willing to invest in solving it 	| Looking to build up a multi-stakeholder collaboration to take steps in addressing the challenge | Focal Point; Specialist; Supporter	 	| Can be multiple leaders for a challenge; with one or more taking the primary role 	|   	
-| *Challenge Stakeholder*  	| Interested in the challenge and/or  needed for solving the challenge	| Can be either on demand or supply side for solutions 	| Focal Point; Specialist; Supporter |    	|
+| *Challenge Lead*	| Experiences the problem to be solved, and willing to take the lead (including investment) in solving it 	| Looking to build up a multi-stakeholder collaboration to take steps in addressing the challenge | Focal Point; Specialist; Stakeholder	 	| Can be multiple leaders for a challenge; with one or more taking the primary role 	|   	
+| *Challenge Affiliate*  	| Experiences the problem to be solved, and willing to invest in solving it	| Contributing in building up the multi-stakeholder collaboration to address the Challenge	| Focal Point; Specialist; Stakeholder |    	|
 | *Partner* | Providing a set of capabilities | Providing particular skill sets / enabling services that are relevant for challenges | Focal Point; Specialist; Supporter  |   |
 
 
@@ -27,7 +27,7 @@ Note: In addition it should be feasible for Challenge Hosts to extend the set of
 | *Focal Point* | The primary contact point within an organisation or team | Interfaces with the rest of the organisation |  |
 | *Spectator* | Observing without being able to contribute / engage | Can request to be elevated to Contributor; no profile  | ...| 
 | *Contributor* | Approved for membership by the Challenge Host (curation) | Can engage in one or more teams / challenges; has a profile |   |
-| *Supporter* | A person within an org that helps with the support of that organisation | Additional decision making roles within the organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
+| *Stakeholder* | A person who is interested in the challenge and/or  needed for solving the challenge; important for the Challenge success.  | The person can be within one of the organisatins, independe, or represent another organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
 | *Specialist* | Posesses a particular skill set(s) | Assists one or more challenges; has a profile; either via an organisation or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
 
 Note: the Challenge Host roles are still to be elaborated
