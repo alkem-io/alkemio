@@ -3,6 +3,14 @@ This document captures the CherryTwist design and enhancements process. This is 
 
 All design material shall be placed as markdown files within this repostiory; however for convenience while designs are rapidly iterating very early versions of designs are being worked via google docs that are visible to all project contributors. If you would like to be considered for contributor access then please reach out to <community@cherrytwist.org>. 
 
+# Conceptual Design
+The set of concepts and terms used for the design of CherryTwist can be found [here](./ConceptualDesign).
+
+It is important to read this document first, as a lot of the terminology used in the rest of the design documentation as well as the code is described here - so having this mental model clear helps. 
+
+# Personas
+The list of personas is usage for the design of CherryTwist can be found [here](./Personas.md). 
+
 # Aspects in Development
 The currently active design documents are:
 * [Identity](https://docs.google.com/document/d/10fdGwtsghLRAlsbksssILIqHZMvYWJmj142LqcdSjs8/edit?usp=sharing): For enabling the usage of Web3 style SSI while also bridging to existing web2 infrastructure. 
