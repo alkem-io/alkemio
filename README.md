@@ -40,7 +40,7 @@ No small challenge - but one that can deliver huge value...a step change in how 
 If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
 
 # Developers
-Want to contribute to CherryTwist? The best place to start is by looking at the Developer.md file located in the [Developer Folder](Developers/Developer.md) in this repo.
+Want to contribute to CherryTwist? The best place to start is by looking at the Developer.md file located in the [Developer Folder](https://github.com/cherrytwist/Coordination/blob/Dev_Doc/Developers/Developers.md) in this repo.
 
 ## Thank you to the following contributors
 - wordsmyth73
