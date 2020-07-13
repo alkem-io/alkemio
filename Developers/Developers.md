@@ -30,7 +30,6 @@ If at any point you would like more information, have an issue, want to be added
 
 Handel | Role
 ------ | ----
-
 wordsmyth73 | Project Lead
 aaitor | Contributor
 eruizgar91 | Contributor
