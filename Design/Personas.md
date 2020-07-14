@@ -6,6 +6,8 @@ At a high level, the following primary categories of personas identified:
 * Natural: a person, either contributing directly or via an legal persona.
 * Group: one or more individuals working together as a unit
 
+An identity can be assigned multiple personas, and in particular for Natural personas they can be stacked e.g. a Specialist "is a" Contributor.
+
 Note: these personas are currently heavily influenced from experience within the Odyssey ecosystem; it will be an on-going process to drive to generic representations / names for the different personas. 
 
 Note: In addition it should be feasible for Challenge Hosts to extend the set of roles that they support within their challenge template. 
