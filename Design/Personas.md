@@ -2,16 +2,18 @@
 This document captures the key personas that are currently identified and being elaborated for the CherryTwist.
 
 At a high level, the following primary categories of personas identified:
-* Organisational: representing legal entities that are either driving a particular challenge or helping across challenges
-* Individual: a user, either contributing directly or via an organisation
+* Legal: representing legal entities that are either driving a particular challenge or helping across challenges
+* Natural: a person, either contributing directly or via a legal persona.
 * Group: one or more individuals working together as a unit
+
+An identity can be assigned multiple personas, and in particular for Natural personas they can be stacked e.g. a Specialist "is a" Contributor.
 
 Note: these personas are currently heavily influenced from experience within the Odyssey ecosystem; it will be an on-going process to drive to generic representations / names for the different personas. 
 
 Note: In addition it should be feasible for Challenge Hosts to extend the set of roles that they support within their challenge template. 
 
 
-## Organisational Personas
+## Legal Personas
 
 |  Name   	|  Brief Description	| Long description  	| Roles   	|   Misc	|
 |---	|---	|---	|---	|--- |	
@@ -21,23 +23,23 @@ Note: In addition it should be feasible for Challenge Hosts to extend the set of
 | *Partner* | Providing a set of capabilities | Providing particular skill sets / enabling services that are relevant for challenges | Focal Point; Specialist; Supporter  |   |
 
 
-## Individual Personas
+## Natural Personas
 | Name 	|  Brief Description	| Long description  	|  Misc	|
 |---	|---	|---	|---	|
-| *Focal Point* | The primary contact point within an organisation or team | Interfaces with the rest of the organisation |  |
 | *Spectator* | Observing without being able to contribute / engage | Can request to be elevated to Contributor; no profile  | ...| 
-| *Contributor* | Approved for membership by the Challenge Host (curation) | Can engage in one or more teams / challenges; has a profile |   |
-| *Stakeholder* | A person who is interested in the challenge and/or  needed for solving the challenge; important for the Challenge success.  | The person can be within one of the organisatins, independe, or represent another organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
-| *Specialist* | Posesses a particular skill set(s) | Assists one or more challenges; has a profile; either via an organisation or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
+| *Contributor* | Approved for membership by the Challenge Host (curation). All other roles with the exception of Spectators are Contributors. | Can engage in one or more teams / challenges; has a profile |   |
+| *Focal Point* | The primary contact point within an organisation or team.  | Interfaces with the rest of the organisation |  |
+| *Stakeholder* | A person who is interested in the challenge and/or  needed for solving the challenge; important for the Challenge success.   | The person can be within one of the organisatins, independent, or represent another organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
+| *Specialist* | Posesses a particular skill set(s).  | Assists one or more challenges; has a profile; either via an organisation or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
 
 Note: the Challenge Host roles are still to be elaborated
 
 ## Group Personas
 | Name 	|  Brief Description	| Long description  	|  Misc	|
 |---	|---	|---	|---	 |
-| *Team* | A group of contributors | Solution focused, working on a particular aspect of a challenge |    |
+| *Team* | A group of contributors.  | Solution focused, working on a particular aspect of a challenge |    |
 
-Note: may need to move to a more generic term than Team.
+The Team term can thus be used to represent a group of developers working on a solution, but also a group of specialists working in a particular area (e.g. Legal).
 
 
 
