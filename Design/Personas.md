@@ -3,7 +3,7 @@ This document captures the key personas that are currently identified and being 
 
 At a high level, the following primary categories of personas identified:
 * Legal: representing legal entities that are either driving a particular challenge or helping across challenges
-* Natural: a person, either contributing directly or via an legal persona.
+* Natural: a person, either contributing directly or via a legal persona.
 * Group: one or more individuals working together as a unit
 
 An identity can be assigned multiple personas, and in particular for Natural personas they can be stacked e.g. a Specialist "is a" Contributor.
