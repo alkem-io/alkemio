@@ -1,4 +1,5 @@
-# Developer Documentation - This is the starting point for understanding the development setup used within CherryTwist as well as how to get started with contributing to the project.
+# Developer Documentation
+This is the starting point for understanding the development setup used within CherryTwist as well as how to get started with contributing to the project.
 
 Currently this documentation might be a bit sparse but hopefully in time it can help you get up to speed quickly.
 Please read the [contributing](https://github.com/cherrytwist/.github/blob/master/CONTRIBUTING.md) guide lines to understand how to participate in this project.
