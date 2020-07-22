@@ -47,7 +47,7 @@ Want to contribute to CherryTwist? The best place to start is by looking at the 
 - aaitor
 - eruizgar91
 - GhostOnTheFiber
-- energinoh
+- ReneHonig
 
 
 
