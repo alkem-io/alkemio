@@ -48,5 +48,5 @@ diminator | Contributor
 aaitor | Contributor
 eruizgar91 | Contributor
 GhostOnTheFiber | Contributor and developer community contact point
-energinoh | Contributor
+ReneHonig | Partnerships, Strategy
 
