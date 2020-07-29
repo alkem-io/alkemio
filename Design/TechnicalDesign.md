@@ -224,8 +224,6 @@ The platform can have a single Ecoverse deployed onto it.
 
 The definition of the Ecoverse is held in a “Ecoverse Template” file that contains:
 
-
-
 *   The Identity for the Ecoverse e.g. Odyssey, YES!Delft, OdysseyTest etc
 *   The description of the Ecoverse, including all related information such as the Ecoverse Host etc
 *   The UserGroups to be used within the Ecoverse
@@ -235,6 +233,11 @@ The definition of the Ecoverse is held in a “Ecoverse Template” file that co
 
 A user with the role of “super admin” is able to deploy the Ecoverse Template.
 
+The evolution of the Ecoverse instance from deploying a template and then instantiating a challenge is shown below:
+
+![Template deployment](./Images/DesignTemplates.png "Template deployment")
+
+Note in particular that a set of additional roles are created as part of the template deployment process, as well as additional entities. 
 
 ## Challenge, Project & User Group Templates
 
