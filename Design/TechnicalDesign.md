@@ -65,9 +65,6 @@ Users can be groups into a sets using the concept of a UserGroup. A UserGroup ca
 ## Web2 Access Management
 
 The operation and management of the initial version of CherryTwist is primarily via web2, for which the following applies:
-
-
-
 *   **Account**: interactions with CT require an account. There are multiple types of accounts:
     *   User Account: natural person
     *   Service Account: for services / bots that interact with the system.
@@ -96,20 +93,26 @@ The following diagram shows at a high level the key entities in use within Cherr
 This data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
 
 The key entities in the model are:
-*   Ecoverse: The root entity, which has an associated hosting organisation.
-*   Community:
-    *   User: The primary way of interacting with the platform    
-    *   UserGroup: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
-    *   Organisation: To reflect legal entities that interact with the platform via one or more users. 
-*   Challenge, Project & Agreement:
-    *   To represent Challenges that are hosted within the Ecoverse. A Challenge has zero or more Projects that represent agreed steps.
-*   Context: The shared understanding, at either Ecoverse or Challenge level. 
+*   **Ecoverse**: The root entity, which has an associated hosting organisation.
+*   Community Entities:
+    *   **User**: The primary way of interacting with the platform    
+    *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
+    *   **Organisation**: To reflect legal entities that interact with the platform via one or more users. 
+*   Challenge related Entiies
+    * **Challenge**: To represent a Challenge
+    * **Project**: To represent an agreed step within the Challenge journey
+    * **Agreement**: The formalisation of an agreement, via smart contract or similar, that underpins a Project. 
+*   **Context**: The shared understanding, at either Ecoverse or Challenge level. 
 *   Security: Primarily Web2 based for now.
-    *   SecurityRole: To aggregate a set of permissions
-    *   SecurityGroup: 
+    *   **Account**: A web2 style account that allows a user to interact with the platform in a web2 manner
+    *   **SecurityRole**: To aggregate a set of permissions
+    *   **SecurityGroup**: 
         *   To assign security permissions to a group of users (which may or may not be via a UserGroup) via the associated SecurityRole(s)
         *   A UserGroup automatically has an associated SecurityGroup created for it. 
         *   A SecurityGroup can exist independently of a UserGroup
+*   Self Sovereign Identity (SSI) entities
+    * **DID**: the persistent decentralised identifier as per W3C standard
+    * **DDO**: The document describing the DID, with roles etc. 
 
 To facilitate flexible usages of this data model, most key entities can have **Tags** associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
@@ -128,7 +131,7 @@ The logical layers to the CherryTwist architecture:
 
 The layering is shown in the following diagram:
 
-![Logical Layers](images/DesignLayers.png "design layers")
+![Logical Layers](./Images/DesignLayers.png "design layers")
 
 
 ### Interaction
@@ -161,31 +164,13 @@ As the Ecoverse Template (see later) will vary between Ecoverses, this implies t
 
 The core of CherryTwist, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
-![Server Components](images/DesignServerComponents "server components")
+![Server Components](./Images/DesignServerComponents.png "server components")
 
 All interactions with the Server are via a set of APIs / services exposed by the platform, and actions are authorised based on the account associated with the user.
-
-
-### Accounts & Access Handler
-
-This is likely in the first instance to be based on a hosted service such as Azure Active Directory.
-
-
-### GraphQL API
-
-This is the interface to the platform for all data exchange. 
-
-
-### Storage Handler
-
-To manage the different types of storage to be used by the platform. Manage the different platform identities (users, ecoverse, challenges, projects, teams, etc)
-
-
-### Identity, Wallets & Smart Contracts Handler
-
-Typically DIDs are stored as part of a users or identity registry in a decentralized network as part of a Smart Contract state. To reduce the potential dependency with an external blockchain network it could be possible to store the DID and DDO in the general purpose database where the key is the DID and the value is the DDO content.
-
-Similarly, initially wallets associated with an identity would be stored in the database but could be later moved to another type of storage. 
+* **Accounts & Access Handler**: This is likely in the first instance to be based on a hosted service such as Azure Active Directory.
+* **GraphQL API**: This is the interface to the platform for all data exchange. 
+* **Storage Handler**: To manage the different types of storage to be used by the platform. Manage the different platform identities (users, ecoverse, challenges, projects, teams, etc)
+* **Identity, Wallets & Smart Contracts Handler**: Typically DIDs are stored as part of a users or identity registry in a decentralized network as part of a Smart Contract state. To reduce the potential dependency with an external blockchain network it could be possible to store the DID and DDO in the general purpose database where the key is the DID and the value is the DDO content. Similarly, initially wallets associated with an identity would be stored in the database but could be later moved to another type of storage. 
 
 
 ## Data Storage
