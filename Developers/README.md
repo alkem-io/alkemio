@@ -16,6 +16,7 @@ This section describes the different repositories in use and their dependencies:
 - **Server**: the primary back end server that manages interactions with the platform
 - **Server.Identity**: manages self sovereigh identity (SSI) profiles used within CherryTwist
 - **Client.Web**: browser based interface for interacting with the platfrom.
+- **Infrastructure**: for managing the environments, deployments & builds
 
 In addition the platform uses an Identity Service based on Azure Active Directory.
 
