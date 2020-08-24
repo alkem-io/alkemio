@@ -9,12 +9,19 @@ Currently we are in the process of creating a road map, landing the technical de
 
 Once we have a working base system, we will update this documentation to help you get started.
 
-## Repository Setup
+## Repositories
 
 This section describes the different repositories in use and their dependencies:
-- Coordination: This is the main repository for orchestrating the project.
+- **Coordination**: This is the main repository for orchestrating the project.
+- **Server**: the primary back end server that manages interactions with the platform
+- **Server.Identity**: manages self sovereigh identity (SSI) profiles used within CherryTwist
+- **Client.Web**: browser based interface for interacting with the platfrom.
 
-## Coordination
+In addition the platform uses an Identity Service based on Azure Active Directory.
+
+Each repository itself contains documentation that is specific for that component.
+
+## Backlog 
 The coordination of this project is based primarily on GitHub issues, augmented by Zenhub for a more agile interface to the backlog.
 
 Name | Use
@@ -22,9 +29,10 @@ Name | Use
 GitHub Issues | Place to talk about issues, bugs, tasks, road map, etc. The primary backlog / source of information.
 [ZenHub](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c) | Alternative interface for GitHub Issues.
 
-And of course, each repository itself contains documentation that is specific for that component.
+Each repo has its own set of issues, and the Coordination repo is used for issues that span the whole project. The Zenhub board spans all active repositories and brings all open issues into a joined up backlog. 
 
-In addition for core contributors the following interaction locations are supported:
+## Interactions
+The primary means of interaction is via GitHub issues. In addition the for core contributors the following interaction locations are supported:
 Name | Use
 ---- | ---
 Discord | Place for quick conversations about CherryTwist.
@@ -39,14 +47,12 @@ The development process in use is largely based on the [default process suggeste
 
 If at any point you would like more information, have an issue, want to be added to our chat platform, etc. reach out via via <community@cherrytwist.or> or directly to **GhostOnTheFiber** and they will point your in the right direction. It might take a couple of days, so please be understanding.
 
-## Important people to know about
+## Connectors within the project
 
 Handel | Role
 ------ | ----
-techsmyth | Project Lead
-diminator | Contributor
-aaitor | Contributor
-eruizgar91 | Contributor
+techsmyth | Coordinator
+valentinyanakiev | Development
 GhostOnTheFiber | Contributor and developer community contact point
 ReneHonig | Partnerships, Strategy
 
