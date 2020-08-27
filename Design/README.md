@@ -8,6 +8,9 @@ The set of concepts and terms used for the design of CherryTwist can be found [h
 
 It is important to read this document first, as a lot of the terminology used in the rest of the design documentation as well as the code is described here - so having this mental model clear helps. 
 
+# Technical Design
+An introduction to the technical design for CherryTwist can be found [here](./TechnicalDesign.md).
+
 # Personas
 The list of personas is usage for the design of CherryTwist can be found [here](./Personas.md). 
 
