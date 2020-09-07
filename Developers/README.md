@@ -8,8 +8,8 @@ Please read the [contributing](https://github.com/cherrytwist/.github/blob/maste
 ## Repositories
 The key repositories in use by the project are:
 - **Coordination**: This is the main repository for orchestrating the project.
-- [**Server**](../Server): the primary back end server that manages interactions with the platform
-- [**Client.Web**](../client.web): browser based interface for interacting with the platfrom.
+- [**Server**](https://github.com/cherrytwist/Server): the primary back end server that manages interactions with the platform
+- [**Client.Web**](https://github.com/cherrytwist/client.web): browser based interface for interacting with the platfrom.
 - **Server.Identity**: manages self sovereigh identity (SSI) profiles used within CherryTwist
 - **Infrastructure**: for managing the environments, deployments & builds
 
@@ -87,8 +87,8 @@ The environment variables should be then be picked up by docker images etc.
 
 ### Builds
 There are currently CI builds on the _main_ branches of the following repositories:
-- [**Server**](../server)
-- [**Client.Web**](../client.web)
+- [**Server**](https://github.com/cherrytwist/server)
+- [**Client.Web**](https://github.com/cherrytwist/client.web)
 
 Near term there will also be a CI build added for the _develop_ branch, and builds will be expanded further from there. 
 
