@@ -67,10 +67,16 @@ The convention for naming of feature branches is that they should take the name 
 In general there should be one issue per feature branch.
 
 ### Shared Environments
-In addition there are currently two staging environments that each have both the client.web and server repos deployed:
-- **dev**: for the continual deployment of CI builds from the _develop_ branch 
-- **acc**: for the continual deployment of CI builds from the _main_ branch 
+In addition there are currently two staging environments that each have both the [client.web](https://github.com/cherrytwist/client.web) and server repos deployed:
+- **[dev](https://dev.cherrytwist.org)**: for the continual deployment from the _develop_ branch 
+- **[acc](https://acc.cherrytwist.org)**: for the continual deployment from the _main_ branch 
 Both of these environments should be live at all times.
+
+The _dev_ environment exposes the following end points:
+* client: https://dev.cherrytwist.org
+* server: https://dev.cherrytwist.org/graphql
+
+Similar end points are exposes for the _acc_ environment.
 
 ### Development Environment 
 Development takes place primarily on local machines.
@@ -86,11 +92,11 @@ It is recommended that environment variables are used for configuring environmen
 The environment variables should be then be picked up by docker images etc. 
 
 ### Builds
-There are currently CI builds on the _main_ branches of the following repositories:
+There are currently CI builds on the _develop_ branches of the following repositories:
 - [**Server**](https://github.com/cherrytwist/server)
 - [**Client.Web**](https://github.com/cherrytwist/client.web)
 
-Near term there will also be a CI build added for the _develop_ branch, and builds will be expanded further from there. 
+The set of builds will be expanded further near term. 
 
 ## Docker Images + Image Registries
 Docker is used to containerize the results from each repository. 
@@ -107,10 +113,12 @@ The _Demo.Simple_ repo has a docker-composed application that takes the latest i
 
 It is likely that there is later a separate repository location added for more development oriented images. 
 
-### Image generation
+### Tags 
 All docker images should have a version number tag assigned. 
 
 Note: there is work planned to automate the generation of docker images that are correctly tagged and pushed to dockerhub.
+
+The `latest` tag is reserved for the latest image generated from the _main_ branches. 
 
 ### Kubernetes & Terraform
 The deployment environment is based on Kubernetes, generated via Terraform.
