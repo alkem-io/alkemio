@@ -79,18 +79,18 @@ A subset of the entities within CT have DID’s associated with them. These are 
 *   Users
 *   Organisations
 *   Challenges
+*   Opportunities
 *   Projects
-*   Agreements
 
 As aspects of SSI mature the intention is to allow more of the platform interaction and management to be carried out using SSI mechanisms e.g. claims, signing etc. 
 
-# Data Model
+# Logical Data Model
 
 The following diagram shows at a high level the key entities in use within CherryTwist:
 
-![Data Model](./Images/DataModel.png)
+![Logical Data Model](./Images/LogicalDataModel.png)
 
-This data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
+This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
 
 The key entities in the model are:
 *   **Ecoverse**: The root entity, which has an associated hosting organisation.
@@ -99,26 +99,21 @@ The key entities in the model are:
     *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
     *   **Organisation**: To reflect legal entities that interact with the platform via one or more users. 
 *   Challenge related Entiies
-    * **Challenge**: To represent a Challenge
-    * **Project**: To represent an agreed step within the Challenge journey
-    * **Agreement**: The formalisation of an agreement, via smart contract or similar, that underpins a Project. 
+    * **Challenge**: the shared goal / vision. Progress towards the goal will require multiple stakeholders collaborating on a non-trivial journey, building up understanding, community and resources as the journey progresses.
+    * **Opportunity**: a potential significant step towards the shared goal. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised.
+
+    * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
 *   **Context**: The shared understanding, at either Ecoverse or Challenge level. 
-*   Security: Primarily Web2 based for now.
-    *   **Account**: A web2 style account that allows a user to interact with the platform in a web2 manner
-    *   **SecurityRole**: To aggregate a set of permissions
-    *   **SecurityGroup**: 
-        *   To assign security permissions to a group of users (which may or may not be via a UserGroup) via the associated SecurityRole(s)
-        *   A UserGroup automatically has an associated SecurityGroup created for it. 
-        *   A SecurityGroup can exist independently of a UserGroup
+*   **Web 2 Account**: A web2 based account that allows a user to interact with the platform in a familiar manner. A user can login if there is a known user whose email matches the email for the Account from the Identity Provider.
 *   Self Sovereign Identity (SSI) entities
     * **DID**: the persistent decentralised identifier as per W3C standard
     * **DDO**: The document describing the DID, with roles etc. 
 
-To facilitate flexible usages of this data model, most key entities can have **Tags** associated with them, allowing for easy filtering + connecting
+To facilitate flexible usages of this data model, most key entities can have **Tagsets** associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
 *   There are likely to be a variety of tag sorts in use: user profiles, ecoverse tags (e.g. partner), host tags (crew) etc. 
 
-
+There is also a *physical data model* that is how the logical data model is stored in the underlying datastore. However for using the system that should be hidden from normal usage.
 
 
 # Logical Design
