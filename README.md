@@ -33,7 +33,7 @@ The solution space is still being actively framed / captured - but some aspects 
 - Facilitating communication and interactions around the challenge
 ...and likely many more. There are many aspects that can play into this.
 
-And of course to do this while leveraging the latest technical capabilityes such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements etc etc - without exposing those details to the end user!
+And of course to do this while leveraging the latest technical capabilities such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements etc etc - without exposing those details to the end user!
 
 No small challenge - but one that can deliver huge value...a step change in how we collaborate!
 
@@ -43,11 +43,14 @@ If you are interested in getting involved please reach out and connect via <info
 Want to contribute to CherryTwist? The best place to start is by looking at the Developer documentation in the [Developer Folder](./Developers/README.md) in this repo.
 
 ## Thank you to the following contributors
-- wordsmyth73
-- aaitor
-- eruizgar91
-- GhostOnTheFiber
+- valentinyanakiev
+- atstoyanov
+- comoque1
 - ReneHonig
+- aaitor
+- GhostOnTheFiber
+- wordsmyth73
+
 
 
 
