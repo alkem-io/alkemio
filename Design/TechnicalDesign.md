@@ -1,5 +1,5 @@
-# CherryTwist - Technical Design Introduction
-This document provides an introduction to the technical design for CherryTwist. It is still evolving and input is very welcome. It is assumed that the reader has already read the [Conceptual Design](./ConceptualDesign.md) document. 
+# Cherrytwist - Technical Design Introduction
+This document provides an introduction to the technical design for Cherrytwist. It is still evolving and input is very welcome. It is assumed that the reader has already read the [Conceptual Design](./ConceptualDesign.md) document. 
 
 The architecture is described along the following aspects:
 *   Design Principles
@@ -8,7 +8,7 @@ The architecture is described along the following aspects:
 *   Logical Design
 *   Configuration & Deployment
 
-In some cases this document will also provide a rationale for decisions that have been made - and of course the initial reference implementation of CherryTwist also requires choices to be made regarding actual languages used, hosting, user management stacks etc. 
+In some cases this document will also provide a rationale for decisions that have been made - and of course the initial reference implementation of Cherrytwist also requires choices to be made regarding actual languages used, hosting, user management stacks etc. 
 
 
 # Design Principles
@@ -23,7 +23,7 @@ The following high level choices guide the technical design:
     *   In practice this means efforts to minimise / isolate deployment dependencies
     *   The initiative is still learning and evolving, so it is deemed prudent to avoid establishing long term dependencies that may not be the right choice.
 *   **Regulated value (e.g. money) out of band i.e. via familiar channels / units**
-    *   In case the platform should enable the transfer of regulated value then a whole range of obligations fall on any organisation deploying a CherryTwist instance - e.g. KYC, AML, insurance etc.
+    *   In case the platform should enable the transfer of regulated value then a whole range of obligations fall on any organisation deploying a Cherrytwist instance - e.g. KYC, AML, insurance etc.
         *   Worth noting that the Ecoverse Host can play a role in this scenario as facilitator of the regulated value exchange e.g. hold money in escrow for stakeholders + then pay parties based on signals from the platform that a Project has completed successfully
     *   Similarly, the Ecoverse Host for now is able to specify the currency to be used in the Ecoverse challenges (e.g. euro, dollar). 
 *   **Formalise Trust**
@@ -34,21 +34,21 @@ The following high level choices guide the technical design:
 *   **Simple to operate**
     *   The platform should be easy to configure, deploy and run - also implying that the number of external dependencies needs to be very carefully managed. 
 
-It is worth noting that some of these choices, especially regarding the Ecoverse Host role in mediating regulated value exchange & trust, are made in the context of getting a first version of CherryTwist deployable. The expectation is fully that these aspects can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
+It is worth noting that some of these choices, especially regarding the Ecoverse Host role in mediating regulated value exchange & trust, are made in the context of getting a first version of Cherrytwist deployable. The expectation is fully that these aspects can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
 
 
 # Users: Accounts, Identities & Access Management
 
-This section describes the user model that is used for all interactions with CherryTwist.  
+This section describes the user model that is used for all interactions with Cherrytwist.  
 
 
 ## User 
 
-One of the key challenges faced by CherryTwist is how to combine the different user / access management approaches implied from classical web deployments versus those from Self Sovereign Identity (SSI) approaches. 
+One of the key challenges faced by Cherrytwist is how to combine the different user / access management approaches implied from classical web deployments versus those from Self Sovereign Identity (SSI) approaches. 
 
-To manage this duality, the core entity that is reflected in CherryTwist is the **User**, which then combines both a web2 as well as a web3 ways of interacting. This is reflected in the following terminology:
-*   **Account**: Initially, all interactions with the CherryTwist platform require an account. This is the Web2 pattern familiar to most end users
-*   **Identity**: All users of CherryTwist also have a Self Sovereign Identity (SSI) created on their behalf. This identity can then further have artifacts such as wallets that the identity controls, and can interact with other web3 artifacts such as smart contracts. The identity is initially largely invisible to Users.
+To manage this duality, the core entity that is reflected in Cherrytwist is the **User**, which then combines both a web2 as well as a web3 ways of interacting. This is reflected in the following terminology:
+*   **Account**: Initially, all interactions with the Cherrytwist platform require an account. This is the Web2 pattern familiar to most end users
+*   **Identity**: All users of Cherrytwist also have a Self Sovereign Identity (SSI) created on their behalf. This identity can then further have artifacts such as wallets that the identity controls, and can interact with other web3 artifacts such as smart contracts. The identity is initially largely invisible to Users.
 
 At a high level this then implies that ![drawing](./Images/Web2plusWeb3.png)
 
@@ -64,7 +64,7 @@ Users can be groups into a sets using the concept of a UserGroup. A UserGroup ca
 
 ## Web2 Access Management
 
-The operation and management of the initial version of CherryTwist is primarily via web2, for which the following applies:
+The operation and management of the initial version of Cherrytwist is primarily via web2, for which the following applies:
 *   **Account**: interactions with CT require an account. There are multiple types of accounts:
     *   User Account: natural person
     *   Service Account: for services / bots that interact with the system.
@@ -79,18 +79,18 @@ A subset of the entities within CT have DID’s associated with them. These are 
 *   Users
 *   Organisations
 *   Challenges
+*   Opportunities
 *   Projects
-*   Agreements
 
 As aspects of SSI mature the intention is to allow more of the platform interaction and management to be carried out using SSI mechanisms e.g. claims, signing etc. 
 
-# Data Model
+# Logical Data Model
 
-The following diagram shows at a high level the key entities in use within CherryTwist:
+The following diagram shows at a high level the key entities in use within Cherrytwist:
 
-![Data Model](./Images/DataModel.png)
+![Logical Data Model](./Images/LogicalDataModel.png)
 
-This data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
+This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
 
 The key entities in the model are:
 *   **Ecoverse**: The root entity, which has an associated hosting organisation.
@@ -98,32 +98,27 @@ The key entities in the model are:
     *   **User**: The primary way of interacting with the platform    
     *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
     *   **Organisation**: To reflect legal entities that interact with the platform via one or more users. 
-*   Challenge related Entiies
-    * **Challenge**: To represent a Challenge
-    * **Project**: To represent an agreed step within the Challenge journey
-    * **Agreement**: The formalisation of an agreement, via smart contract or similar, that underpins a Project. 
+*   Challenge related Entities
+    * **Challenge**: the shared goal / vision. Progress towards the goal will require multiple stakeholders collaborating on a non-trivial journey, building up understanding, community and resources as the journey progresses.
+    * **Opportunity**: a potential significant step towards the shared goal. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised.
+
+    * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
 *   **Context**: The shared understanding, at either Ecoverse or Challenge level. 
-*   Security: Primarily Web2 based for now.
-    *   **Account**: A web2 style account that allows a user to interact with the platform in a web2 manner
-    *   **SecurityRole**: To aggregate a set of permissions
-    *   **SecurityGroup**: 
-        *   To assign security permissions to a group of users (which may or may not be via a UserGroup) via the associated SecurityRole(s)
-        *   A UserGroup automatically has an associated SecurityGroup created for it. 
-        *   A SecurityGroup can exist independently of a UserGroup
+*   **Web 2 Account**: A web2 based account that allows a user to interact with the platform in a familiar manner. A user can login if there is a known user whose email matches the email for the Account from the Identity Provider.
 *   Self Sovereign Identity (SSI) entities
     * **DID**: the persistent decentralised identifier as per W3C standard
     * **DDO**: The document describing the DID, with roles etc. 
 
-To facilitate flexible usages of this data model, most key entities can have **Tags** associated with them, allowing for easy filtering + connecting
+To facilitate flexible usages of this data model, most key entities can have **Tagsets** associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
 *   There are likely to be a variety of tag sorts in use: user profiles, ecoverse tags (e.g. partner), host tags (crew) etc. 
 
-
+There is also a *physical data model* that is how the logical data model is stored in the underlying datastore. However for using the system that should be hidden from normal usage.
 
 
 # Logical Design
 
-The logical layers to the CherryTwist architecture:
+The logical layers to the Cherrytwist architecture:
 *   **Interaction**: for the interfaces used by the users as they interact within the context of an Ecoverse / Challenge
 *   **Server**: for managing all aspects of the Ecoverse & Challenge lifecycle
 *   **Data Storage**: for storing the persistent data related to challenges
@@ -144,7 +139,7 @@ Examples types of interactions:
 *   Immersive game / VR experience
 *   Extensions of UX / Web frameworks
 
-For the initial version of CherryTwist, the focus will be on extending an existing UX / Web framework to be able to expose and represent visually the information maintained with CherryTwist. 
+For the initial version of Cherrytwist, the focus will be on extending an existing UX / Web framework to be able to expose and represent visually the information maintained with Cherrytwist. 
 
 The frontend layer will be in charge of the following responsibilities:
 *   Login/Sign up via SSO
@@ -162,7 +157,7 @@ As the Ecoverse Template (see later) will vary between Ecoverses, this implies t
 
 ## Server
 
-The core of CherryTwist, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
+The core of Cherrytwist, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
 ![Server Components](./Images/DesignServerComponents.png "server components")
 
@@ -181,7 +176,7 @@ The artifacts managed by the server need to be safely and securely managed by th
 *   **Smart Contracts**, on an executable platform
 *   **Digital Wallets**, for the management of digital assets such as recognition tokens. Note that no value that falls under regulation would be support initially.
 
-The following locations are identified for the storage of data associated with CherryTwist:
+The following locations are identified for the storage of data associated with Cherrytwist:
 *   **Database**: for the data and the relationships between the entities, metadata etc. This could be relational or NoSQL based.
 *   **Ledger**: for smart contracts, and transfer of value. The smart contracts can cover a variety of usages on the platform e.g. execution of projects, digital identities & the definition / control of any tokens created by the Ecoverse.
 *   **IPFS**: for any documents that should be stored in a content addressable way (CAS), whereby the data is also potentially distributed (resilience etc). 
@@ -204,18 +199,18 @@ Later it should be possible to integrate either with public chains based on Ethe
 
 This section details out how an Ecoverse instance is deployed, and then how entities such as Challenges hosted in the Ecoverse are created.
 
-A core driver is to ensure that the platform is configurable, and in a replicable way - both to enable reliably development / deployment but also to ensure that over time a community pool of best practice templates emerges that can be leveraged for new innovations in the field of CherryTwist.
+A core driver is to ensure that the platform is configurable, and in a replicable way - both to enable reliably development / deployment but also to ensure that over time a community pool of best practice templates emerges that can be leveraged for new innovations in the field of Cherrytwist.
 
 For this inspiration is taken from other process template environments such as Azure DevOps, GitHub Actions etc. 
 
 
 ## Base Install
 
-The CherryTwist platform is initially deployed in an “empty” state, without an Ecoverse. It does however already include the following roles:
-*   SuperAdmin: able to deploy templates ane manage assignments to key platform roles
-*   Admin: able to carry out all sub roles, create new user groups etc
+The Cherrytwist platform is initially deployed in an “empty” state, without an Ecoverse. It does however already include the following roles:
+*   Global admin: able to deploy templates ane manage assignments to key platform roles
+*   Ecoverse admin: able to carry out all sub roles, create new user groups etc
 *   Community admin: able to manage users, existing user groups, membership of security groups, etc
-*   Challenge admin: able to manage the set of challenges deployed
+*   Members: able access to the full query api. Able to see details of the challenges that the user is a member of. Able to edit their own user profile.
 
 The platform can have a single Ecoverse deployed onto it. 
 
@@ -231,7 +226,7 @@ The definition of the Ecoverse is held in a “Ecoverse Template” file that co
 *   Tags to be used within the Ecoverse
     *   E.g. Jedi, skills based tags etc
 
-A user with the role of “super admin” is able to deploy the Ecoverse Template.
+A user with the role of “global admin” is able to deploy the Ecoverse Template.
 
 The evolution of the Ecoverse instance from deploying a template and then instantiating a challenge is shown below:
 
@@ -248,7 +243,7 @@ Further, the following additional templates will be supported:
 
 In particular the Project Template is likely to have multiple variations possible to reflect the multiple ways a project may want to be executed. A Challenge Lead would then select a template to use when launching the challenge.
 
-These additional templates may be part of the Ecoverse Template or uploaded later, and they initially all require the “super admin”role.
+These additional templates may be part of the Ecoverse Template or uploaded later, and they initially all require the “global admin”role.
 
 
 ## Exportable & Uploadable Representation
