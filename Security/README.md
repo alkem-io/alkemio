@@ -54,8 +54,8 @@ On Cherrytwist server startup a file is loaded that specifies a default set of u
 
 **Queries**
 
-| Entity                        | API Call EndPoint    | Minimum Authorisation Level  | Notes             |
-| ----------------------------- | -------------------- | ---------------------------- | ----------------- |
+| Entity        | API Call EndPoint    | Minimum Authorisation Level  | Notes                           |
+| --------------| -------------------- | ---------------------------- | ------------------------------- |
 | Ecoverse         | name           | anonymous | |		
 |	 | host         |	anonymous	 | |
 |	 | context	    |anonymous	    | |
