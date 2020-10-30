@@ -91,9 +91,9 @@ Note: the above is not a comprehensive list of all fields / entities but it inte
 | | 	createChallenge	ecoverse-admin	| | 
 | | 	createOrganisation	ecoverse-admin	| |
 | UserGroup	| addUserToGroup| 	community-admin	| | 
-| 	removeUserFromGroup	| community-admin	| | 
-| 	assignGroupFocalPoint	| community-admin	| | 
-| 	removeGroupFocalPoint	| community-admin	| | |
+| |	removeUserFromGroup	| community-admin	| | 
+| |	assignGroupFocalPoint	| community-admin	| | 
+| |	removeGroupFocalPoint	| community-admin	| | |
 | User| 	updateUser| 	community-admin	| | 
 | Challenge	| createGroupOnChallenge| 	community-admin	| | 
 | | 	updateChallenge	| ecoverse-admin	| | 
