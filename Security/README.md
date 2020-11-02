@@ -54,9 +54,9 @@ On Cherrytwist server startup a file is loaded that specifies a default set of u
 
 **Queries**
 
-| Entity                        | API Call EndPoint    | Minimum Authorisation Level  | Notes             |
-| ----------------------------- | -------------------- | ---------------------------- | ----------------- |
-| Ecoverse         | name           | anonymous | |		
+| Entity     | API Call EndPoint    | Minimum Authorisation Level  | Notes                           |
+| -----------| -------------------- | ---------------------------- | ------------------------------- |
+| Ecoverse   | name           | anonymous | |		
 |	 | host         |	anonymous	 | |
 |	 | context	    |anonymous	    | |
 |	 | user         |	community-admin	 |  |
@@ -78,6 +78,7 @@ On Cherrytwist server startup a file is loaded that specifies a default set of u
 |  |	contributors	        | community-admin	 | To be visible later to challenge members|
 |  |	groups	        | community-admin	 | To be visible later to challenge members|
  
+
 Note: the above is not a comprehensive list of all fields / entities but it intended to give an overview of the authorisation levels needes to access the different types of information managed by the Cherrytwist server.
 
 **Mutations**
@@ -91,9 +92,9 @@ Note: the above is not a comprehensive list of all fields / entities but it inte
 | | 	createChallenge	ecoverse-admin	| | 
 | | 	createOrganisation	ecoverse-admin	| |
 | UserGroup	| addUserToGroup| 	community-admin	| | 
-| 	removeUserFromGroup	| community-admin	| | 
-| 	assignGroupFocalPoint	| community-admin	| | 
-| 	removeGroupFocalPoint	| community-admin	| | |
+| |	removeUserFromGroup	| community-admin	| | 
+| |	assignGroupFocalPoint	| community-admin	| | 
+| |	removeGroupFocalPoint	| community-admin	| | |
 | User| 	updateUser| 	community-admin	| | 
 | Challenge	| createGroupOnChallenge| 	community-admin	| | 
 | | 	updateChallenge	| ecoverse-admin	| | 
