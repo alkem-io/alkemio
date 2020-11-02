@@ -100,16 +100,18 @@ The key entities in the model are:
     *   **Organisation**: To reflect legal entities that interact with the platform via one or more users. 
 *   Challenge related Entities
     * **Challenge**: the shared goal / vision. Progress towards the goal will require multiple stakeholders collaborating on a non-trivial journey, building up understanding, community and resources as the journey progresses.
-    * **Opportunity**: a potential significant step towards the shared goal. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised.
-
+    * **Opportunity**: a potential significant step towards the shared goal. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised. 
+        * **ActorGroups**: The different groups of actors who are identified and/or engaged in realising this Opportunity
+        * **Aspects**: The aspects to solutions for this Opportunity
     * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
 *   **Context**: The shared understanding, at either Ecoverse or Challenge level. 
 *   **Web 2 Account**: A web2 based account that allows a user to interact with the platform in a familiar manner. A user can login if there is a known user whose email matches the email for the Account from the Identity Provider.
-*   Self Sovereign Identity (SSI) entities
+*   **SSI**: Self Sovereign Identity (SSI) entities
     * **DID**: the persistent decentralised identifier as per W3C standard
     * **DDO**: The document describing the DID, with roles etc. 
+* **Template**: a template is a set of entity definitions that are used by an Ecoverse. For example holding different types of users (i.e. what tagsets are expected on a user and what value selection is allowed). 
 
-To facilitate flexible usages of this data model, most key entities can have **Tagsets** associated with them, allowing for easy filtering + connecting
+To facilitate flexible usages of this data model, most key entities have either a **Tagsets** or a **Profile** (containing multiple Tagsets) associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
 *   There are likely to be a variety of tag sorts in use: user profiles, ecoverse tags (e.g. partner), host tags (crew) etc. 
 
@@ -215,38 +217,43 @@ The Cherrytwist platform is initially deployed in an “empty” state, without 
 The platform can have a single Ecoverse deployed onto it. 
 
 
-## Ecoverse Template
+## Populating an Ecoverse
+This section describes the steps and supporting entities for working with an Ecoverse. 
 
-The definition of the Ecoverse is held in a “Ecoverse Template” file that contains:
+### Structure
+The structural setup of the Ecoverse is held in a “Ecoverse Setup file, external to Cherrytwist that contains:
 
 *   The Identity for the Ecoverse e.g. Odyssey, YES!Delft, OdysseyTest etc
 *   The description of the Ecoverse, including all related information such as the Ecoverse Host etc
-*   The UserGroups to be used within the Ecoverse
+*   The UserGroups to be used at the Ecoverse level
     *   E.g. Jedis, ChallengeLeads, Crew, …
-*   Tags to be used within the Ecoverse
-    *   E.g. Jedi, skills based tags etc
 
-A user with the role of “global admin” is able to deploy the Ecoverse Template.
+### Templates
+A Template contains Entities that are used by the Ecoverse to create Entities with flexible usage patterns. Examples of the kind of information that could be stored within a Template include:
+* Definitions of types of users, such as what tagsets are expected on a particular user type (e.g. skills, interests, ...)
+* Challenge states, user groups, ...
+* Opportunity aspects, actor groups, ...
+
+The template setup is currently only used for holding User profile setup data, but the approach is designed to be extended and support e.g. having multiple Challenge / Opportunity / Project templates available for selection by Ecoverse users.
 
 The evolution of the Ecoverse instance from deploying a template and then instantiating a challenge is shown below:
 
 ![Template deployment](./Images/DesignTemplates.png "Template deployment")
 
-Note in particular that a set of additional roles are created as part of the template deployment process, as well as additional entities. 
+#### Challenge, Project & User Group Templates
 
-## Challenge, Project & User Group Templates
-
-Further, the following additional templates will be supported:
+Further, the following entities will have enhanced templatiing supporte:
 *   Challenge Template
+*   Opportunity Template
 *   Project Template
 *   User Group Template
 
-In particular the Project Template is likely to have multiple variations possible to reflect the multiple ways a project may want to be executed. A Challenge Lead would then select a template to use when launching the challenge.
+In particular the Project Template is likely to have multiple variations possible to reflect the multiple ways a project may want to be executed. An Opportunity Lead would then select a template to use when launching the challenge.
 
-These additional templates may be part of the Ecoverse Template or uploaded later, and they initially all require the “global admin”role.
+These additional templates may be part of the Ecoverse Template or uploaded later, and they initially all require the “global admin” role.
 
 
-## Exportable & Uploadable Representation
+### Exportable & Uploadable Representation
 
 In addition to supporting the usage of Templates, the platform also needs to be able to export and import fully defined Challenges. These should reference a Challenge Template that they are based on and then provide the actual data to be populated into that Challenge instance. 
 
