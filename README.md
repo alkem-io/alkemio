@@ -46,7 +46,7 @@ A key goal of the platform is to leverage the latest technical capabilities such
 And last but not least, please feel free to reach out and **[ask us for support!](https://github.com/cherrytwist/.github/blob/master/SUPPORT.md)**
 
 ## Developers
-Want to contribute to CherryTwist? The best place to start is by looking at the Developer documentation in the [Developer Folder](./Developers/README.md) in this repo.
+Want to contribute to Cherrytwist? The best place to start is by looking at the Developer documentation in the [Developer Folder](./Developers/README.md) in this repo.
 
 ## Thank you to the following contributors
 - valentinyanakiev
