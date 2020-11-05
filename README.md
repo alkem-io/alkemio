@@ -32,9 +32,9 @@ Realising a platform to facilitate complex challenges is ambitious - but one tha
 If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
 
 # How is Cherrytwist built? 
-The set of concepts and terms used for the design of CherryTwist can be found [here](./Design/ConceptualDesign.md). It is important to read this document first, as a lot of the terminology used in the rest of the design documentation as well as the code is described here - so having this mental model clear helps. 
+The set of concepts and terms used for the design of CherryTwist can be found inour [Conceptual Design](./Design/ConceptualDesign.md). It is important to read this document first, as a lot of the terminology used in the rest of the design documentation as well as the code is described here - so having this mental model clear helps. 
 
-A high level technical design for CherryTwist can be found [here](./Design/TechnicalDesign.md).
+A high level technical design for CherryTwist can be found in our [Technical Design](./Design/TechnicalDesign.md).
 
 A key goal of the platform is to leverage the latest technical capabilities such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements via smart contracts etc etc - without exposing those details to the end user!
 
