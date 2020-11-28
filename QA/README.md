@@ -1,8 +1,8 @@
-#CherryTwist - Quality Assurance
+# CherryTwist - Quality Assurance
 
 This document provides overview of "Cherrytwist" quality assurance and testing activities. Some of them are in progress and some are to be started.
 
-#Process
+# Process
  
 - Perform functional/non-functional testing types on reviewed "github" issues
     - Depending on the "github" issue scope, testing is performed on different environments 
@@ -12,56 +12,58 @@ This document provides overview of "Cherrytwist" quality assurance and testing a
 - Test data management
 
 
-#Testing types and levels
+# Testing types and levels
 
 "Cherrytwist" consists of multiple services. The following test types are being applied among the different test levels:
 
-- ##"Server" - testing types and levels:
-     - ###Functional testing: 
-        - Unit testing<sup>*</sup>
-        - [GraphQL API integration tests](https://github.com/cherrytwist/Server/tree/develop/test)
-        - GraphQL Exploratory testing
+## "Server" - testing types and levels:
+- ### Functional testing: 
+    - Unit testing<sup>*</sup>
+    - [GraphQL API integration tests](https://github.com/cherrytwist/Server/tree/develop/test)
+    - GraphQL Exploratory testing
         
-     - ###Non-functional testing:
-        - [Performance testing](https://github.com/cherrytwist/Server/tree/develop/test/performance)
-        - Security testing<sup>*</sup>
-        - Database migration<sup>*</sup>
+- ### Non-functional testing:
+    - [Performance testing](https://github.com/cherrytwist/Server/tree/develop/test/performance)
+    - Security testing<sup>*</sup>
+    - Database migration<sup>*</sup>
 
-     - ###Static testing:
-        - Code review
-        - Static code analyses tools<sup>*</sup>
+- ### Static testing:
+    - Code review
+    - Static code analyses tools<sup>*</sup>
  
-- ##"Client.Web" - testing types and levels:
-     - ###Functional testing: 
-        - Component testing<sup>*</sup>
-        - Integration testing<sup>*</sup>
-        - E2E automation testing<sup>*</sup>
-        - Exploratory testing
+## "Client.Web" - testing types and levels:
+- ### Functional testing: 
+    - Component testing<sup>*</sup>
+    - Integration testing<sup>*</sup>
+    - E2E automation testing<sup>*</sup>
+    - Exploratory testing
         
-     - ###Non-functional testing:
-        - Performance testing<sup>*</sup>
-        - Security testing<sup>*</sup>
+- ### Non-functional testing:
+    - Performance testing<sup>*</sup>
+    - Security testing<sup>*</sup>
 
 
-#Reporting
+# Reporting
  
 - [Test cases](https://travis-ci.com/github/cherrytwist/Server/builds)
+
     - Number of test cases
     - Number of failed test cases per service
 
 - Defects<sup>*</sup>
+
     - Number of defects<sup>*</sup>
     - Number of production environment defects by severity<sup>*</sup>
     - Number of development environment defects by severity<sup>*</sup>
 
-#Environments
+# Environments
 - Local - setup for [Server](https://github.com/cherrytwist/Server) and [Client.Web](https://github.com/cherrytwist/Client.Web)
 - [Development](https://dev.cherrytwist.org/) - auto-deployed after each merge to development branch
 - [Test](https://test.cherrytwist.org/) - QA deploys from "github" repositories action, the required branch
 - [Acc](https://acc.odyssey.ninja:3000/ecoverse) - Project manager deploys from "github" repositories action, from master branch 
 - [Prod](https://prod.odyssey.ninja:3000/ecoverse) - Project manager deploys from "github" repositories action, from master branch
 
-#Tools
+# Tools
 - [Jest](https://jestjs.io/) - javascript automation test framework
 - [Jmeter](https://jmeter.apache.org/) - performance test tool 
 - [Postman](https://www.postman.com/) - API testing tool
