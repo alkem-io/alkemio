@@ -1,6 +1,6 @@
 # CherryTwist - Quality Assurance
 
-This document provides overview of "Cherrytwist" quality assurance and testing activities. Some of them are in progress and some are to be started.
+This document provides an overview of the quality assurance and testing activities that are carried out on the Cherrytwist platform.
 
 # Process
  
@@ -10,13 +10,17 @@ This document provides overview of "Cherrytwist" quality assurance and testing a
 - Perform regression testing as part of "github" issues testing
 - Automate/maintain test cases on different levels
 - Test data management
+- Package dependency audit: regular review of reported vulnerabilities in packages dependent on and then address
 
 
 # Testing types and levels
 
-"Cherrytwist" consists of multiple services. The following test types are being applied among the different test levels:
+Cherrytwist consists of multiple services. The following test types are being applied among the different test levels:
 
 ## "Server" - testing types and levels:
+
+First QA priority is the "Server" repository quality
+
 - ### Functional testing: 
     - Unit testing<sup>*</sup>
     - [GraphQL API integration tests](https://github.com/cherrytwist/Server/tree/develop/test)
@@ -25,13 +29,19 @@ This document provides overview of "Cherrytwist" quality assurance and testing a
 - ### Non-functional testing:
     - [Performance testing](https://github.com/cherrytwist/Server/tree/develop/test/performance)
     - Security testing<sup>*</sup>
-    - Database migration<sup>*</sup>
+    - [Database migrations](https://github.com/cherrytwist/Server/edit/develop/README.md)
 
 - ### Static testing:
     - Code review
-    - Static code analyses tools<sup>*</sup>
+    - Static code analyses tools:
+        - Build Status:![Docker Image CI](https://github.com/cherrytwist/Server/workflows/Docker%20Image%20CI/badge.svg?branch=master)
+
+        - Build Quality:[![BCH compliance](https://bettercodehub.com/edge/badge/cherrytwist/Server?branch=develop)](https://bettercodehub.com/)
  
 ## "Client.Web" - testing types and levels:
+
+Secondary QA priority is the "Client.Web" repository quality
+
 - ### Functional testing: 
     - Component testing<sup>*</sup>
     - Integration testing<sup>*</sup>
@@ -42,6 +52,12 @@ This document provides overview of "Cherrytwist" quality assurance and testing a
     - Performance testing<sup>*</sup>
     - Security testing<sup>*</sup>
 
+- ### Static testing:
+    - Code review
+    - Static code analyses tools:
+        - Build Status:![AKS dev CI/CD pipeline](https://github.com/cherrytwist/Client.Web/workflows/AKS%20dev%20CI/CD%20pipeline/badge.svg?branch=develop)
+
+        - Build Quality:[![BCH compliance](https://bettercodehub.com/edge/badge/cherrytwist/Client.Web?branch=develop)](https://bettercodehub.com/)
 
 # Reporting
  
@@ -58,12 +74,13 @@ This document provides overview of "Cherrytwist" quality assurance and testing a
 
 # Environments
 - Local - setup for [Server](https://github.com/cherrytwist/Server) and [Client.Web](https://github.com/cherrytwist/Client.Web)
-- [Development](https://dev.cherrytwist.org/) - auto-deployed after each merge to development branch
-- [Test](https://test.cherrytwist.org/) - QA deploys from "github" repositories action, the required branch
-- [Acc](https://acc.odyssey.ninja:3000/ecoverse) - Project manager deploys from "github" repositories action, from master branch 
-- [Prod](https://prod.odyssey.ninja:3000/ecoverse) - Project manager deploys from "github" repositories action, from master branch
+- [Development](https://dev.cherrytwist.org/) - auto-deployed after each merge to develop branch
+- [Test](https://test.cherrytwist.org/) - QA deploys from "github" repositories action, the branch version that is being tested
+- [Acc](https://acc.odyssey.ninja:3000/) - Project manager deploys from "github" repositories action, from master branch 
+- [Prod](cherrytwist.odyssey.org) - Project manager deploys from "github" repositories action, from master branch
 
 # Tools
+- [VS Code] - IDE for automation test development
 - [Jest](https://jestjs.io/) - javascript automation test framework
 - [Jmeter](https://jmeter.apache.org/) - performance test tool 
 - [Postman](https://www.postman.com/) - API testing tool
