@@ -76,11 +76,11 @@ Secondary QA priority is the "Client.Web" repository quality
 - Local - setup for [Server](https://github.com/cherrytwist/Server) and [Client.Web](https://github.com/cherrytwist/Client.Web)
 - [Development](https://dev.cherrytwist.org/) - auto-deployed after each merge to develop branch
 - [Test](https://test.cherrytwist.org/) - QA deploys from "github" repositories action, the branch version that is being tested
-- [Acc](https://acc.odyssey.ninja:3000/) - Project manager deploys from "github" repositories action, from master branch 
-- [Prod](cherrytwist.odyssey.org) - Project manager deploys from "github" repositories action, from master branch
+- Acc<sup>*</sup>
+- Prod<sup>*</sup>
 
 # Tools
-- [VS Code] - IDE for automation test development
+- [VS Code](https://code.visualstudio.com/) - IDE for automation test development
 - [Jest](https://jestjs.io/) - javascript automation test framework
 - [Jmeter](https://jmeter.apache.org/) - performance test tool 
 - [Postman](https://www.postman.com/) - API testing tool
