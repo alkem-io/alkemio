@@ -2,7 +2,7 @@
 
 This is a working document intended to capture key concepts and terminology that are used within the context of CherryTwist. 
 
-As these concepts are used throughout CherryTwist it is important for anyone new to CherryTwist to be familiar with the contents of this document.
+As these concepts are used throughout CherryTwist, it is important for anyone new to CherryTwist to be familiar with the contents of this document.
 
 # **Challenge: A Journey with many steps**
 
@@ -12,10 +12,10 @@ It is a _*journey*_, whereby those invovled in the challenge will need to work t
 
 ![Challenge as a journey with multiple steps](Images/ChallengeJourney.png "Challenge as a journey with multiple steps")
 
-All other concepts / activities in CherryTwist are to support the realising of Challenges - from the activities on the journey, to the community that builds up around the Challenge. In some sense it is the placement of the Challenge as being _the_ heart of CherryTwist that sets it apart.
+All other concepts / activities in CherryTwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge. In some sense it is the placement of the Challenge as being _the_ heart of CherryTwist that sets it apart.
 
 ## Projects: Steps on the Journey
-The term used within CherryTwist for the steps on the Challenge journey is *Project*, whereby a set of participants collaborate within the context of a Challenge towards a clearly defined outcome. 
+The term used within CherryTwist for the steps on the Challenge journey is *Project*, whereby a set of participants collaborate, within the context of a Challenge, towards a clearly defined outcome. 
 
 A Project can represent many different types of steps on the journey; critical is that it has a clear outcome (scope), a timeline, and specifies the resources available.  
 
@@ -65,11 +65,11 @@ The type of Agreements that can be made are varied. Examples include:
 * Project Frameworks: Master agreements that can be used as context for the definition of Projects
 
 # **Ecoverse: Challenge Hosting**
-The formation of a community around a Challenge requires a careful nurturing hand and hosting in an environment with the right "ingredients"- especially in the early formation stages but also potentially throughout the lifecycle of the Challenge. This hosting environment is focused on maximising the chances of Challenge success, and is called an  "Ecoverse".
+_Ecoverse_ is a contraction of the words "ecosystem" and "universe". The formation of a community around a Challenge, requires a careful nurturing hand. Once forming, a community needs hosting in an environment with the right "ingredients"- especially in the early formation stages. Potentially hosting is necessary throughout the lifecycle of the Challenge. This hosting environment is focused on maximising the chances of Challenge success.
 
 ![Ecoverse: Hosting of Challenges](Images/Ecoverse.png "Ecoverse: Hosting of Challenges")
 
-Why the term Ecoverse? In many ways a Challenge can be viewed as a "Digital Ecosystem" i.e. a complex interactions that take place between the various actors involved in a challenge. And typically multiple Challenges are hosted in the same location - hence the term "Ecoverse". 
+Why the term _Ecoverse_? In many ways a Challenge can be viewed as a "Digital Ecosystem" i.e. a complex interactions that take place between the various actors involved in a challenge. And typically multiple Challenges are hosted in the same location - hence the term "Ecoverse". 
 
 Note: an Ecoverse is actually also a Challenge, so it inherits also all the building blocks that come together for a Challenge i.e. Shared understanding, community, projects etc.  
 
@@ -92,12 +92,12 @@ As such the design of CherryTwist has at its core the notion of an Ecoverse - a 
 An additional concept that may help convey the importance of Ecoverse is the notion of DNA - whereby the "DNA" from the Ecoverse host is used to help establish the right ingredients (community) and culture within hosted Challenges. 
 
 ## Ecoverse Services
-The Ecoverse is active in facilitating the Challenges it is hosting, ensuring that the Challenges have access to the right services to help the Challenge make progress. These services may be provided directly by the the organisation running the Ecoverse but potentially by other curated service providers.
+The Ecoverse is active in facilitating the Challenges it is hosting, ensuring that the Challenges have access to the right services to help the Challenge make progress. These services may be provided directly by the organisation running the Ecoverse, but potentially by other curated service providers.
 
 ![Ecoverse Services: Supporting the Challenges](Images/EcoverseServices.png "Ecoverse Services: Supporting the Challenges")
 
 # **CherryVerse: connected Ecoverses**
-The expectation is that over time a number of Ecoverses will be established - each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
+The expectation is that over time a number of Ecoverses will be established - each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
 
 ![CherryVerse](Images/CherryVerse.png "CherryVerse - interacting Ecoverses")
 
