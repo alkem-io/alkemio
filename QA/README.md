@@ -28,7 +28,11 @@ First QA priority is the "Server" repository quality
         
 - ### Non-functional testing:
     - [Performance testing](https://github.com/cherrytwist/Server/tree/develop/test/performance)
-    - Security testing<sup>*</sup>
+    - Security testing
+         - [Authorization tests and accounts](https://github.com/cherrytwist/Server/tree/develop/test/auth)
+              - admin@cherrytwist.org
+              - ecoverse.admin@cherrytwist.org
+              - community.admin@cherrytwist.org
     - [Database migrations](https://github.com/cherrytwist/Server/edit/develop/README.md)
 
 - ### Static testing:
