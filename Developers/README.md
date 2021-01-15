@@ -22,8 +22,8 @@ The coordination of this project is based primarily on GitHub issues, augmented 
 
 Name | Use
 ---- | ---
-GitHub Issues | Place to talk about issues, bugs, tasks, road map, etc. The primary backlog / source of information.
-[ZenHub](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c) | Alternative interface for GitHub Issues.
+[ZenHub](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c/board?repos=266739765,283163879,289860424,289632902,290211702,297138635,310239655,315907752) | Aggregated backlog. 
+GitHub Issues | Master repository for all issues. Place to talk about issues, bugs, tasks, road map, etc. 
 
 Each repo has its own set of issues.
 
