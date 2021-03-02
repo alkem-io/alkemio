@@ -129,7 +129,7 @@ If at any point you would like more information, have an issue, want to be added
 
 ### Connectors within the project
 
-Handel | Role
+Handle | Role
 ------ | ----
 techsmyth | Coordinator
 valentinyanakiev | Development
