@@ -15,7 +15,7 @@ The key repositories in use by the project are:
 Each repository itself contains documentation that is specific for that component.
 
 ## Coordination
-The development process in use is largely based on the [default process suggested by Zenhub](https://help.zenhub.com/support/solutions/articles/43000010341). 
+The coordination of this project is based primarily on GitHub issues, augmented by Zenhub for a more agile interface to the backlog.
 
 Each repo has its own set of issues.
 
