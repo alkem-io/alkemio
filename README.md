@@ -37,6 +37,7 @@ The Cherrytwist Platform manages a shared representation of a Challenge, which h
 * **What do we want to change?**: the shared representation (**context**) of the desired outcomes and current understanding. 
 * **Who wants to contribute?**: the people and organisations (**community**) that wish to collaborate within the shared context. 
 * **How do we effectively collaborate?**: making it easier to work together (**collaboration**) towards the desired outcomes. 
+* **How we manage the full lifecycle?**: explicitly managing the phases so that the focus is on the results, not steps on the journey (**continuity**) 
 
 Critically by putting the Challenge central, and managing a portfolio of Challenges via a plaform, this enables the following:
 * **Community & Capabilities**: being able to connect and grow a motivated community around the desired outcomes. Being able to find and connect to the right people who have the capabilities and are motivated to contribute. Ensuring that all citizens or organisations that wish to contribute are able to effectively do so.
