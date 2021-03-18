@@ -65,7 +65,7 @@ There is a huge amount to be done so all contributions are much appreciated!
 
 Next steps:
 * **[Guidelines for contributing](docs/contributing.md)** 
-* **[Conceptual Design - The key concepts used within the Cherrytwist Platform)](docs/conceptual-design.md)**
+* **[Conceptual Design - The key concepts used within the Cherrytwist Platform](docs/conceptual-design.md)**
 * **[Technical Design - How the platform is being built and the core components in the Cherrytwist Platform](docs/technical-design.md)**
 * **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c/board)** 
 * **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
