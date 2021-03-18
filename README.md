@@ -28,7 +28,7 @@ However managing Challenges currently is hard:
 * Perceptions & agendas
 * ...
 
-Society needs to be able to more effectively collaborate to address the Challenge we increasingly face. 
+Society needs to be able to more effectively collaborate to address the Challenges we increasingly face. 
 
 
 ## What does Cherrytwist Platform enable?
@@ -38,9 +38,7 @@ The Cherrytwist Platform manages a shared representation of a Challenge, which h
 * **Community**: the people and organisations that wish to collaborate within the shared context. __Who wants to contribute?__
 * **Collaboration**: facilitating effective interaction between members of the community towards the desired outcomes. __How do we collaborate?__
 
-Each Challenge is a journey, starting from an identified desired outcome through to delivered change. And it is important to manage effectively the different aspects of a Challenge throughout that **Lifecycle**.
-
-Critically by putting the Challenge central and managing via a plaform this enables the following:
+Critically by putting the Challenge central and managing a portfolio of Challenges via a plaform this enables the following:
 * **Community & Capabilities**: being able to connect and grow a motivated community around the desired outcomes. Being able to find and connect to the right people who have the capabilities and are motivated to contribute. Ensuring that all citizens or organisations that wish to contribute are able to effectively do so.
 * **Collaboration**: make it easy for parties to collaborate towards the desired outcomes. Used the share understanding and community to enable low thresholds to effective collaboration.
 * **Full lifecycle**:  a Challenge is a journey with multiple stages, and needs to be managed as such. The shared representation, community and collaboration all evolve as the Challenge evolves.
