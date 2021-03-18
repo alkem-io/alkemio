@@ -11,7 +11,7 @@ The main principles around the CT security design are:
 * Database is secured via user:password. The database endpoint is accessible only inside the Kubernetes network.
 * Accessing 3rd party APIs requires obtaining API specific access token.
 
-![Cherrytwist Security Overview](./Images/SecurityDesignOverview.png)
+![Cherrytwist Security Overview](./images/SecurityDesignOverview.png)
  
 Fig.1 Cherrytwist Security Overview
 
@@ -19,7 +19,7 @@ Fig.1 Cherrytwist Security Overview
 ##	Authentication
 ###	Cherrytwist Web Client Authentication
 
- ![Authorisation Code Flow with PKCE](./Images/ClientAuthentication.png)
+ ![Authorisation Code Flow with PKCE](./images/ClientAuthentication.png)
 Fig.2 Authorization Code Flow with Proof Key for Code Exchange
 
 The Cherrytwist Client authentication uses the Authorization Code Flow with Proof Key for Code Exchange(PKCE). It takes advantage of the MSAL.js library built-in integration with AAD. 
@@ -33,7 +33,7 @@ The Access Token is passed as a Bearer token in the Authorization HTTP header (e
 NB! If any of the calls / callbacks aren’t strictly followed the flow will be altered and it will not work.
 
 ###	Cherrytwist Server calling Microsoft Graph API
-![Microsoft Graph API + On-Behalf-Of](./Images/ServerOnBehalfOf.png)
+![Microsoft Graph API + On-Behalf-Of](./images/ServerOnBehalfOf.png)
 
 Cherrytwist Server uses the On-Behalf-Of flow to call Microsoft Graph API. The Access Token received from the Cherrytwist Client (from the Auth Code with PKCE flow) is replaced with a new call to AAD for a new token to access the Microsoft Graph API.
  

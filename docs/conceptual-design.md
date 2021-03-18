@@ -1,21 +1,21 @@
 # **Introduction**
 
-This is a working document intended to capture key concepts and terminology that are used within the context of CherryTwist. 
+This is a working document intended to capture key concepts and terminology that are used within the context of Cherrytwist. 
 
-As these concepts are used throughout CherryTwist, it is important for anyone new to CherryTwist to be familiar with the contents of this document.
+As these concepts are used throughout Cherrytwist, it is important for anyone new to Cherrytwist to be familiar with the contents of this document.
 
 # **Challenge: A Journey with many steps**
 
-The central concept in CherryTwist is the *Challenge* - a complex problem / change to be realised and involving multiple stakeholders. 
+The central concept in Cherrytwist is the *Challenge* - a complex problem / change to be realised and involving multiple stakeholders. 
 
 It is a _*journey*_, whereby those invovled in the challenge will need to work together to realise steps in the right direction. 
 
 ![Challenge as a journey with multiple steps](Images/ChallengeJourney.png "Challenge as a journey with multiple steps")
 
-All other concepts / activities in CherryTwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge. In some sense it is the placement of the Challenge as being _the_ heart of CherryTwist that sets it apart.
+All other concepts / activities in Cherrytwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge. In some sense it is the placement of the Challenge as being _the_ heart of Cherrytwist that sets it apart.
 
 ## Projects: Steps on the Journey
-The term used within CherryTwist for the steps on the Challenge journey is *Project*, whereby a set of participants collaborate, within the context of a Challenge, towards a clearly defined outcome. 
+The term used within Cherrytwist for the steps on the Challenge journey is *Project*, whereby a set of participants collaborate, within the context of a Challenge, towards a clearly defined outcome. 
 
 A Project can represent many different types of steps on the journey; critical is that it has a clear outcome (scope), a timeline, and specifies the resources available.  
 
@@ -85,7 +85,7 @@ Now consider a Challenge, which by its very nature represents multiple types of 
 **Right Ingredients**
 To maximise the changes of realising the desired goals from a Challenge, it is critical to embed the Challenge within a wider community posessing the right balance of skills, drive and understanding to nurture in particular the early stages of the Challenge journey. 
 
-As such the design of CherryTwist has at its core the notion of an Ecoverse - a hosting community that helps the formation and early incubation of a Challenge. 
+As such the design of Cherrytwist has at its core the notion of an Ecoverse - a hosting community that helps the formation and early incubation of a Challenge. 
 
 ================================
 

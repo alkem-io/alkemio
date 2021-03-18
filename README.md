@@ -1,61 +1,87 @@
-# Cherrytwist - Challenge Management Platform 
-Welcome to CherryTwist - an open source platform for managing Challenges that allows you to: 
 
-* Manage the full lifecycle of innovation challenges, in a single, shared representation
-    * Challenges: Scope, publish, campaign
-    * Project portfolio: Initiate, (co)fund and govern projects
-    * Grants: (crowd)fund, award and govern, keep track of results and paper-trail
-* Community: Engage and grow your community
-    * Onboard stakeholders and talented / motivated contributors, increase diversity of contributions
-    * Enable exchange of capabilities, expertise and knowledge
-* Enable sharing & learning within and between communities
-* Self sovereign / decentralisation ready (web 3 under the hood)
+<p align="center">
+  <a href="http://cherrytwist.org/" target="blank"><img src="https://cherrytwist.org/wp-content/uploads/2020/10/cherrytwist-2.png" width="240" alt="Cherrytwist Logo" /></a>
+</p>
+<p align="center"><i>Enabling society to collaborate. Building a better future, together.</i></p>
 
-This repository is for coordination around the project. The project is developing rapidly, and we aim to get the basics right from the get go so please do share any feedback / observations / suggestions you have!
 
-#  What is the problem?
-Managing challenges is hard:
-* Many parties involved, different backgrounds
-* Fragmented best practices / community 
+# Cherrytwist: Challenge Management Platform 
+Cherrytwist is an open source platform for managing Challenges throughout their lifecycle. 
+
+## What is a Challenge? 
+A Challenge is any desired outcome whereby multiple parties need to coordinate their activities over a longer period to solve. 
+
+Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
+
+## Why do we need to manage Challenges effectively?
+The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.
+
+![Complexity Rising](./docs/images/ComplexityRising.jpg "ComplexityRising")
+ 
+
+However managing Challenges currently is hard:
 * Ad-hoc tooling
+* Many parties involved, different backgrounds
 * Ensuring lifecycle continuity
+* Fragmented best practices / community 
 * Facilitating collaboration & tracking progress
 * Perceptions & agendas
-However increasingly the problems that society needs to addres __are complex challenges__. 
+* ...
 
-![Complexity Rising](./images/ComplexityRising.jpg "ComplexityRising")
+Society needs to be able to more effectively collaborate to address the Challenges we increasingly face. 
 
-The complexity of our society is simply rising and we need to find new ways to collaborate effectively to address them. 
 
-Realising a platform to facilitate complex challenges is ambitious - but one that can deliver huge value...a step change in how we collaborate!
+## What does Cherrytwist Platform enable?
+
+The Cherrytwist Platform manages a shared representation of a Challenge, which has the following core aspects:
+* **What do we want to change?**: the shared representation (**context**) of the desired outcomes and current understanding. 
+* **Who wants to contribute?**: the people and organisations (**community**) that wish to collaborate within the shared context. 
+* **How do we effectively collaborate?**: making it easier to work together (**collaboration**) towards the desired outcomes. 
+* **How we manage the full lifecycle?**: explicitly managing the phases so that the focus is on the results, not steps on the journey (**continuity**) 
+
+Critically by putting the Challenge central, and managing a portfolio of Challenges via a plaform, this enables the following:
+* **Community & Capabilities**: being able to connect and grow a motivated community around the desired outcomes. Being able to find and connect to the right people who have the capabilities and are motivated to contribute. Ensuring that all citizens or organisations that wish to contribute are able to effectively do so.
+* **Collaboration**: make it easy for parties to collaborate towards the desired outcomes. Used the share understanding and community to enable low thresholds to effective collaboration.
+* **Full lifecycle**:  a Challenge is a journey with multiple stages, and needs to be managed as such. The shared representation, community and collaboration all evolve as the Challenge evolves.
+* **Best practices**: the complexity of Challenges means that we need to systematically be able to share patterns and approaches that are demonstrated to work in various situations, from phased approaches through to methods for surfacing up the inherent complexity or coming to an agreed shared understanding.
+* **Governance & Oversight**: being able to manage a portfolio of Challenges, with confidence that agreed governance / processes are being followed. Setting clear principles and boundaries for the collaboration that takes place.
+* **Trust & Transparency**: a neutral, trusted base from which all parties can confidently interact without fear of being at a disadvantage or seeing value capture unfairly by other parties.
+* **Awareness & Visibility**: being able to promote the set of Challenges within a particular context and to share in a controlled way information about both the desired outcomes and the progress towards them.
+
 
 If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
 
-# How is Cherrytwist built? 
-The set of concepts and terms used for the design of CherryTwist can be found in our [Conceptual Design](./Design/ConceptualDesign.md). It is important to read this document first, as a lot of the terminology used in the rest of the design documentation as well as the code is described here - so having this mental model clear helps. 
+<p></p>
 
-A high level technical design for CherryTwist can be found in our [Technical Design](./Design/TechnicalDesign.md).
 
-A key goal of the platform is to leverage the latest technical capabilities such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements via smart contracts etc etc - without exposing those details to the end user!
+## How do I get started?
+The easiest way to get started with Cherrytwist is to see it in action! For that there are a couple of options:
+* **[Odyssey Production instance](https://cherrytwist.odyssey.org)** - a production Cherrytwist instance showing Odyssey's hosted Challenges from their Odyssey Momentum event late 2020. 
+* **[UN SDGs Demo](https://demo-sdgs.cherrytwist.org)** - coming soon, a sample Cherrytwist instance illustrating the UN Sustainable Development Goals (SDGs)
+* **[Try it out locally](https://www.github.com/cherrytwist/demo)** - create your own local Cherrytwist instance and populate it with sample data.
 
-# Community Guidelines
-- Contributing: please read the **[guidelines](https://github.com/cherrytwist/.github/blob/master/CONTRIBUTING.md)** and check the **[backlog](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c/board)** for open issues.
-- Licensing: all contributors to the project are required to sign a **[Contributor License Agreement (CLA)](https://github.com/cherrytwist/.github/blob/master/CLA.md)** to ensure that the contents of the repository are covered from a legal perspective. The CLA process is enforced for all contributions.
-- Security: the project is enforcing 2FA, and our **[security process](https://github.com/cherrytwist/.github/blob/master/SECURITY.md)** details out what to do in the event of a vulnerability being detected
+## How do I contribute to Cherrytwist?
+There is a huge amount to be done so all contributions are much appreciated! 
 
-And last but not least, please feel free to reach out and **[ask us for support!](https://github.com/cherrytwist/.github/blob/master/SUPPORT.md)**
+Next steps:
+* **[Guidelines for contributing](docs/contributing.md)** 
+* **[Conceptual Design - The key concepts used within the Cherrytwist Platform](docs/conceptual-design.md)**
+* **[Technical Design - How the platform is being built and the core components in the Cherrytwist Platform](docs/technical-design.md)**
+* **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c/board)** 
+* **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
+* **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security.md)** 
+* **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 
-## Developers
-Want to contribute to Cherrytwist? The best place to start is by looking at the Developer documentation in the [Developer Folder](./Developers/README.md) in this repo.
+## Who is involved with Cherrytwist?
+The Cherrytwist Platform is fully open source, and relies on a combination of core development team and volunteer contributors. 
 
-## Thank you to the following contributors
-- valentinyanakiev
-- atstoyanov
-- comoque1
-- ReneHonig
-- aaitor
-- GhostOnTheFiber
-- wordsmyth73
+For additional details on project partners and supporters please look at our [website](https://cherrytwist.org). 
+
+## Connecting + Getting Help
+If at any point you would like more information, have an issue, want to be added to our chat platform, etc. reach out via via <community@cherrytwist.org> and we will point your in the right direction as quickly as we can!
+
+## Copyright & License
+Please see **[Licensing](LICENSES.md)** for a full overview. 
 
 
 
