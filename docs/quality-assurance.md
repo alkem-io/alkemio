@@ -1,4 +1,4 @@
-# CherryTwist - Quality Assurance
+# Cherrytwist - Quality Assurance
 
 This document provides an overview of the quality assurance and testing activities that are carried out on the Cherrytwist platform.
 

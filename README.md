@@ -11,7 +11,7 @@ Cherrytwist is an open source platform for managing Challenges throughout their 
 ## What is a Challenge? 
 A Challenge is any desired outcome whereby multiple parties need to coordinate their activities over a longer period to solve. 
 
-Challenges arise from all aspects of society: whether we’re talking about UN SDGs or corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
+Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
 
 ## Why do we need to manage Challenges effectively?
 The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.

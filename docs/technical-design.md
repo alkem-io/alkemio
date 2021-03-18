@@ -242,7 +242,7 @@ The evolution of the Ecoverse instance from deploying a template and then instan
 
 #### Challenge, Project & User Group Templates
 
-Further, the following entities will have enhanced templatiing supporte:
+Further, the following entities will have enhanced templating support:
 *   Challenge Template
 *   Opportunity Template
 *   Project Template

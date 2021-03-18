@@ -26,14 +26,14 @@ In general there should be one issue per feature branch.
 ## Shared Environments
 In addition there are currently two staging environments that each have both the [client.web](https://github.com/cherrytwist/client.web) and server repos deployed:
 - **[dev](https://dev.cherrytwist.org)**: for the continual deployment from the _develop_ branch 
-- **[acc](https://acc.cherrytwist.org)**: for the continual deployment from the _main_ branch 
+- **[test](https://test.cherrytwist.org)**: for validating production deployments from the _main_ branch 
 Both of these environments should be live at all times.
 
 The _dev_ environment exposes the following end points:
 * client: https://dev.cherrytwist.org
 * server: https://dev.cherrytwist.org/graphql
 
-Similar end points are exposes for the _acc_ environment.
+Similar end points are exposes for the _test_ environment.
 
 ## Development Environment 
 Development takes place primarily on local machines.
@@ -52,7 +52,7 @@ The environment variables should be then be picked up by docker images etc.
 There are currently CI builds on the _develop_ branches of the following repositories:
 - [**Server**](https://github.com/cherrytwist/server)
 - [**Client.Web**](https://github.com/cherrytwist/client.web)
-- [**DemoAuthenticationProvider**](https://github.com/cherrytwist/authentication.provider.demo)
+- [**Demo Authentication Provider**](https://github.com/cherrytwist/AuthenticationProvider)
 
 
 ## Docker Images + Image Registries
@@ -63,6 +63,7 @@ DockerHub is used as the primary registry for public images. New Images are push
 The currently supported repos on dockerhub are:
 - cherrytwist/server
 - cherrytwist/client-web 
+- cherrytwist/AuthenticationProvider (demo)
 
 The _Demo_ repo has a docker-composed application that takes the latest image from both of these repos and creates a simple running demonstrator. 
 
