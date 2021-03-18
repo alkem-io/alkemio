@@ -55,8 +55,9 @@ If you are interested in getting involved please reach out and connect via <info
 
 ## How do I get started?
 The easiest way to get started with Cherrytwist is to see it in action! For that there are a couple of options:
-* [UN SDGs Demo](https://demo-sdgs-cherrytwist.org) - a sample Cherrytwist instance illustrating the UN Sustainable Development Goals (SDGs)
-* [Try it out locally](https://www.github.com/cherrytwist/demo) - create your own local Cherrytwist instance and populate it with sample data.
+* **[Odyssey Production instance](https://cherrytwist.odyssey.org)** - a production Cherrytwist instance showing Odyssey's hosted Challenges from their Odyssey Momentum event late 2020. 
+* **[UN SDGs Demo](https://demo-sdgs-cherrytwist.org)** - coming soon, a sample Cherrytwist instance illustrating the UN Sustainable Development Goals (SDGs)
+* **[Try it out locally](https://www.github.com/cherrytwist/demo)** - create your own local Cherrytwist instance and populate it with sample data.
 
 ## How do I contribute to Cherrytwist?
 There is a huge amount to be done so all contributions are much appreciated! 
