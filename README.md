@@ -81,7 +81,7 @@ For additional details on project partners and supporters please look at our [we
 If at any point you would like more information, have an issue, want to be added to our chat platform, etc. reach out via via <community@cherrytwist.org> and we will point your in the right direction as quickly as we can!
 
 ## Copyright & License
-Please see **[Licensing](Licenses.md)** for a full overview. 
+Please see **[Licensing](LICENSES.md)** for a full overview. 
 
 
 
