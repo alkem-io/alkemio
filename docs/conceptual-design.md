@@ -16,7 +16,7 @@ It is a _*journey*_, whereby those invovled in the challenge will need to work t
 
 All other concepts / activities in Cherrytwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
 
-And with any journey the _*Map*_ you have of where you are heading is critical to getting your companions on the journey. This needs to be a shared representation - as opposed to the current default reality whereby all parties have pieces of the puzzle that is the map. 
+And with any journey the _*Map*_ you have of where you are heading is critical to getting you towards your destination as well as finding the right companions for the journey. This needs to be a shared representation - as opposed to the current default reality whereby all parties have pieces of the puzzle that is the map. 
 <p >
 <img src="visuals/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
 </p>
@@ -78,7 +78,7 @@ And critical to actually achieving the desired outcomes is that there can be _*C
 
 An all too common pitfall with Challenges is that a lot of initial energy and enthusiasm, leading up to hackathons or similar events, results ultimately in the desired outcomes not being achieved. 
 
-
+By managing a representation of the Challenge that is shared by the community of the Challenge, it is easier to keep the continuity as the Challenge progresses.
 
 
 # **Ecoverse: Challenge Hosting**
