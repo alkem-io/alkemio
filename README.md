@@ -17,7 +17,7 @@ Challenges arise from all aspects of society: whether we’re talking about UN S
 The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.
 
 <p >
-<img src="visuals/societal-complexity-rising.jpg" alt="Societies complexity is rishing" width="600" />
+<img src="docs/visuals/societal-complexity-rising.jpg" alt="Societal complexity is rising" width="600" />
 </p>
  
 

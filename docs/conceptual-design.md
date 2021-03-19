@@ -118,7 +118,7 @@ The Cherrytwist paltform enables the management of Challenges over their full li
 The platform provides the full lifecycle management, but there are many other activities / services that can be provided to help Challenges on their journey. These services / activities can be provided directly by the Challenge Host organisation, or by other curated service parties that are active within the Ecoverse.  .
 
 
-# **Coonnected Ecoverses**
+# **Connected Ecoverses**
 The expectation is that over time a number of Ecoverses will be established - each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
 
 
