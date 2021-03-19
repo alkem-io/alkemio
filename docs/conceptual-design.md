@@ -16,7 +16,8 @@ It is a _*journey*_, whereby those invovled in the challenge will need to work t
 
 All other concepts / activities in Cherrytwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
 
-And with any journey the _*Map*_ you have of where you are heading is critical to getting you towards your destination as well as finding the right companions for the journey. This needs to be a shared representation - as opposed to the current default reality whereby all parties have pieces of the puzzle that is the map. 
+And with any journey, having as complete as possible representation of the route to the destination is important to choosing the right next steps - essentially we need a _*Map*_. However at the moment the pieces of the Map are held by different people and not in a joined up representation. The Map helps you know where you are heading as well as finding the right companions for the journey. This needs to be a shared representation.
+
 <p >
 <img src="visuals/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
 </p>
@@ -53,7 +54,7 @@ Around the Context is the _*Community*_, the people and organisations who wish t
 
 A Challenge needs a community contributing to it, and that community likely will have multiple types of actors contributing to progressing the Challenge journey. 
 
-The set of Roles for a Challenge captures the key generic roles around the Challenge - including the expectations / privilidges associated with each Role. 
+The set of Roles for a Challenge captures the key generic roles around the Challenge - including the expectations / priviliges associated with each Role. 
 
 
 ### Collaboration
@@ -70,19 +71,21 @@ The activities taken over the Challenge lifecycle will vary depending on the pha
 * Pilot: delivering a working solution (as defined by the scoping Project scope)
 
 ### Continuity
-And critical to actually achieving the desired outcomes is that there can be _*Continuity*_ over the full lifecycle of the Challenge. 
+Each Challange, as well as sub levels such as Opportunity, have a lifecycle. They are identified, are evolved via various activities and hopefully ultimately the desired outcomes are realised. Of course the Challenge could also be abandoned - but that should be an explicit choice. 
+
+However all too often Challenges tend to simply fizzle to a halt: there is a lot of initial energy and enthusiasm, leading up to hackathons or similar events - but then further progress is very hard to realize. 
+
+The goal should be to ensure that the Challenge progress can continue and be tracked over the full lifecycle - which is captured under the term _*Continuity*_.
 
 <p>
 <img src="images/challenge-continuity.png" alt="Challenge Continuity" width="400" />
 </p>
 
-An all too common pitfall with Challenges is that a lot of initial energy and enthusiasm, leading up to hackathons or similar events, results ultimately in the desired outcomes not being achieved. 
-
 By managing a representation of the Challenge that is shared by the community of the Challenge, it is easier to keep the continuity as the Challenge progresses.
 
 
 # **Ecoverse: Challenge Hosting**
-_Ecoverse_ is a contraction of the words "ecosystem" and "universe". It is where Challenges are hosted, providing a shared base context and community as well as facilitating the collaboration within and between hosted Challenges.. 
+_Ecoverse_ is a contraction of the words "ecosystem" and "universe". It is where Challenges are hosted, providing a shared base context and community as well as facilitating the collaboration within and between hosted Challenges. 
 
 The expectation is the the community for the Ecoverse is curated, and provides the hosted Challenges with the right "ingredients"- especially in the early formation stages. 
 
