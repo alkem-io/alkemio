@@ -16,7 +16,9 @@ Challenges arise from all aspects of society: whether we’re talking about UN S
 ## Why do we need to manage Challenges effectively?
 The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.
 
-![Complexity Rising](./docs/images/ComplexityRising.jpg "ComplexityRising")
+<p >
+<img src="visuals/societal-complexity-rising.jpg" alt="Societies complexity is rishing" width="600" />
+</p>
  
 
 However managing Challenges currently is hard:

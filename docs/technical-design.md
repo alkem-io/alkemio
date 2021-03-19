@@ -50,7 +50,7 @@ To manage this duality, the core entity that is reflected in Cherrytwist is the 
 *   **Account**: Initially, all interactions with the Cherrytwist platform require an account. This is the Web2 pattern familiar to most end users
 *   **Identity**: All users of Cherrytwist also have a Self Sovereign Identity (SSI) created on their behalf. This identity can then further have artifacts such as wallets that the identity controls, and can interact with other web3 artifacts such as smart contracts. The identity is initially largely invisible to Users.
 
-At a high level this then implies that ![drawing](./images/Web2plusWeb3.png)
+At a high level this then implies that ![drawing](./images/design-web2-web3.png)
 
 This can also be seen as putting a web2 layer around a web3 core. Critically, all identities (SSI) created by the platform are managed by the platform on behalf of the user i.e. acting as a proxy for actions authorised by the user via their Account. The goal is to have these identities held outside of the platform - but that is in itself a journey with multiple steps on the way.
 
@@ -88,7 +88,7 @@ As aspects of SSI mature the intention is to allow more of the platform interact
 
 The following diagram shows at a high level the key entities in use within Cherrytwist:
 
-![Logical Data Model](./images/LogicalDataModel.png)
+![Logical Data Model](./images/design-logical-data-model.png)
 
 This logical data model attempts to keep to a minimum, at least initially, the set of entities that are represented in the platform, while still being able to reflect the types described in the conceptual design. The rationale for this is to avoid bringing in implicit context from known deployments of Challenges. 
 
@@ -128,7 +128,7 @@ The logical layers to the Cherrytwist architecture:
 
 The layering is shown in the following diagram:
 
-![Logical Layers](./images/DesignLayers.png "design layers")
+![Logical Layers](./images/design-layers.png "design layers")
 
 
 ### Interaction
@@ -161,7 +161,7 @@ As the Ecoverse Template (see later) will vary between Ecoverses, this implies t
 
 The core of Cherrytwist, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
-![Server Components](./images/DesignServerComponents.png "server components")
+![Server Components](./images/design-server-components.png "server components")
 
 All interactions with the Server are via a set of APIs / services exposed by the platform, and actions are authorised based on the account associated with the user.
 * **Accounts & Access Handler**: This is likely in the first instance to be based on a hosted service such as Azure Active Directory.
@@ -238,7 +238,7 @@ The template setup is currently only used for holding User profile setup data, b
 
 The evolution of the Ecoverse instance from deploying a template and then instantiating a challenge is shown below:
 
-![Template deployment](./images/DesignTemplates.png "Template deployment")
+![Template deployment](./images/design-templates.png "Template deployment")
 
 #### Challenge, Project & User Group Templates
 
