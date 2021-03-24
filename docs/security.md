@@ -6,23 +6,33 @@ The main principles around the CT security design are:
 * Minimal network surface exposure – all traffic goes through the Kubernetes Ingress controller
 * Authorization is token-based via Identity Provider (at the moment Azure Active Directory)
 * Routing to the Identity Provider endpoints is done via standard 3rd party libraries
-    * For Cherrytwist Client.Web – Microsoft Authentication Library for JavaScript (MSAL.js)
+    * For Cherrytwist Client.Web – Microsoft Authentication Library for JavaScript (e.g. MSAL.js)
     * For Cherrytwist Server – Passport.js
 * Database is secured via user:password. The database endpoint is accessible only inside the Kubernetes network.
 * Accessing 3rd party APIs requires obtaining API specific access token.
 
-![Cherrytwist Security Overview](./images/SecurityDesignOverview.png)
- 
-Fig.1 Cherrytwist Security Overview
+ <p>
+<img src="images/security-network.png" alt="ACherrytwist Security Overview" width="600" />
+</p>
+Fig.1 Cherrytwist Network Security Overview
 
- 
 ##	Authentication
-###	Cherrytwist Web Client Authentication
+As covered in the [Technical Design](./technical-design.md), Cherrytwist uses the concept of Authentication Providers to externalise the responsibility for Authentication. 
 
- ![Authorisation Code Flow with PKCE](./images/ClientAuthentication.png)
-Fig.2 Authorization Code Flow with Proof Key for Code Exchange
+There are currently two supported Authentication Providers:
+* Azure Active Directory (AAD): For production usage.
+* Demonstration Authentication Provider: For demonstration / development usage. 
 
-The Cherrytwist Client authentication uses the Authorization Code Flow with Proof Key for Code Exchange(PKCE). It takes advantage of the MSAL.js library built-in integration with AAD. 
+Near term the platform will be adding a third, open source production quality authentication provider - stay tuned!
+
+### AAD Authentication Provider Flow
+The Cherrytwist AAD Client authentication uses the Authorization Code Flow with Proof Key for Code Exchange(PKCE). It takes advantage of the MSAL.js library built-in integration with AAD. 
+
+<p>
+<img src="images/security-aad-authentication-provider.png" alt="Authorisation Code Flow with PKCE" width="600" />
+</p>
+
+Fig.2 AAD Authorization Code Flow with Proof Key for Code Exchange (PKCE)
 
 The main steps of the flow are highlighted on the diagram above. 
 
@@ -32,14 +42,20 @@ The Access Token is passed as a Bearer token in the Authorization HTTP header (e
 
 NB! If any of the calls / callbacks aren’t strictly followed the flow will be altered and it will not work.
 
-###	Cherrytwist Server calling Microsoft Graph API
-![Microsoft Graph API + On-Behalf-Of](./images/ServerOnBehalfOf.png)
+### Demo Authentication Provider Flow
+The Cherrytwist Demo Client authentication allows user to "register" with the platform and to then interact in an authenticated manner. It is primarily for usage in Demonstrations and for Development - it is **not** for production usage. 
 
-Cherrytwist Server uses the On-Behalf-Of flow to call Microsoft Graph API. The Access Token received from the Cherrytwist Client (from the Auth Code with PKCE flow) is replaced with a new call to AAD for a new token to access the Microsoft Graph API.
+<p>
+<img src="images/security-demo-authentication-provider.png" alt="Authorisation Code Flow with PKCE" width="600" />
+</p>
+
+Fig.2 Demo Authentication Provider Flow 
+
  
 ##	Authorization
 The following roles are used within the context of the Cherrytwist platform:
 * **Anonymous** - Able to access non-authenticated elements of the query api. To include ecoverse name/context, list of challenges + for each challenge the context of the challenge. Never be able to access any mutations, nor read access to any details of users / user groups.
+* **Registered** - User has a profile and can authenticate. They are able to do self-management for their own profile on the platform but their rights are otherwise the same as Anonymous. 
 * **Ecoverse Member** - Able access to the full query api. Able to see community details of the challenges that the user is a member of. Able to edit their own user profile.
 * **Ecoverse Community Admin** - Able to add users, add /remove users to groups
 * **Ecoverse Admin** - Delete users, create/delete groups, create/delete challenge, able to fill any roles for each challenge
@@ -56,27 +72,30 @@ On Cherrytwist server startup a file is loaded that specifies a default set of u
 
 | Entity     | API Call EndPoint    | Minimum Authorisation Level  | Notes                           |
 | -----------| -------------------- | ---------------------------- | ------------------------------- |
+| Global   | user           | member | |		
+|	 | users	    | member | |
+|	 | organisations | anonymous	 |Only the descriptive elements are visible, not the community |
+|	 | organisation  | anonymous |	 Only the descriptive elements are visible, not the community |
+|	 |	me	        | registered, ecoverse-members	 | User must have an account. |
 | Ecoverse   | name           | anonymous | |		
 |	 | host         |	anonymous	 | |
 |	 | context	    |anonymous	    | |
-|	 | user         |	community-admin	 |  |
-|	 | users	    |community-admin | |
-|	 | group	    |community-admin |	  |
-|	 | groups       |	community-admin	 | |
-|	 | groupsWithTag |	community-admin	 |  |
+|	 | community	    |member	    | |
+|	 | group	    |member |	  |
+|	 | groups       |	member	 | |
+|	 | groupsWithTag |	member	 |  |
 |	 | challenges   |	anonymous   |	Only the descriptive elements are visible, not the community  |
 |	 | challenge	 | anonymous |	Only the descriptive elements are visible, not the community |
-| 	 | organisations | anonymous	 |Only the descriptive elements are visible, not the community |
-|	 | organisation  | anonymous |	 Only the descriptive elements are visible, not the community |
-|	 | tagset	    | anonymous	 |  |
-|    |	me	        | ecoverse-members	 | User must have an account. |
+| 	 | tagset	    | anonymous	 |  |
 | Challenge |	name	        | anonymous	 | |
 |  |	context	        | anonymous	 | |
-|  |	contributors	        | community-admin	 | To be visible later to challenge members|
-|  |	groups	        | community-admin	 | To be visible later to challenge members|
+|  |	community	        | member	 | To be visible later restricted further to challenge members|
+| Community |	members	        | member	 | |
+|  |	groups	        | member	 | |
+|  |	applications	        | member	 | |
 | Organisation |	name	        | anonymous	 | |
-|  |	contributors	        | community-admin	 | To be visible later to challenge members|
-|  |	groups	        | community-admin	 | To be visible later to challenge members|
+|  |	members	        | member	 | |
+|  |	groups	        | member	 | |
  
 
 Note: the above is not a comprehensive list of all fields / entities but it intended to give an overview of the authorisation levels needes to access the different types of information managed by the Cherrytwist server.
@@ -85,20 +104,17 @@ Note: the above is not a comprehensive list of all fields / entities but it inte
 
 | Entity                        | API Call EndPoint    | Minimum Authorisation Level  | Notes             |
 | ----------------------------- | -------------------- | ---------------------------- | ----------------- |
-| Ecoverse| 	createGroupOnEcoverse	| ecoverse-admin	| | 
-| | 	updateEcoverse	| ecoverse-admin	| | 
-| | 	createUser	| community-admin	| | 
-| | 	removeUser	| community-admin	| | 
-| | 	createChallenge	ecoverse-admin	| | 
-| | 	createOrganisation	ecoverse-admin	| |
-| UserGroup	| addUserToGroup| 	community-admin	| | 
+| Platform| 	createUser	| self, community-admin	| | 
+| | 	updateUser| 	self, community-admin	| | | | 	removeUser	| community-admin	| | 
+| | 	createOrganisation |	ecoverse-admin	| |
+| Community| 	createGroupOnCommunity	| community-admin	| | 
+| | 	addUserToGroup| 	community-admin	| | 
 | |	removeUserFromGroup	| community-admin	| | 
-| |	assignGroupFocalPoint	| community-admin	| | 
-| |	removeGroupFocalPoint	| community-admin	| | |
-| User| 	updateUser| 	community-admin	| | 
-| Challenge	| createGroupOnChallenge| 	community-admin	| | 
+| | 	addUserToCommunity| 	community-admin	| | 
+| Ecoverse| 	updateEcoverse	| ecoverse-admin	| | 
+| | 	createChallenge	| ecoverse-admin	| | 
+| Challenge	| createOpportunity| 	ecoverse-admin	| | 
 | | 	updateChallenge	| ecoverse-admin	| | 
-| | 	addUserToChallenge| 	community-admin	| | 
 | Organisation	| createGroupOnOrganisation	| community-admin	| | 
 | | 	updateOrganisation| 	ecoverse-admin	| | 
 | Profile	| createTagsetOnProfile	| community-admin	| | 
