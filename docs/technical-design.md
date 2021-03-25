@@ -165,6 +165,10 @@ The ideal scenario for Users is that ultimately they can have their own SSI that
 ## Authentication Providers
 To authenticate users, the platform uses the concept of Authentication Providers. An Authentication Provider has the sole responsibility of authenticating users - so that upon authentication the platform knows exactly which User has logged in.
 
+<p>
+<img src="images/security-authentication-providers.png" alt="Security: Authentication Providers" width="600" />
+</p>
+
 The currently supported Authentication Providers are:
 * Azure Active Directory (AAD) - a production, enterprise class Identity Provider from Microsoft.
 * Demo Authentication Provider - a non-production authentication provider to show the capabilities of the platform in a lightweight way.
