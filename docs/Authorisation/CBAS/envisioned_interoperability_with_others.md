@@ -1,0 +1,9 @@
+Envisioned interoperability
+===========================
+
+Given that the CBAS component builds on a number of existing specifications, all interoperability efforts across the stack are beneficial and contribute to the interoperability and ease of adoption of the CBAS component. More specifically, interoperability efforts on the following layers would be of the greatest value to the CBAS component:
+
+1. Interoperability on the Verifiable Credential layer. Specifically, interoperable representations, as well as signature generation and verification mechanisms (including normalization) can greatly benefit the adoption and as well as reduce the implementation efforts for the CBAS component. As part of our collaboration with other projects, we hope to get a good understanding of what VC representations (eg JSON based, JSON-LD based, Zero Knowledge credentials) / protocols are well represented and need to be prioritized.
+    1. As an extension to the previous point, data structures derived from Verifiable Credentials, i.e. Verifiable Presentations are also of interest in the context of the CBAS proposal.
+2. Interoperability on the credential issuance and presentation layer. Agents will frequently find themselves presenting capabilities when accessing protected resources, or delegating authorization by issuing attenuated versions of the capability to other agents. Since CBAS models capabilities using Verifiable Credentials, existing VC exchange protocols can be leveraged.
+3. Standardization or interoperability around defining common configuration policies which can be used by Issuer / Verifier components to guide their activity / advertise their services. Such definition files could be used to encode authorization rules / policies as well. We are currently considering the Aries Trust Framework document (specifically the machine-readable option), but would like to align with other partners regarding currently employed / considered approaches.
