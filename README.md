@@ -2,14 +2,18 @@
 <p align="center">
   <a href="http://cherrytwist.org/" target="blank"><img src="https://cherrytwist.org/uploads/logos/CT-logo-teal-transparent.svg" width="400" alt="Cherrytwist Logo" /></a>
 </p>
+<p align="center"><i><b>Open Innovation Platform.</b></i></p>
 <p align="center"><i>Enabling society to collaborate. Building a better future, together.</i></p>
 
 
-# Cherrytwist: Challenge Management Platform 
-Cherrytwist is an open source platform for managing Challenges throughout their lifecycle. 
+# Cherrytwist: Open Innovation Platform 
+Cherrytwist is an open source, open innovation platform. It puts the Challenges central. 
 
 ## What is a Challenge? 
-A Challenge is any desired outcome whereby multiple parties need to coordinate their activities over a longer period to solve. 
+A Challenge is any dissatisfaction with current reality. Where are we now and what would we like to change?
+
+A Challenge requires multiple parties to coordinate their activities over a longer period to make progress. 
+A Challenge is complex, spanning multiple organisational boundaries.
 
 Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
 
@@ -22,6 +26,7 @@ The complexity of our society is simply rising. The result is nearly all the sig
  
 
 However managing Challenges currently is hard:
+* Alignment
 * Ad-hoc tooling
 * Many parties involved, different backgrounds
 * Ensuring lifecycle continuity
