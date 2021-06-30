@@ -9,6 +9,8 @@
 # Alkemio: Open Innovation Platform 
 Alkemio is an open source, open innovation platform. It puts the Challenges central. 
 
+Note: Alkemio used to be called Cherrytwist, so you may still see this name appearing in documentation / code etc. 
+
 ## What is a Challenge? 
 A Challenge is any dissatisfaction with current reality. Where are we now and what would we like to change?
 
