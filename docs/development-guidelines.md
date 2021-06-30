@@ -24,14 +24,14 @@ The convention for naming of feature branches is that they should take the name 
 In general there should be one issue per feature branch.
 
 ## Shared Environments
-In addition there are currently two staging environments that each have both the [client.web](https://github.com/cherrytwist/client.web) and server repos deployed:
-- **[dev](https://dev.cherrytwist.org)**: for the continual deployment from the _develop_ branch 
-- **[test](https://test.cherrytwist.org)**: for validating production deployments from the _main_ branch 
+In addition there are currently two staging environments that each have both the [client.web](https://github.com/alkem-io/client.web) and server repos deployed:
+- **[dev](https://dev.alkem.io)**: for the continual deployment from the _develop_ branch 
+- **[test](https://test.alkem.io)**: for validating production deployments from the _main_ branch 
 Both of these environments should be live at all times.
 
 The _dev_ environment exposes the following end points:
-* client: https://dev.cherrytwist.org
-* server: https://dev.cherrytwist.org/graphql
+* client: https://dev.alkem.io
+* server: https://dev.alkem.io/graphql
 
 Similar end points are exposes for the _test_ environment.
 
@@ -50,9 +50,9 @@ The environment variables should be then be picked up by docker images etc.
 
 ## Builds
 There are currently CI builds on the _develop_ branches of the following repositories:
-- [**Server**](https://github.com/cherrytwist/server)
-- [**Client.Web**](https://github.com/cherrytwist/client.web)
-- [**Demo Authentication Provider**](https://github.com/cherrytwist/AuthenticationProvider)
+- [**Server**](https://github.com/alkem-io/server)
+- [**Client.Web**](https://github.com/alkem-io/client.web)
+- [**Demo Authentication Provider**](https://github.com/alkem-io/AuthenticationProvider)
 
 
 ## Docker Images + Image Registries
@@ -61,9 +61,8 @@ Docker is used to containerize the results from each repository.
 DockerHub is used as the primary registry for public images. New Images are pushing automatically to DockerHub upon tagged releases in the repos. 
 
 The currently supported repos on dockerhub are:
-- cherrytwist/server
-- cherrytwist/client-web 
-- cherrytwist/AuthenticationProvider (demo)
+- alkemio/server
+- alkemio/client-web 
 
 The _Demo_ repo has a docker-composed application that takes the latest image from both of these repos and creates a simple running demonstrator. 
 

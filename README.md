@@ -1,13 +1,13 @@
 
 <p align="center">
-  <a href="http://cherrytwist.org/" target="blank"><img src="https://cherrytwist.org/uploads/logos/CT-logo-teal-transparent.svg" width="400" alt="Cherrytwist Logo" /></a>
+  <a href="http://alkem.io/" target="blank"><img src="https://alkem.io/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
 </p>
 <p align="center"><i><b>Open Innovation Platform.</b></i></p>
 <p align="center"><i>Enabling society to collaborate. Building a better future, together.</i></p>
 
 
-# Cherrytwist: Open Innovation Platform 
-Cherrytwist is an open source, open innovation platform. It puts the Challenges central. 
+# Alkemio: Open Innovation Platform 
+Alkemio is an open source, open innovation platform. It puts the Challenges central. 
 
 ## What is a Challenge? 
 A Challenge is any dissatisfaction with current reality. Where are we now and what would we like to change?
@@ -38,9 +38,9 @@ However managing Challenges currently is hard:
 Society needs to be able to more effectively collaborate to address the Challenges we increasingly face. 
 
 
-## What does Cherrytwist Platform enable?
+## What does Alkemio Platform enable?
 
-The Cherrytwist Platform manages a shared representation of a Challenge, which has the following core aspects:
+The A Platform manages a shared representation of a Challenge, which has the following core aspects:
 * **What do we want to change?**: the shared representation (**context**) of the desired outcomes and current understanding. 
 * **Who wants to contribute?**: the people and organisations (**community**) that wish to collaborate within the shared context. 
 * **How do we effectively collaborate?**: making it easier to work together (**collaboration**) towards the desired outcomes. 
@@ -56,36 +56,35 @@ Critically by putting the Challenge central, and managing a portfolio of Challen
 * **Awareness & Visibility**: being able to promote the set of Challenges within a particular context and to share in a controlled way information about both the desired outcomes and the progress towards them.
 
 
-If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
+If you are interested in getting involved please reach out and connect via <info@alkemio.io>!
 
 <p></p>
 
 
 ## How do I get started?
-The easiest way to get started with Cherrytwist is to see it in action! For that there are a couple of options:
-* **[Odyssey Production instance](https://cherrytwist.odyssey.org)** - a production Cherrytwist instance showing Odyssey's hosted Challenges from their Odyssey Momentum event late 2020. 
-* **[UN SDGs Demo](https://demo-sdgs.cherrytwist.org)** - coming soon, a sample Cherrytwist instance illustrating the UN Sustainable Development Goals (SDGs)
-* **[Try it out locally](https://www.github.com/cherrytwist/demo)** - create your own local Cherrytwist instance and populate it with sample data.
+The easiest way to get started with Alkemio is to see it in action! For that there are a couple of options:
+* **[Demo Environment](https://demo.alkem.io)** - a production Alkemio instance showing Odyssey's hosted Challenges from their Odyssey Momentum event late 2020. 
+* **[Try it out locally](https://www.github.com/alkem-io/demo)** - create your own local Alkemio instance and populate it with sample data.
 
-## How do I contribute to Cherrytwist?
+## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 
 
 Next steps:
 * **[Guidelines for contributing](docs/contributing.md)** 
-* **[Conceptual Design - The key concepts used within the Cherrytwist Platform](docs/conceptual-design.md)**
-* **[Technical Design - How the platform is being built and the core components in the Cherrytwist Platform](docs/technical-design.md)**
-* **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/cherrytwist-5ecb98b262ebd9f4aec4194c/board)** 
+* **[Conceptual Design - The key concepts used within the Alkemio Platform](docs/conceptual-design.md)**
+* **[Technical Design - How the platform is being built and the core components in the Alkemio Platform](docs/technical-design.md)**
+* **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/alkemio-5ecb98b262ebd9f4aec4194c/board)** 
 * **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
 * **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security.md)** 
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 
-## Who is involved with Cherrytwist?
-The Cherrytwist Platform is fully open source, and relies on a combination of core development team and volunteer contributors. 
+## Who is involved with Alkemio?
+The Alkemio Platform is fully open source, and relies on a combination of core development team and volunteer contributors. 
 
-For additional details on project partners and supporters please look at our [website](https://cherrytwist.org). 
+For additional details on project partners and supporters please look at our [website](https://alkemio.io). 
 
 ## Connecting + Getting Help
-If at any point you would like more information, have an issue, want to be added to our chat platform, etc. reach out via via <community@cherrytwist.org> and we will point your in the right direction as quickly as we can!
+If at any point you would like more information, have an issue, want to be added to our chat platform, etc. reach out via via <community@alkemio.io> and we will point your in the right direction as quickly as we can!
 
 ## Copyright & License
 Please see **[Licensing](LICENSES.md)** for a full overview. 

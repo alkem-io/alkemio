@@ -1,5 +1,5 @@
-# Cherrytwist - Technical Design Introduction
-This document provides an introduction to the technical design for Cherrytwist. It is assumed that the reader has already read the [Conceptual Design](./conceptual-design.md) document. 
+# Alkemio - Technical Design Introduction
+This document provides an introduction to the technical design for Alkemio. It is assumed that the reader has already read the [Conceptual Design](./conceptual-design.md) document. 
 
 The architecture is described along the following aspects:
 *   Design Principles
@@ -8,7 +8,7 @@ The architecture is described along the following aspects:
 *   Logical Design
 *   Configuration & Deployment
 
-In some cases this document will also provide a rationale for decisions that have been made - and of course the initial reference implementation of Cherrytwist also requires choices to be made regarding actual languages used, hosting, user management stacks etc. 
+In some cases this document will also provide a rationale for decisions that have been made - and of course the initial reference implementation of Alkemio also requires choices to be made regarding actual languages used, hosting, user management stacks etc. 
 
 
 # Design Principles
@@ -23,7 +23,7 @@ The following high level choices guide the technical design:
     *   In practice this means efforts to minimise / isolate deployment dependencies
     *   The initiative is still learning and evolving, so it is deemed prudent to avoid establishing long term dependencies that may not be the right choice.
 *   **Regulated value (e.g. money) out of band i.e. via familiar channels / units**
-    *   In case the platform should enable the transfer of regulated value then a whole range of obligations fall on any organisation deploying a Cherrytwist instance - e.g. KYC, AML, insurance etc.
+    *   In case the platform should enable the transfer of regulated value then a whole range of obligations fall on any organisation deploying a Alkemio instance - e.g. KYC, AML, insurance etc.
         *   Worth noting that the Ecoverse Host can play a role in this scenario as facilitator of the regulated value exchange e.g. hold money in escrow for stakeholders + then pay parties based on signals from the platform that a Project has completed successfully
     *   Similarly, the Ecoverse Host for now is able to specify the currency to be used in the Ecoverse challenges (e.g. euro, dollar). 
 *   **Formalise Trust**
@@ -34,13 +34,13 @@ The following high level choices guide the technical design:
 *   **Simple to operate**
     *   The platform should be easy to configure, deploy and run - also implying that the number of external dependencies needs to be very carefully managed. 
 
-It is worth noting that some of these choices, especially regarding the Ecoverse Host role in mediating regulated value exchange & trust, are made in the context of getting a first version of Cherrytwist deployable. The expectation is fully that these aspects can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
+It is worth noting that some of these choices, especially regarding the Ecoverse Host role in mediating regulated value exchange & trust, are made in the context of getting a first version of Alkemio deployable. The expectation is fully that these aspects can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
 
 # Logical Data Model
 
-The goal of the Cherrytwist platform is to manage the shared representation of Challenges and to faciliate collaboration within the context of those Challenges. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
+The goal of the Alkemio platform is to manage the shared representation of Challenges and to faciliate collaboration within the context of those Challenges. To support this, the platform has a *logical data model* for storing the shared representation and for facilitating the collaboration. 
 
-The following diagram shows at a high level the key entities in use within Cherrytwist:
+The following diagram shows at a high level the key entities in use within Alkemio:
 
 <p>
 <img src="images/design-logical-data-model.png" alt="Logical Data Model" width="600" />
@@ -77,7 +77,7 @@ There is also a *physical data model* that is how the logical data model is stor
 
 # Logical Design
 
-The logical layers to the Cherrytwist architecture:
+The logical layers to the Alkemio architecture:
 *   **Clients**: the actual devices being used to interact by the users 
 *   **Interaction**: the user experiences being provided to Users as they interact within the context of an Ecoverse / Challenge
 *   **Server**: for managing all aspects of the Ecoverse & Challenge lifecycle
@@ -97,7 +97,7 @@ Examples types of interactions:
 *   Immersive game / VR experience
 *   Extensions of UX / Web frameworks
 
-For the initial version of Cherrytwist, the focus will be on extending an existing UX / Web framework to be able to expose and represent visually the information maintained with Cherrytwist. 
+For the initial version of Alkemio, the focus will be on extending an existing UX / Web framework to be able to expose and represent visually the information maintained with Alkemio. 
 
 The interaction layer will be in charge of the following responsibilities:
 *   Login/Sign up via SSO
@@ -111,7 +111,7 @@ The interaction layer will typically be a stateless application and will communi
 
 ## Server
 
-The core of Cherrytwist, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
+The core of Alkemio, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
 <p>
 <img src="images/design-server-components.png" alt="Server Components" width="600" />
@@ -132,7 +132,7 @@ The artifacts managed by the server need to be safely and securely managed by th
 *   **Smart Contracts**, on an executable platform
 *   **Digital Wallets**, for the management of digital assets such as recognition tokens. Note that no value that falls under regulation would be support initially.
 
-The following locations are identified for the storage of data associated with Cherrytwist:
+The following locations are identified for the storage of data associated with Alkemio:
 *   **Database**: for the data and the relationships between the entities, metadata etc. This could be relational or NoSQL based.
 *   **Content Addressable Storage (CAS)**: for any images or documents that should be stored in a content addressable (CAS) way, whereby the data is also potentially distributed (resilience etc). Primarily used for now as a Content Distribution Network (CDN).
 *   **Ledger**: for smart contracts, and transfer of value. The smart contracts can cover a variety of usages on the platform e.g. execution of projects, digital identities & the definition / control of any tokens created by the Ecoverse.
@@ -144,7 +144,7 @@ The platform currently has both Database and CAS available - additional storage 
 
 # Interacting: Users, Agents, Authentication & Authorisation
 
-This section describes the user model that is used for all interactions with Cherrytwist. Key is that this interaction model can work with both existing web paradigms as well as emerging Self Sovereign Identity (SSI) approaches.
+This section describes the user model that is used for all interactions with Alkemio. Key is that this interaction model can work with both existing web paradigms as well as emerging Self Sovereign Identity (SSI) approaches.
 
 ## Users
 Each User of the platform has a their own profile, which then governs their interactions with the platform. 
@@ -186,7 +186,7 @@ The current implementation relies on assigning users to one of a number of roles
 
 Users inherit these roles by being members of User Groups at the Ecoverse level.
 
-There is fine grained control on the GraphQL mutations (api calls) from the Cherrytwist Server based on the roles that the users is assigned. 
+There is fine grained control on the GraphQL mutations (api calls) from the Alkemio Server based on the roles that the users is assigned. 
 
 However in order to ensure the platform is decentralised, having authorisation managed centrally is not an option. As such the goal is to move towards a model whereby authorisation is based on claims / credentials held by the Agent acting on behalf of a User. 
 
@@ -196,14 +196,14 @@ However in order to ensure the platform is decentralised, having authorisation m
 
 This section details out how an Ecoverse instance is deployed, and then how entities such as Challenges hosted in the Ecoverse are created.
 
-A core driver is to ensure that the platform is configurable, and in a replicable way - both to enable reliably development / deployment but also to ensure that over time a community pool of best practice templates emerges that can be leveraged for new innovations in the field of Cherrytwist.
+A core driver is to ensure that the platform is configurable, and in a replicable way - both to enable reliably development / deployment but also to ensure that over time a community pool of best practice templates emerges that can be leveraged for new innovations in the field of Alkemio.
 
 For this inspiration is taken from other process template environments such as Azure DevOps, GitHub Actions etc. 
 
 
 ## Base Install
 
-The Cherrytwist platform is initially deployed in an “empty” state, without an Ecoverse. It does however already include the following roles:
+The Alkemio platform is initially deployed in an “empty” state, without an Ecoverse. It does however already include the following roles:
 *   Global admin: able to deploy templates ane manage assignments to key platform roles
 *   Ecoverse admin: able to carry out all sub roles, create new user groups etc
 *   Community admin: able to manage users, existing user groups, membership of security groups, etc
@@ -215,7 +215,7 @@ The platform is currently limited to have a single Ecoverse deployed onto it.
 This section describes the steps and supporting entities for working with an Ecoverse. 
 
 ### Structure
-The structural setup of the Ecoverse is held in a “Ecoverse Setup file, external to Cherrytwist that contains:
+The structural setup of the Ecoverse is held in a “Ecoverse Setup file, external to Alkemio that contains:
 
 *   The Identity for the Ecoverse e.g. Odyssey, YES!Delft, OdysseyTest etc
 *   The description of the Ecoverse, including all related information such as the Ecoverse Host etc
