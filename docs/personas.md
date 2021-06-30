@@ -1,5 +1,5 @@
-# Cherrytwist Personas
-This document captures the key personas that are currently identified and being elaborated for the Cherrytwist.
+# Alkemio Personas
+This document captures the key personas that are currently identified and being elaborated for the Alkemio.
 
 At a high level, the following primary categories of personas identified:
 * Legal: representing legal entities that are either driving a particular challenge or helping across challenges

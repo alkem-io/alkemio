@@ -1,12 +1,12 @@
 # **Introduction**
 
-This is a working document intended to capture key concepts and terminology that are used within the context of Cherrytwist. 
+This is a working document intended to capture key concepts and terminology that are used within the context of Alkemio. 
 
-As these concepts are used throughout Cherrytwist, it is important for anyone new to Cherrytwist to be familiar with the contents of this document.
+As these concepts are used throughout Alkemio, it is important for anyone new to Alkemio to be familiar with the contents of this document.
 
 # **Challenge: A Journey towards a desired outcome**
 
-The central concept in Cherrytwist is the *Challenge* - a desired outcome to be realised that requires multiple parties to collaborate over a longer period of time.  
+The central concept in Alkemio is the *Challenge* - a desired outcome to be realised that requires multiple parties to collaborate over a longer period of time.  
 
 It is a _*journey*_, whereby those invovled in the challenge will need to work together to realise steps in the right direction towards a desired outcome. 
 
@@ -14,7 +14,7 @@ It is a _*journey*_, whereby those invovled in the challenge will need to work t
 <img src="visuals/challenge-journey.jpg" alt="Challenge as a journey towards a desired outcome" width="600" />
 </p>
 
-All other concepts / activities in Cherrytwist are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
+All other concepts / activities in Alkemio are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
 
 And with any journey, having as complete as possible representation of the route to the destination is important to choosing the right next steps - essentially we need a _*Map*_. However at the moment the pieces of the Map are held by different people and not in a joined up representation. The Map helps you know where you are heading as well as finding the right companions for the journey. This needs to be a shared representation.
 
@@ -22,7 +22,7 @@ And with any journey, having as complete as possible representation of the route
 <img src="visuals/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
 </p>
 
-It is the placement of the Challenge as being _the_ heart of Cherrytwist that sets it apart.
+It is the placement of the Challenge as being _the_ heart of Alkemio that sets it apart.
 
 ## What are the core elements of a Challenge?
 
@@ -109,14 +109,14 @@ Now consider a Challenge, which by its very nature represents multiple types of 
 **Right Ingredients**
 To maximise the changes of realising the desired goals from a Challenge, it is critical to embed the Challenge within a wider community posessing the right balance of skills, drive and understanding to nurture in particular the early stages of the Challenge journey. 
 
-As such the design of Cherrytwist has at its core the notion of an Ecoverse - a hosting community that helps the formation and early incubation of a Challenge. 
+As such the design of Alkemio has at its core the notion of an Ecoverse - a hosting community that helps the formation and early incubation of a Challenge. 
 
 ================================
 
 An additional concept that may help convey the importance of Ecoverse is the notion of DNA - whereby the "DNA" from the Ecoverse host is used to help establish the right ingredients (community) and culture within hosted Challenges. 
 
 ## Challenge Services
-The Cherrytwist paltform enables the management of Challenges over their full lifecyle. Challenges are hosted within an Ecoverse - which in turn is hosted by a host organisation. 
+The Alkemio paltform enables the management of Challenges over their full lifecyle. Challenges are hosted within an Ecoverse - which in turn is hosted by a host organisation. 
 
 The platform provides the full lifecycle management, but there are many other activities / services that can be provided to help Challenges on their journey. These services / activities can be provided directly by the Challenge Host organisation, or by other curated service parties that are active within the Ecoverse.  .
 
