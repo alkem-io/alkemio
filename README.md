@@ -16,7 +16,7 @@ Alkemio is about enabling open innovation, across all aspects of society. Connec
 
 Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
 
-The core concept is a **Challenge**, creating a **shared understanding** of where we are now so that we can start making progress **towards** a new reality. But making progress in a hyper connected society is simply hard: there are many multiple stakeholders that typically need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
+The core concept is a **Challenge**, creating a **shared understanding** of where we are now so that we can start making progress **towards** a new reality. But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
 
 There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
 
