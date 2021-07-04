@@ -5,18 +5,18 @@ Good questions, lets start with the core concept...
 A Challenge is any dissatisfaction with current reality. Where are we now and what would we like to change?
 
 A Challenge requires multiple parties to coordinate their activities over a longer period to make progress. 
-A Challenge is complex, spanning multiple organisational boundaries.
+A Challenge is complex, typically spanning multiple organisational boundaries.
 
 Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
 
-<p >
+<p  align="center">
 <img src="./visuals/challenge-journey.jpg" alt="A Challenge is a journey" width="600" />
 </p>
 
 ## Why do we need to manage Challenges effectively?
 The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.
 
-<p >
+<p  align="center">
 <img src="./visuals/societal-complexity-rising.jpg" alt="Societal complexity is rising" width="600" />
 </p>
  
@@ -36,13 +36,14 @@ Society needs to be able to more effectively collaborate to address the Challeng
 
 ## What does Alkemio Platform enable?
 
-The A Platform manages a shared representation of a Challenge, which has the following core aspects:
+The Alkemio Platform manages a shared representation of a Challenge, which has the following core aspects:
 * **What do we want to change?**: the shared representation (**context**) of the desired outcomes and current understanding. 
 * **Who wants to contribute?**: the people and organisations (**community**) that wish to collaborate within the shared context. 
 * **How do we effectively collaborate?**: making it easier to work together (**collaboration**) towards the desired outcomes. 
+* **How to we find similar Challenges? Who can help?**: making it easier to find similar Challenges (**connect**) and talent to help make progress. 
 * **How we manage the full lifecycle?**: explicitly managing the phases so that the focus is on the results, not steps on the journey (**continuity**) 
 
-<p >
+<p align="center">
 <img src="./visuals/challenge-shared-representation.jpg" alt="Shared representation" width="600" />
 </p>
 

@@ -5,24 +5,22 @@
 <p align="center"><i><b>Open Innovation Platform.</b></i></p>
 <p align="center"><i>Enabling society to collaborate. Building a better future, together.</i></p>
 
-
-# Alkemio: Open Innovation Platform 
 Alkemio is an open source, open innovation platform. It puts the Challenges central. 
 
 Note: Alkemio used to be called Cherrytwist, so you may still see this name appearing in documentation / code etc. 
 
-
-
 <p></p>
 
 ## Why Alkemio?
-Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. Enabling society to collaborate. Building a better future, together. 
+Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. 
 
-The core concept is a Challenge, moving from where we are now to a new reality. But in a hyper connected society that involves multi-stakeholder collaboration, which is simply hard - and we believe that a lot more innovation is needed in how we collaborate.
+Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
+
+The core concept is a **Challenge**, creating a **shared understanding** of where we are now so that we can start making progress **towards** a new reality. But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
 
 There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
 
-<p >
+<p align="center">
 <img src="./docs/visuals/challenge-shared-representation.jpg" alt="Shared representation" width="600" />
 </p>
 
@@ -32,14 +30,15 @@ The Alkemio Platform is fully open source, and relies on a combination of core d
 For additional details on project partners and supporters please look at our [website](https://alkem.io). 
 
 ## Connecting + Getting Help
-The best place to start is on our **[discussions](https://github.com/alkem-io/alkemio/discussions). There you can raise ideas, ask for help, connect with others etc. 
+The best place to start is on our **[github discussions](https://github.com/alkem-io/alkemio/discussions)**. There you can raise ideas, ask for help, connect with others etc. 
 
 If at any point you would like more information, or connect more directly to the team behind the platform, then please feel to reach out via <community@alkem.io>!
 
 ## How do I get started?
 The easiest way to get started with Alkemio is to see it in action! For that there are a couple of options:
-* **[Demo Environment](https://demo.alkem.io)** - a production Alkemio instance showing Odyssey's hosted Challenges from their Odyssey Momentum event late 2020. 
-* **[Try it out locally](https://www.github.com/alkem-io/demo)** - create your own local Alkemio instance and populate it with sample data.
+* **[Demo Environment](https://demo.alkem.io)** - a non-production environment illustrating how multiple organisations / users can host Challenges on a single hub, allowing the community to be shared across all Challenges and users to find Challenges that they want to contribute to. 
+  * If you are interested in having your own Challenges Space on the demo enviornment to try it out please reach out via <community@alkem.io>!.  
+* **[Try it out locally](https://www.github.com/alkem-io/demo)** - create your own local Alkemio instance and populate it with sample data. Recommended for the more hands on :)
 ## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 
 
