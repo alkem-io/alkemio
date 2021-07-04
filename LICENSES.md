@@ -1,4 +1,4 @@
-The Stichting Alkemio ("Stichting") reserves all rights to the works that belong to the Sitchting published on this GitHub account. Nevertheless, reuse is permitted under the following conditions.
+The Stichting Cherrytwist ("Stichting") reserves all rights to the works that belong to the Sitchting published on this GitHub account. Nevertheless, reuse is permitted under the following conditions.
 
 First - The work that is created in the ALkemio project, is available under the EU-PL license; and any outside contributions to it are under an [individual Contributor License Agreement](https://github.com/alkem-io/.github/blob/master/CLA.md) ("CLA") that references this license explicitly.
 
