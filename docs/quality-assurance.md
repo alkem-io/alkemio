@@ -23,13 +23,13 @@ First QA priority is the "Server" repository quality
 
 - ### Functional testing: 
     - Unit testing<sup>*</sup>
-    - [GraphQL API integration tests](https://github.com/alkem-io/server/tree/develop/test)
+    - [GraphQL API integration tests](https://github.com/alkem-io/server-api-tests/tree/develop/test/functional)
     - GraphQL Exploratory testing
         
 - ### Non-functional testing:
-    - [Performance testing](https://github.com/alkem-io/Server/tree/develop/test/performance)
+    - [Performance testing](https://github.com/alkem-io/server-api-tests/tree/develop/test/non-functional/performance)
     - Security testing
-         - [Authorization tests and accounts](https://github.com/alkem-io/server/tree/develop/test/auth)
+         - [Authorization tests and accounts](https://github.com/alkem-io/server-api-tests/tree/develop/test/non-functional/auth)
               - admin@alkem.io
               - ecoverse.admin@alkem.io
     - [Database migrations](https://github.com/alkem-io/server/develop/README.md)
@@ -64,7 +64,7 @@ Secondary QA priority is the "Client.Web" repository quality
 
 # Reporting
  
-- [Test cases](https://travis-ci.com/github/Alkemio/Server/builds)
+- [Test cases](https://app.travis-ci.com/github/alkem-io/server-api-tests)
 
     - Number of test cases
     - Number of failed test cases per service
@@ -76,11 +76,11 @@ Secondary QA priority is the "Client.Web" repository quality
     - Number of development environment defects by severity<sup>*</sup>
 
 # Environments
-- Local - setup for [Server](https://github.com/alkem-io/Server) and [Client.Web](https://github.com/alkem-io/client.web)
+- Local - setup for [server](https://github.com/alkem-io/server) and [client-web](https://github.com/alkem-io/client-web)
 - [Development](https://dev.alkem.io/) - auto-deployed after each merge to develop branch
 - [Test](https://test.alkem.io/) - QA deploys from "github" repositories action, the branch version that is being tested
-- Acc<sup>*</sup>
-- Prod<sup>*</sup>
+- [Acceptance](https://acc.alkem.io/) 
+- [Production](https://hub.alkem.io/) 
 
 # Tools
 - [VS Code](https://code.visualstudio.com/) - IDE for automation test development
@@ -88,7 +88,7 @@ Secondary QA priority is the "Client.Web" repository quality
 - [Jmeter](https://jmeter.apache.org/) - performance test tool 
 - [Postman](https://www.postman.com/) - API testing tool
 - [MySQL 8](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/) - query data and testing the systems integration
-- [Populator.GSheet](https://github.com/alkem-io/Populator.GSheet) - test data population
+- [Populator](https://github.com/alkem-io/Populator) - test data population
 - Test management system - for the moment, the manual testing is tracked within "github" issues
     - [KIWI TCMS](https://kiwitcms.org/features/) is being evaluated for manual test case management
 
@@ -97,3 +97,40 @@ Secondary QA priority is the "Client.Web" repository quality
 Test terminology meaning is based on: ["ISTQB" syllabus](https://www.istqb.org/downloads/send/69-2019-advanced-level-test-analyst/303-advanced-level-syllabus-2019-1-test-analyst.html)
 
 <sup>*</sup>to be defined/implemented
+
+# Release - QA checklist
+
+### Pre-deployment
+
+- [ ] Nightly test build is passing    [![Build Status](https://app.travis-ci.com/alkem-io/server-api-tests.svg?branch=develop)](https://app.travis-ci.com/alkem-io/server-api-tests)
+- [ ] Server CI: passing  [![Build Status](https://app.travis-ci.com/alkem-io/server.svg?branch=develop)](https://app.travis-ci.com/alkem-io/server)
+- [ ] Client-web CI: passing [![Build Status](https://app.travis-ci.com/alkem-io/client-web.svg?branch=develop)](https://app.travis-ci.com/alkem-io/client-web)
+- [ ] New features/bugs are tested manually and/or automated
+  - [ ] Feature/Bug "x"
+  - [ ] Feature/Bug "y"
+  - [ ] Feature/Bug "y"
+- [ ] Update scripts: tested
+- [ ] Migration scripts: tested
+- [ ] Performance/Security analyses, if required
+
+
+### Post-deployment
+
+- [x] System smoke test
+  - [ ] Sign in/out
+  - [ ] User registration
+  - [ ] User profile update
+  - [ ] User access to available resources
+    - [ ] Ecoverse page
+    - [ ] Challenge page
+    - [ ] Opportunity page
+    - [ ] Search page
+    - [ ] Admin page
+      - [ ] Ecoverses
+      - [ ] Users
+      - [ ] Organisations
+      - [ ] Authorization
+- [ ] Update scripts: verify no data loss/coruption
+- [ ] Migration scripts: verify no data loss/coruption
+- [ ] Logs are error free
+- [ ] Performance/Security analyses, if required
