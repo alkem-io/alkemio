@@ -60,14 +60,13 @@ The key entities in the model are:
     *   **Profile**: a shared entity across Users, UserGroups and Organisations to represent their Profile in a consistent way. It manages the avatar of the entity, tagsets giving meta-data about the entity (e.g. industry, skill sets, intersts) and references for links related to the entity (e.g. website of an organisation, linkedin profile for a user etc)
 *   **Context**: 
     * **Context**: The shared understanding, at either Ecoverse or Challenge level. 
-    * **ActorGroups + Actors**: The different groups of actors who are identified and/or engaged
+    * **Ecosystem Model**: A representation (model) of the different types of **ActorGroups + Actors**, plus later the value types each receives / brings into the Ecosystem. 
     * **Aspects**: The aspects to solutions being worked on in the context of the Challenge
 *   **Collaboration**: 
     * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
-    * **Relation**: an interaction to be tracked between two Users / Organisations / Groups related to a particular aspect (e.g. Opportunity) within the platform
-*   **Agents (SSI)**: 
-    * **DID**: the persistent decentralised identifier as per W3C standard
-    * **DDO**: The document describing the DID, with roles etc. 
+    * **Relation**: an interaction to be tracked between two Users / Organisations / Groups related to a particular Opportunity
+*   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organisations, Challenges, Ecoverses etc. 
+    * **Credentials**: a list of credentials held by the Agent. Important to note is that there are two types of credentials that can be associated with an Agent (a) simple credentials, which are managed by the platform (b) verified credentials, which are familiar W3C Verified Credentials. 
 
 To facilitate flexible usages of this data model, most key entities have **Tagsets** associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
@@ -79,8 +78,8 @@ There is also a *physical data model* that is how the logical data model is stor
 
 The logical layers to the Alkemio architecture:
 *   **Clients**: the actual devices being used to interact by the users 
-*   **Interaction**: the user experiences being provided to Users as they interact within the context of an Ecoverse / Challenge
-*   **Server**: for managing all aspects of the Ecoverse & Challenge lifecycle
+*   **Interaction**: the user experiences being provided to Users as they interact with other Agents for other entities in the platform.
+*   **Server**: for managing all entities hosted by the platform
 
 The layering is shown in the following diagram:
 <p>
@@ -89,7 +88,7 @@ The layering is shown in the following diagram:
 
 ## Interaction (aka user interfaces)
 
-The server maintains the long term representation of the Challenge, with which users interact in many different ways over the lifecycle of the Challenge. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
+The server maintains the long term representation of all Challenges hosted by the platform. Users and Organisations interact in many different ways over the lifecycle of the Challenge. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
 
 Examples types of interactions:
 *   Dedicated website
@@ -113,7 +112,7 @@ The interaction layer will typically be a stateless application and will communi
 
 The core of Alkemio, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
-<p>
+<p align="center">
 <img src="images/design-server-components.png" alt="Server Components" width="600" />
 </p>
 
@@ -142,19 +141,43 @@ The following locations are identified for the storage of data associated with A
 The platform currently has both Database and CAS available - additional storage mechanisms will be added as needed later. 
 
 
-# Interacting: Users, Agents, Authentication & Authorisation
+# Security, Decentralization & Identity
 
-This section describes the user model that is used for all interactions with Alkemio. Key is that this interaction model can work with both existing web paradigms as well as emerging Self Sovereign Identity (SSI) approaches.
+This section describes how users interact with the platform in a secure manner. 
 
-## Users
-Each User of the platform has a their own profile, which then governs their interactions with the platform. 
+The key design goals driving the setup below are:
+* **Security**: it goes without saying that for a platform that is facilitating the collabration between multiple stakeholders that security is paramount for the necessary trust needed for interactions
+* **Decentralization ready**: the interaction pattern has to be able to support operating in a decentralized setup. By decentralized in this case we focus on having entities such as Challenges, Opportunities, Users, Organisations being able to interaction *without* being on the same server. The initial implementation does have all entities on the same server, but the interaction pattern has to support being decentralized. 
+* **Extendable**: there are many ways that entities (e.g. users) can authenticate themselves, so the design needs to be flexible in terms of how entities are authenticated.  
 
-## Agents
-Each User of the platform, and each entity such as a Challenge or Opportunity, have SSI _Agents_ that the platform manages on their behalf. 
+## Actor Model & Agents
+The target interaction pattern is the Actor Model, whereby entities are represented as independent actors that interact via the exchange of messages. This is a [well known approach](https://arxiv.org/vc/arxiv/papers/1008/1008.1459v8.pdf) that matches well to entities interacting in a decentralized manner. 
 
-Each Agent can then further have artifacts such as wallets that it controls, and can interact on behalf of the user / entity with other elements of the platform. The usage of Agents is currently largely invisible to Users - but it is critical to setup the platform from the start with Agent based interaction patterns to enable moving more decentralized later.
+Core autonomous entnties in the platform have an **Agent** that represents that entity in platform interactions. Entities with Agents currently are: User, Organisation, Challenge, Ecoverse & Opportunity. Each Agent has _Credentials_ which can interact on behalf of the user / entity with other elements of the platform. 
 
-Critically, all identities (SSI) created by the platform are managed by the platform on behalf of the user i.e. acting as a proxy for actions authorised by the user via their Account. The goal is to have these identities held outside of the platform - but that is in itself a journey with multiple steps on the way.
+The usage of Agents is currently largely invisible to Users - but it is critical to setup the platform from the start with Agent based interaction patterns to enable moving more decentralized later.
+
+Note: the text below primarily talks about Users for Authentication and Authorization, but the approach is also applicable for other entities with Agents e.g. Challenges, Organisations etc. 
+
+## Authentication Providers
+The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After succesful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
+
+<p align="center">
+<img src="images/security-authentication-providers.png" alt="Security: Authentication Providers" width="600" />
+</p>
+
+The platform currently supports the usage of [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OAuth2 so that it is straightforward to integrated external authentications, e.g. Github, Google etc, into the platform. 
+
+This design is chosen so that in the future the platform can be extended with additional Authentication Providers e.g. their own SSI, a topic of [very active development](https://identity.foundation/did-siop/) in the SSI community. 
+
+## Credential Based Authorization
+All Authorization within the Alkemio platform is based on Credential Based Authorization. This section will provide a high level overview of this approach, and please [read this document](./credential-based-authorization.md) for additional details.
+
+<p align="center">
+<img src="images/security-credential-based-authorization.png" alt="Credential Based Authorization" width="600" />
+</p>
+
+Critically, all identities  created by the platform are managed by the platform on behalf of the user i.e. acting as a proxy for actions authorised by the user via their Account. The goal is to have these identities held outside of the platform - but that is in itself a journey with multiple steps on the way.
 
 Worth noting that this hybrid approach also allows platform users to leverages some of the benefits of Self Sovereign Identity (SSI) such as pairwise unique identifiers etc for peer interactions, albeit with the Ecoverse as a trusted party until that trust role is decentralised. 
 
@@ -162,18 +185,7 @@ As aspects of SSI mature the intention is to allow more of the platform interact
 
 The ideal scenario for Users is that ultimately they can have their own SSI that can then control the Agents managed by the platform - or replace the platform Agents. 
 
-## Authentication Providers
-To authenticate users, the platform uses the concept of Authentication Providers. An Authentication Provider has the sole responsibility of authenticating users - so that upon authentication the platform knows exactly which User has logged in.
 
-<p>
-<img src="images/security-authentication-providers.png" alt="Security: Authentication Providers" width="600" />
-</p>
-
-The currently supported Authentication Providers are:
-* Azure Active Directory (AAD) - a production, enterprise class Identity Provider from Microsoft.
-* Demo Authentication Provider - a non-production authentication provider to show the capabilities of the platform in a lightweight way.
-
-This design is chosen so that in the future users can also authenticate using their own SSI - a topic of [very active development](https://identity.foundation/did-siop/) in the SSI community. 
 
 ## Authorisation
 Once a User is authenticated, then the platform needs to know what they are authorised to do on the platform.
