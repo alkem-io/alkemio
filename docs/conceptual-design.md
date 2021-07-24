@@ -4,22 +4,24 @@ This is a working document intended to capture key concepts and terminology that
 
 As these concepts are used throughout Alkemio, it is important for anyone new to Alkemio to be familiar with the contents of this document.
 
-# **Challenge: A Journey towards a desired outcome**
+# **Challenge: A dissatisfaction with the current reality**
 
-The central concept in Alkemio is the *Challenge* - a desired outcome to be realised that requires multiple parties to collaborate over a longer period of time.  
+The central concept in Alkemio is the *Challenge* - a dissatisfaction with the current reality, around which multiple parties collaborate over a longer period of time to make progress.  
 
-It is a _*journey*_, whereby those invovled in the challenge will need to work together to realise steps in the right direction towards a desired outcome. 
+It is a _*journey*_, whereby those invovled in the challenge will need to work together to realise progress.. 
 
-<p >
-<img src="visuals/challenge-journey.jpg" alt="Challenge as a journey towards a desired outcome" width="600" />
+<p align="center">
+    <img src="images/challenge-journey.jpg" alt="Challenge as a journey towards a desired outcome" width="600" />
 </p>
 
 All other concepts / activities in Alkemio are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
 
+### Creating the map, together
+
 And with any journey, having as complete as possible representation of the route to the destination is important to choosing the right next steps - essentially we need a _*Map*_. However at the moment the pieces of the Map are held by different people and not in a joined up representation. The Map helps you know where you are heading as well as finding the right companions for the journey. This needs to be a shared representation.
 
-<p >
-<img src="visuals/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
+<p align="center">
+<img src="images/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
 </p>
 
 It is the placement of the Challenge as being _the_ heart of Alkemio that sets it apart.
@@ -28,7 +30,7 @@ It is the placement of the Challenge as being _the_ heart of Alkemio that sets i
 
 ### Context
 At the heart of a Challenge, and providing the foundation from which the Challenge progresses, is the _*Context*_. 
-<p>
+<p align="center">
 <img src="images/challenge-context.png" alt="Challenge Context" width="400" />
 </p>
 
@@ -45,10 +47,11 @@ For all those participating in a Challenge it is important that the set of Agree
 * Legal context: Any legal infrastructure / setup that should be used for collaboration
 
 The Context represents the current understanding of the challenge - so it will evolve. 
+
 ### Community
 Around the Context is the _*Community*_, the people and organisations who wish to contribute to the achieving the desired outcomes. 
 
-<p>
+<p align="center">
 <img src="images/challenge-community.png" alt="Challenge Community" width="400" />
 </p>
 
@@ -60,7 +63,7 @@ The set of Roles for a Challenge captures the key generic roles around the Chall
 ### Collaboration
 The Community uses the shared Context to _*Collaborate*_, working together towards the desired outcomes. 
 
-<p>
+<p align="center">
 <img src="images/challenge-collaboration.png" alt="Challenge Collaboration" width="400" />
 </p>
 
@@ -77,7 +80,7 @@ However all too often Challenges tend to simply fizzle to a halt: there is a lot
 
 The goal should be to ensure that the Challenge progress can continue and be tracked over the full lifecycle - which is captured under the term _*Continuity*_.
 
-<p>
+<p align="center">
 <img src="images/challenge-continuity.png" alt="Challenge Continuity" width="400" />
 </p>
 
@@ -90,7 +93,7 @@ _Ecoverse_ is a contraction of the words "ecosystem" and "universe". It is where
 The expectation is the the community for the Ecoverse is curated, and provides the hosted Challenges with the right "ingredients"- especially in the early formation stages. 
 
 
-<p>
+<p align="center">
 <img src="images/ecoverse.png" alt="Ecoverse: Hosting of Challenges" width="600" />
 </p>
 
@@ -121,11 +124,13 @@ The Alkemio paltform enables the management of Challenges over their full lifecy
 The platform provides the full lifecycle management, but there are many other activities / services that can be provided to help Challenges on their journey. These services / activities can be provided directly by the Challenge Host organisation, or by other curated service parties that are active within the Ecoverse.  .
 
 
-# **Connected Ecoverses**
-The expectation is that over time a number of Ecoverses will be established - each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
+# **Shared Community across Ecoverses**
+The expectation is that over time many Ecoverses are created, each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
+
+Key is that the community that is engaged on Challenges within a particular Ecoverse is also able to connect to other Challenges hosted in other Ecoverses.
 
 
-<p>
+<p align="center">
 <img src="images/ecoverses-connected.png" alt="Connected Ecoverses" width="600" />
 </p>
 

@@ -29,7 +29,7 @@ Near term the platform will be adding a third, open source production quality au
 The Alkemio AAD Client authentication uses the Authorization Code Flow with Proof Key for Code Exchange(PKCE). It takes advantage of the MSAL.js library built-in integration with AAD. 
 
 <p>
-<img src="images/security-aad-authentication-provider.png" alt="Authorisation Code Flow with PKCE" width="600" />
+<img src="images/security-aad-authentication-provider.png" alt="Authorization Code Flow with PKCE" width="600" />
 </p>
 
 Fig.2 AAD Authorization Code Flow with Proof Key for Code Exchange (PKCE)
@@ -46,7 +46,7 @@ NB! If any of the calls / callbacks aren’t strictly followed the flow will be 
 The Alkemio Demo Client authentication allows user to "register" with the platform and to then interact in an authenticated manner. It is primarily for usage in Demonstrations and for Development - it is **not** for production usage. 
 
 <p>
-<img src="images/security-demo-authentication-provider.png" alt="Authorisation Code Flow with PKCE" width="600" />
+<img src="images/security-demo-authentication-provider.png" alt="Authorization Code Flow with PKCE" width="600" />
 </p>
 
 Fig.2 Demo Authentication Provider Flow 
@@ -63,14 +63,14 @@ The following roles are used within the context of the Alkemio platform:
 
 The above roles are managed via membership of a restricted set of UserGroups at the Ecoverse level i.e. there is a "Community-Admins" group and users that are members of that group will inherit the Community-Admin role. 
 
-On Alkemio server startup a file is loaded that specifies a default set of users to go into the authorisation groups.
+On Alkemio server startup a file is loaded that specifies a default set of users to go into the authorization groups.
 
 ##	Group mapping to API calls
 
 
 **Queries**
 
-| Entity     | API Call EndPoint    | Minimum Authorisation Level  | Notes                           |
+| Entity     | API Call EndPoint    | Minimum Authorization Level  | Notes                           |
 | -----------| -------------------- | ---------------------------- | ------------------------------- |
 | Global   | user           | member | |		
 |	 | users	    | member | |
@@ -98,11 +98,11 @@ On Alkemio server startup a file is loaded that specifies a default set of users
 |  |	groups	        | member	 | |
  
 
-Note: the above is not a comprehensive list of all fields / entities but it intended to give an overview of the authorisation levels needes to access the different types of information managed by the Alkemio server.
+Note: the above is not a comprehensive list of all fields / entities but it intended to give an overview of the authorization levels needes to access the different types of information managed by the Alkemio server.
 
 **Mutations**
 
-| Entity                        | API Call EndPoint    | Minimum Authorisation Level  | Notes             |
+| Entity                        | API Call EndPoint    | Minimum Authorization Level  | Notes             |
 | ----------------------------- | -------------------- | ---------------------------- | ----------------- |
 | Platform| 	createUser	| self, community-admin	| | 
 | | 	updateUser| 	self, community-admin	| | | | 	removeUser	| community-admin	| | 
