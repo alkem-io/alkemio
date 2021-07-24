@@ -9,7 +9,7 @@ The high level design for the Authorization Framework is shown below.
 It is important to note that while the set of Credentials held by an Agent is expected to be dynamic and evolve with platform usage, the Authorization Policies are expected to not change often. 
 
 ## **Why use Credentials? Are Access Control Lists / Groups not enough?**
-To operate the platform in a decentralized manner, the Authorization framewokr used cannot rely on centralized access control. Given the platforms focus on SSI, the choice was made to move to using Credentials for the authorization of all actions on the platform.  
+To operate the platform in a decentralized manner, the Authorization framework used cannot rely on centralized access control. Given the platforms focus on SSI, the choice was made to move to using Credentials for the authorization of all actions on the platform.  
 
 It is important to understand how this is different. Most systems tend to use a form of access control lists for managing roles, which then determines what access and actions could be carried out. All role assignment is then done centrally. This is fundamentally different than using Credentials for Authorization. A simple analogy to explain the difference: a person wants to get access to a conference:
 * **Access Control Lists**: the person goes to the conference entrance, and identifies themselves. Their identity is checked against a list at the door by the representative. If the *identity* is on the list the user is granted access.
@@ -17,7 +17,7 @@ It is important to understand how this is different. Most systems tend to use a 
 
 Note that the latter is inherently more scalable and decentralized as there is not a centralized list that is used at the entrance to the conference. 
 
-The medium term goal is to move to using full SSI with Verified Credentials. However as an intermediate step the platform uses a lightweight implementation of non-verified Credentials (i.e. not cryptographically secure and managed by the platform). This works as the platform is still centralized but it is important to switch already to Credential based authorization now so that the path to using decentralized authorisation is clear. 
+The medium term goal is to move to using full SSI with Verified Credentials. However as an intermediate step the platform uses a lightweight implementation of non-verified Credentials (i.e. not cryptographically secure and managed by the platform). This works as the platform is still centralized but it is important to switch already to Credential based authorization now so that the path to using decentralized authorization is clear. 
 
 ## **Terminology**
 The terminology used within Alkemio for Credential Based Authorization has borrowed heavily from initiatives such as [Cability Based Authorization System](https://essif-lab.eu/capability-based-authorization-system-by-jolocom/). This is to both learn from the experience within the wider SSI field, as well as to make the subsequent move to using Verified Credentials easier. 
@@ -116,7 +116,7 @@ _Case 2_:  The User wishes to update the definition of Challenge 7.
 The focus thus far has been fully on being able to use Credentials for all Authorizations on the platform. 
 
 The current setup can be improved in multiple dimensions:
-* Flexibility: particularly regarding the authorization rules that are supported by the platform. The rules introduced in phase 2 are fairly rigid and custom - so later would like to move to leverage a claims authorisation package.
+* Flexibility: particularly regarding the authorization rules that are supported by the platform. The rules introduced in phase 2 are fairly rigid and custom - so later would like to move to leverage a claims authorization package.
 * Performance: the current implementation is not yet optimized, relying on horizontal scaling
 * Maintainability: making it easier to cascade updates to AuthorizationPolicies to child entities. 
  

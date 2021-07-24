@@ -24,41 +24,34 @@ The convention for naming of feature branches is that they should take the name 
 In general there should be one issue per feature branch.
 
 ## Shared Environments
-In addition there are currently two staging environments that each have both the [client.web](https://github.com/alkem-io/client.web) and server repos deployed:
-- **[dev](https://dev.alkem.io)**: for the continual deployment from the _develop_ branch 
-- **[test](https://test.alkem.io)**: for validating production deployments from the _main_ branch 
-Both of these environments should be live at all times.
+In addition the following environments are used for the release management of the platform:
+- **[dev](https://dev.alkem.io)**: for the continual deployment from the _develop_ branch, from Server and client repos.
+- **[test](https://test.alkem.io)**: for carrying out performance / load testing, or just simply having an environment whereby particular issues can be reviewed
+- **[acc](https://acc.alkem.io)**: for verification of new builds before they are deployed to production environments
+- **[demo](https://demo.alkem.io)**: a semi-production environment where the capabilities fo the platform can be evaluated
+- **[prod](https://hub.alkem.io)**: the production open innovation hub. 
 
 The _dev_ environment exposes the following end points:
 * client: https://dev.alkem.io
 * server: https://dev.alkem.io/graphql
 
-Similar end points are exposes for the _test_ environment.
+Similar end points are exposes for all other environments.
 
 ## Development Environment 
 Development takes place primarily on local machines.
 
 The default developer IDE is VS Code, and repos may include configuration for that IDE that make sense to be shared (debug setups etc).
 
-The following tooling is in use within the repos:
-- ESLint: for checking code formatting. 
-
-## Development Best Practices
-It is recommended that environment variables are used for configuring environment specific settings, typically via a `.env` file. 
-
-The environment variables should be then be picked up by docker images etc. 
-
 ## Builds
-There are currently CI builds on the _develop_ branches of the following repositories:
+There are currently CI and Nightly builds on the _develop_ branches of the following repositories:
 - [**Server**](https://github.com/alkem-io/server)
 - [**Client.Web**](https://github.com/alkem-io/client.web)
-- [**Demo Authentication Provider**](https://github.com/alkem-io/AuthenticationProvider)
 
 
 ## Docker Images + Image Registries
 Docker is used to containerize the results from each repository. 
 
-DockerHub is used as the primary registry for public images. New Images are pushing automatically to DockerHub upon tagged releases in the repos. 
+[DockerHub](https://hub.docker.com/orgs/alkemio/repositories) is used as the primary registry for public images. New Images are pushing automatically to DockerHub upon tagged releases in the repos. 
 
 The currently supported repos on dockerhub are:
 - alkemio/server

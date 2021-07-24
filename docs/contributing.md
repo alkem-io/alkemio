@@ -10,7 +10,10 @@ The key repositories in use by the project are:
 - **Coordination**: This is the main repository for orchestrating the project.
 - [**Server**](https://github.com/alkem-io/Server): the primary back end server that manages interactions with the platform
 - [**Client.Web**](https://github.com/alkem-io/client.web): browser based interface for interacting with the platfrom.
-- [**Infrastructure**](https://github.com/alkem-io/infrastructure): for managing the environments, deployments & builds
+- [**Demo**](https://github.com/alkem-io/demo): for createing a demonstration instance of the platform, with data, locally.
+- [**Client.Lib**](https://github.com/alkem-io/client.lib): wrapper around the server api for interacting programmatically with the platform.
+- [**Populator**](https://github.com/alkem-io/populator): for populating an Ecoverse using data loaded from a spreadsheet.
+- [**Infrastructure**](https://github.com/alkem-io/infrastructure): additional information related to deploying the platform as a cluster
 
 Each repository itself contains documentation that is specific for that component.
 
@@ -19,15 +22,17 @@ The coordination of this project is based primarily on GitHub issues, augmented 
 
 Each repo has its own set of issues.
 
-The Coordination repo is used for issues that span the whole project. 
+[This](https://github.com/alkem-io/alkemio) repo is used for issues / discussions that span the whole project. 
 
-All Epics are in the Coordination repo.
+All Epics are in the Alkemio repo.
 
 The [ZenHub board](https://app.zenhub.com/workspaces/Alkemio-5ecb98b262ebd9f4aec4194c) spans all active repositories and brings all open issues into a joined up backlog. 
 
-In addition there is a **Discord** for more in lace for quick conversations about Alkemio, daily standups etc.the 
+There is a **Discord** for more in lace for quick conversations about Alkemio, daily standups etc.
 
 If you are contributing to the project the default path is to fork and submit a pull request.
+
+Finally, for discussions about ideas, needing help, collaborations etc, please check out our [GitHub Discussions](https://github.com/alkem-io/alkemio/discussions).
 
 ## Becoming a core contribrutor
 If you are interested in becoming a core contributor then please reach out via <community@alkem.io>.
@@ -37,5 +42,9 @@ If you are interested in becoming a core contributor then please reach out via <
 - atstoyanov
 - comoque1
 - ReneHonig
-- GhostOnTheFiber
 - wordsmyth73
+- eredine
+- hero101
+- GhostOnTheFiber
+- Pimotte
+- OlegSubik

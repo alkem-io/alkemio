@@ -118,7 +118,7 @@ The core of Alkemio, facilitating all other aspects of the platform. The core su
 
 
 All interactions with the Server are via a set of APIs / services exposed by the platform, and actions are authorised based on the account associated with the user.
-* **Authentication & Authorisation**: Supporting multiple Authentication Providers, and managing User authorisation once they have a valid session. 
+* **Authentication & Authorization**: Supporting multiple Authentication Providers, and managing User authorization once they have a valid session. 
 * **GraphQL API**: This is the interface to the platform for all data exchange. 
 * **Storage Handler**: To manage the different types of storage to be used by the platform. Manage the different platform identities (users, ecoverse, challenges, projects, teams, etc)
 * **Identity, Wallets & Smart Contracts Handler**: Typically DIDs are stored as part of a users or identity registry in a decentralized network as part of a Smart Contract state. To reduce the potential dependency with an external blockchain network it could be possible to store the DID and DDO in the general purpose database where the key is the DID and the value is the DDO content. Similarly, initially wallets associated with an identity would be stored in the database but could be later moved to another type of storage. 
@@ -166,13 +166,15 @@ Note: the text below primarily talks about Users for Authentication and Authoriz
 ## Authentication Providers
 The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After succesful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
 
-The platform currently supports [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OAuth2 so that it is straightforward to integrate external authentications, e.g. Github, Google etc, into the platform. 
+The platform currently supports [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OIDC so that it is straightforward to integrate external authentications, e.g. Github, Google etc, into the platform. 
 
 <p align="center">
 <img src="images/security-authentication-ory.png" alt="Security: Ory Authentication" width="600" />
 </p>
 
 This design is chosen as it essentially isolates the Authentication process from the rest of the platform, so that it can be later extended / adjusted if needed with additional Authentication Providers. In particular one clear goal is to allow users to their own SSI, a topic of [very active development](https://identity.foundation/did-siop/) in the SSI community. 
+
+In essence the Server is protected by Oathkeeper, which then relies on Kratos for the management of the identities (including trusted external authentications) that are allowed to authenticate. This is represented by the Authentication Zone in the diagram - currently only the Alkemio Server works with Oathkeeper / Kratos but as the platform gets more decentralized other services will likely need to also leverage Oathkeeper / Kratos for authenticating incoming requests. 
 
 ## Authorization: Credentials
 All Authorization within the Alkemio platform is based on Credential Based Authorization. This section will provide a high level overview of this approach. For additional details please [read this document](./credential-based-authorization.md).
@@ -218,18 +220,21 @@ The structural setup of the Ecoverse is held in a “Ecoverse Setup file, extern
     *   E.g. Jedis, ChallengeLeads, Crew, …
 
 ### Templates
-A Template contains Entities that are used by the Ecoverse to create Entities with flexible usage patterns. Examples of the kind of information that could be stored within a Template include:
-* Definitions of types of users, such as what tagsets are expected on a particular user type (e.g. skills, interests, ...)
-* Challenge states, user groups, ...
-* Opportunity aspects, actor groups, ...
+A key design goal for Alkemio is the sharing of best practices, so the platform needs to be customizable. This is achieved with Templates.
 
-The template setup is currently only used for holding User profile setup data, but the approach is designed to be extended and support e.g. having multiple Challenge / Opportunity / Project templates available for selection by Ecoverse users.
+Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Ecoverse, Challenge, Opportunity, Project etc) can be instantiated based on a particular template. 
 
-The evolution of the Ecoverse instance from deploying a template and then instantiating a challenge is shown below:
+Key areas where we expect that templates support will be useful include:
+* Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Challenge is approved?
+* Ecosystem Models: what types of actors / values are being exchanged within the ecosystem?
+* Aspects: what are the key aspects for a Challenge / Opportunity that need to be captured within a given Challenge / Opportuntiy?
+* Community: what type of community do you intend to create? What User groups make sense?
+* Whiteboards: what collaboration canvases should be available and what is the goal of each canvas?
+* (later) what are custom credentials / actions that can be carried out within a particular context?
 
-<p>
-<img src="images/design-templates.png" alt="Template deployment" width="600" />
-</p>
+The management of Templates needs to be both at the global level (global catalog), as well as locally controllable i.e. that an Ecoverse can provide a defined set of options (e.g. what Lifecycles can be used).
+
+Currently there is only limited global templates support; if you have suggestions or wish to work with us on this aspect please engage!
 
 #### Challenge, Project & User Group Templates
 
