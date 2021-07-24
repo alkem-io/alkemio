@@ -116,7 +116,7 @@ _Case 2_:  The User wishes to update the definition of Challenge 7.
 The focus thus far has been fully on being able to use Credentials for all Authorizations on the platform. 
 
 The current setup can be improved in multiple dimensions:
-* Flexibility: particularly regarding the authorization rules that are supported by the platform. The rules introduced in phase 2 are fairly rigid and custom - so later would like to move to leverage a claims authorization package.
+* Flexibility: particularly regarding the authorization rules that are supported by the platform. The rules currently are fairly rigid and custom; there could be significant benefit in moving to a claims authorization package.
 * Performance: the current implementation is not yet optimized, relying on horizontal scaling
 * Maintainability: making it easier to cascade updates to AuthorizationPolicies to child entities. 
  

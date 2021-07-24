@@ -35,7 +35,7 @@ The _dev_ environment exposes the following end points:
 * client: https://dev.alkem.io
 * server: https://dev.alkem.io/graphql
 
-Similar end points are exposes for all other environments.
+Similar end points are exposed for all other environments.
 
 ## Development Environment 
 Development takes place primarily on local machines.
