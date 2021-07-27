@@ -189,37 +189,8 @@ Essentially upon a User authenticating, the following happens:
 
 Worth noting that this approach also allows for Credentials to be later held outside of the platform e.g. the user holds their own wallet and manages their own credentials. The ideal scenario for Users is that ultimately they can have their own SSI that can then control the Agents managed by the platform - or replace the platform Agents. 
 
-# Configuration & Deployment
 
-This section details out how an Ecoverse instance is deployed, and then how entities such as Challenges hosted in the Ecoverse are created.
-
-A core driver is to ensure that the platform is configurable, and in a replicable way - both to enable reliably development / deployment but also to ensure that over time a community pool of best practice templates emerges that can be leveraged for new innovations in the field of Alkemio.
-
-For this inspiration is taken from other process template environments such as Azure DevOps, GitHub Actions etc. 
-
-
-## Base Install
-
-The Alkemio platform is initially deployed in an “empty” state, without an Ecoverse. It does however already include the following roles:
-*   Global admin: able to deploy templates ane manage assignments to key platform roles
-*   Ecoverse admin: able to carry out all sub roles, create new user groups etc
-*   Community admin: able to manage users, existing user groups, membership of security groups, etc
-*   Members: able access to the full query api. Able to see details of the challenges that the user is a member of. Able to edit their own user profile.
-
-The platform is currently limited to have a single Ecoverse deployed onto it. 
-
-## Populating an Ecoverse
-This section describes the steps and supporting entities for working with an Ecoverse. 
-
-### Structure
-The structural setup of the Ecoverse is held in a “Ecoverse Setup file, external to Alkemio that contains:
-
-*   The Identity for the Ecoverse e.g. Odyssey, YES!Delft, OdysseyTest etc
-*   The description of the Ecoverse, including all related information such as the Ecoverse Host etc
-*   The UserGroups to be used at the Ecoverse level
-    *   E.g. Jedis, ChallengeLeads, Crew, …
-
-### Templates
+# Templates
 A key design goal for Alkemio is the sharing of best practices, so the platform needs to be customizable. This is achieved with Templates.
 
 Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Ecoverse, Challenge, Opportunity, Project etc) can be instantiated based on a particular template. 
@@ -236,17 +207,144 @@ The management of Templates needs to be both at the global level (global catalog
 
 Currently there is only limited global templates support; if you have suggestions or wish to work with us on this aspect please engage!
 
-#### Challenge, Project & User Group Templates
+# Identifiers + Names
 
-Further, the following entities will have enhanced templating support:
-*   Challenge Template
-*   Opportunity Template
-*   Project Template
-*   Community Template
+## UUID
+Every entity within the platform has a [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier). 
 
-In particular the Project Template is likely to have multiple variations possible to reflect the multiple ways a project may want to be executed. An Opportunity Lead would then select a template to use when launching the challenge.
+This is the primary means for identifying entities within the platform.
 
-These additional templates may be part of the Ecoverse Template or uploaded later, and they initially all require the “global admin” role.
+## NameID
+In addition, the platform also uses a human readable identifier for certain entities. This is in addition to the UUID for the entity. 
+
+The NameID is used for the following purposes:
+* **Client side URLs**: it is used to generate the URL that uniquely can navigate to that entity e.g. https://hub.alkem.io/ecoverse1/challenge1
+* **Human readable**: making it easier to refer to particular entities
+* **Automation**: it makes populating of data on the platform easier
+
+Each NameID is unique within a certain scope. The following table shows which entities have a NameID and what is the uniqueness scope.
+
+| Entity      | Uniqueness scope (namespace) |
+| ----------- | ----------- |
+| User      | Global amongst Users       |
+| Organisation   | Global amongst Organisations        |
+| Ecoverse   | Global amongst Ecoverses        |
+| Challenge   | Within containing Ecoverse         |
+| Opportunity   | Within containing Ecoverse         |
+| Project   | Within containing Ecoverse         |
+
+Notes:
+* This implies that within a particular Ecoverse that the NameIDs for all Challenges, Opportunities and Projects need to be unique. 
+* The combination of (Ecoverse.NameID, Challenge.NameID) is sufficient to universally identify a particular Challenge using human friendly names. 
+
+The following rules apply to the creation / usage of a NameID:
+* 25 character limit
+* allowed characters: a-z, A-Z, 0-9, -
+* Must start with a letter (to create regex rule)
+NameIDs logically **can** be updated (not initially), but with a warning re URLs being affected etc.
 
 
+# Lifecycles
+As described in the Conceptual Design, the collaboration around a Challenge starts with a shared understanding ('Context'). A key element of that shared understanding is understanding where the Challenge (or other entity) is in terms of its maturity. 
 
+The term used within the Alkemio platform for the managing the maturity of Challenges (+ other entities), as well as to enforce processes / workflows, is **Lifecycle**. 
+
+State based representations are widely used, with Finite State Machines (FSMs) being a formalism whereby a system can be in exactly one from a defined set of states, with clearly defined criteria / rules for when a transition can take place. Examples include Kanban boards, RFCs as well as more formally business process modeling approaches. 
+
+A state based representation is a natural match for collaboration on Challenges – allowing clarity for the multiple parties interacting as it is always clear where the Entity is (exactly one state) as well as the allowed transitions with guards that determine how an Entity moves between the potential States. 
+
+## State Machine
+Alkemio uses the [XState](https://xstate.js.org) engine for managing the lifecycle of entities. The embedded XState engine is extremely capable and is widely used. It provides the core state representation syntax, logic and execution.
+
+The XState engine is then wrapped by a *Lifecycle* entity that provides the integration with the Alkemio platform.
+
+<p align="center">
+<img src="images/design-lifecycle.png" alt="Lifecycles" width="600" />
+</p>
+
+Each Lifecycle is instantiated with a particular `machine definition` that defines the set of states plus associated logic for that entity. 
+
+It can then accept incoming events, and upon receiving an event, it restores the state of the XState engine and passes the event to the engine with additional context. It also provides a set of hooks for commands and guards:
+* The commands are capable of carrying out actions within the wider platform e.g. adding a user to a community. 
+* The guards are capable of working with the Authorization Framework to see if a particular command is allowed. 
+
+After executing the command, the Lifecycle then stores the machine state ready for the next incoming event. 
+
+## Declarative Specification
+
+Critically, the separation of the Lifecycle definition using XState allows for the definition of the states  to be declaratively specified. 
+
+
+For example, consider the following lifecycle definition, used for a very simple Challenge:
+
+```
+{
+  id: 'challenge-lifecycle-default',
+  initial: 'new',
+  states: {
+    new: {
+      on: {
+        REFINE: 'beingRefined',
+        ABANDONED: 'abandoned',
+      },
+    },
+    beingRefined: {
+      on: {
+        ACTIVE: 'inProgress',
+        ABANDONED: 'abandoned',
+      },
+    },
+    inProgress: {
+      on: {
+        COMPLETED: 'complete',
+        ABANDONED:'abandoned',
+      },
+    },
+    complete: {
+      on: {
+        ARCHIVE: 'archived',
+        ABANDONED: 'abandoned',
+      },
+    },
+    abandoned: {
+      on: {
+        REOPEN: 'inProgress',
+        ARCHIVE: 'archived',
+      },
+    },
+    archived: {
+      type: 'final',
+    },
+  },
+}
+```
+This is visualized in the platform as follows:
+
+<p align="center">
+<img src="images/design-lifecycle-visual.png" alt="Lifecycle visualized" width="600" />
+</p>
+
+If you are curious you can also cut and paste the above definition into the [official XState Visualization service](https://xstate.js.org/viz/) and see their visualization of the same definition. 
+
+## Usage
+The platform currently uses Lifcycles on the following entities:
+* User Applications
+* Challenges
+* Opportunities
+
+The usage is currently fairly basic as the focus has being on ensuring that the concept is properly embedded within the platform and that it provides a solid foundation for future expansion (as per design principles at the start of this document).
+
+However the expectation is to expand the usage significantly as soon as resources / demand allows:
+* Custom Lifecycle definitions
+* Attaching guards / commands to state transitions
+* Expanding the set of Commands / guards e.g. to allow notifications
+* ...
+
+## SSI Demonstrator
+There is already a demonstrator to illustrate the power of this approach, and how it can be integrated with SSI / VCs.
+
+For this scenario the following was demonstrated:
+* An Agent acting on behalf of a Challenge issued a VC for "LifecycleStateManagement" to a particular User
+* The Agent acting on behalf of the User then stores that VC into its digital wallet (SSI)
+* The logic for the Lifecycle for the Challenge was updated to include a new guard that was executed on all state transitions for a Challenge Lifecycle. 
+* The new guard specified that only Agents with an assigned VC of the above type and tied to the particular Challenge were allowed to update the Challenge state.
