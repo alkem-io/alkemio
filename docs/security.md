@@ -11,11 +11,6 @@ The main principles around the CT security design are:
 * Database is secured via user:password. The database endpoint is accessible only inside the Kubernetes network.
 * Accessing 3rd party APIs requires obtaining API specific access token.
 
- <p>
-<img src="images/security-network.png" alt="Alkemio Security Overview" width="600" />
-</p>
-Fig.1 Alkemio Network Security Overview
-
 ##	Authentication
 As covered in the [Technical Design](./technical-design.md), Alkemio uses the concept of Authentication Providers to externalise the responsibility for Authentication. 
 
