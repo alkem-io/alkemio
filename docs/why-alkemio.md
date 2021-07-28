@@ -10,14 +10,14 @@ A Challenge is complex, typically spanning multiple organisational boundaries.
 Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
 
 <p  align="center">
-<img src="./images/challenge-journey.jpg" alt="A Challenge is a journey" width="600" />
+<img src="./images/visual-challenge-journey.jpg" alt="A Challenge is a journey" width="600" />
 </p>
 
 ## Why do we need to manage Challenges effectively?
 The complexity of our society is simply rising. The result is nearly all the significant issues facing our society are Challenges.
 
 <p  align="center">
-<img src="./images/societal-complexity-rising.jpg" alt="Societal complexity is rising" width="600" />
+<img src="./images/visual-societal-complexity-rising.jpg" alt="Societal complexity is rising" width="600" />
 </p>
  
 
@@ -44,7 +44,7 @@ The Alkemio Platform manages a shared representation of a Challenge, which has t
 * **How we manage the full lifecycle?**: explicitly managing the phases so that the focus is on the results, not steps on the journey (**continuity**) 
 
 <p align="center">
-<img src="./images/challenge-shared-representation.jpg" alt="Shared representation" width="600" />
+<img src="./images/visual-challenge-shared-representation.jpg" alt="Shared representation" width="600" />
 </p>
 
 Critically by putting the Challenge central, and managing a portfolio of Challenges via a plaform, this enables the following:

@@ -3,10 +3,12 @@ This document provides an introduction to the technical design for Alkemio. It i
 
 The architecture is described along the following aspects:
 *   Design Principles
-*   Users: Accounts, Identities & Access Management
-*   Data model
-*   Logical Design
-*   Configuration & Deployment
+*   Logical Data Model
+*   Logical Design, and core components
+*   Security, Identities & Authorization
+*   Identifiers
+*   Templates
+*   Lifecycles & states
 
 In some cases this document will also provide a rationale for decisions that have been made - and of course the initial reference implementation of Alkemio also requires choices to be made regarding actual languages used, hosting, user management stacks etc. 
 
@@ -19,7 +21,8 @@ The following high level choices guide the technical design:
     *   E.g. web 3 under the hood, but exposed using web 2.3 for the user
     *   Leverage latest proven technical solutions (e.g. SSI, Smart Contracts), but shield the end user from the technical complexity until ready
     *   This implies creating the platform with digital identities (SSI) for all entities in the system with associated wallets etc, but that this is all kept internal to the platform in first versions.
-*   **Maintain flexibility to evolve**
+*   **Build for massive scale, with flexibility to evolve**
+    *   Ensure that the core components chosen and how they are used needs to be chosen with massive scale in mind
     *   In practice this means efforts to minimise / isolate deployment dependencies
     *   The initiative is still learning and evolving, so it is deemed prudent to avoid establishing long term dependencies that may not be the right choice.
 *   **Regulated value (e.g. money) out of band i.e. via familiar channels / units**
@@ -42,7 +45,7 @@ The goal of the Alkemio platform is to manage the shared representation of Chall
 
 The following diagram shows at a high level the key entities in use within Alkemio:
 
-<p>
+<p align="center">
 <img src="images/design-logical-data-model.png" alt="Logical Data Model" width="600" />
 </p>
 
@@ -67,6 +70,8 @@ The key entities in the model are:
     * **Relation**: an interaction to be tracked between two Users / Organisations / Groups related to a particular Opportunity
 *   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organisations, Challenges, Ecoverses etc. 
     * **Credentials**: a list of credentials held by the Agent. Important to note is that there are two types of credentials that can be associated with an Agent (a) simple credentials, which are managed by the platform (b) verified credentials, which are familiar W3C Verified Credentials. 
+*   **Authorization Policy**: representing the authorization rules that grant privileges to agents that are interacting with the entity.  
+    * **Privilege**: a list of potential Privileges such as Create, Read, Update, Delete, Grant that can be required in any particular interaction. 
 
 To facilitate flexible usages of this data model, most key entities have **Tagsets** associated with them, allowing for easy filtering + connecting
 *   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
@@ -76,69 +81,46 @@ There is also a *physical data model* that is how the logical data model is stor
 
 # Logical Design
 
-The logical layers to the Alkemio architecture:
-*   **Clients**: the actual devices being used to interact by the users 
-*   **Interaction**: the user experiences being provided to Users as they interact with other Agents for other entities in the platform.
-*   **Server**: for managing all entities hosted by the platform
+The logical layers in the Alkemio architecture are as follows:
+*   **User Interaction**: the user experiences being provided to Users as they interact with the platform.
+*   **Platform**: providing the set of services to clients that are interacting with the platform. 
 
 The layering is shown in the following diagram:
-<p>
-<img src="images/design-interactions.png" alt="Design interaction layers" width="600" />
-</p>
-
-## Interaction (aka user interfaces)
-
-The server maintains the long term representation of all Challenges hosted by the platform. Users and Organisations interact in many different ways over the lifecycle of the Challenge. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
-
-Examples types of interactions:
-*   Dedicated website
-*   Mobile clients
-*   Immersive game / VR experience
-*   Extensions of UX / Web frameworks
-
-For the initial version of Alkemio, the focus will be on extending an existing UX / Web framework to be able to expose and represent visually the information maintained with Alkemio. 
-
-The interaction layer will be in charge of the following responsibilities:
-*   Login/Sign up via SSO
-*   Ecoverse navigation
-*   Challenge navigation
-*   Project initiating and launching
-*   Connecting within the community
-*   (later) Navigating / connecting between Ecoverses that have established trust relationships.
-
-The interaction layer will typically be a stateless application and will communicate with the backend application via GraphQL API.
-
-## Server
-
-The core of Alkemio, facilitating all other aspects of the platform. The core sub-components are shown in the following diagram. 
 
 <p align="center">
-<img src="images/design-server-components.png" alt="Server Components" width="600" />
+<img src="images/design-layers.png" alt="Design layers" width="600" />
 </p>
 
+Note that the platform itself is designed to be able to be used in a "headless" fashion, thus enabling many different types of clients / integrations.
 
-All interactions with the Server are via a set of APIs / services exposed by the platform, and actions are authorised based on the account associated with the user.
-* **Authentication & Authorization**: Supporting multiple Authentication Providers, and managing User authorization once they have a valid session. 
-* **GraphQL API**: This is the interface to the platform for all data exchange. 
-* **Storage Handler**: To manage the different types of storage to be used by the platform. Manage the different platform identities (users, ecoverse, challenges, projects, teams, etc)
-* **Identity, Wallets & Smart Contracts Handler**: Typically DIDs are stored as part of a users or identity registry in a decentralized network as part of a Smart Contract state. To reduce the potential dependency with an external blockchain network it could be possible to store the DID and DDO in the general purpose database where the key is the DID and the value is the DDO content. Similarly, initially wallets associated with an identity would be stored in the database but could be later moved to another type of storage. 
+## User Interaction
 
-### Data Storage
+Users and Organisations interact in many different ways over the lifecycle of the Challenge. As such the primary goal of the Interaction Layer is to ensure that many different types of interactions are feasible, while of course also allowing easy adoption of the platform via one or more reference user interfaces.
 
-The artifacts managed by the server need to be safely and securely managed by the server. The following are key artifacts to be stored by the platform:
-*   **Entities from the data model** i.e. Ecoverse, Challenges & Project state
-*   **Digital Identities**, so both the DID & the DDO associated with a DID
-*   **Smart Contracts**, on an executable platform
-*   **Digital Wallets**, for the management of digital assets such as recognition tokens. Note that no value that falls under regulation would be support initially.
+Examples types of interactions:
+*   Web client (default)
+*   Mobile clients
+*   Immersive game / VR experience
+*   Integrations into other platforms / tooling
 
-The following locations are identified for the storage of data associated with Alkemio:
-*   **Database**: for the data and the relationships between the entities, metadata etc. This could be relational or NoSQL based.
-*   **Content Addressable Storage (CAS)**: for any images or documents that should be stored in a content addressable (CAS) way, whereby the data is also potentially distributed (resilience etc). Primarily used for now as a Content Distribution Network (CDN).
-*   **Ledger**: for smart contracts, and transfer of value. The smart contracts can cover a variety of usages on the platform e.g. execution of projects, digital identities & the definition / control of any tokens created by the Ecoverse.
-*   **Vault**: For management of keys in a readily accessible but secure way. 
-    *   Note: it may be that later users of the platform would want to store value that would warrant usage of cold storage, but the expectation is that this would be done leveraging a third party service. 
+The default web client does allow interacting with the full domain model and administrating the platform. However this should be seen in some sense as a default client, with many other types of clients possible and encouraged.  
 
-The platform currently has both Database and CAS available - additional storage mechanisms will be added as needed later. 
+## Platform
+There are multiple components working together in the Alkemio platform, with the Alkemio server being at the heart of all interactions.
+
+<p align="center">
+<img src="images/design-platform-components.png" alt="Platform Components" width="600" />
+</p>
+
+The core sub-components for the platform are as follows:
+*   **Server**: for managing the entities in the domain model, and facilitating the usage of other services
+*   **Authentication**: for managing the authentication of Users that are interacting with the platform
+*   **Sql Storage**: for storing of databases, including the domain model from the Alkemio server, wallets from SSI, Communications and Identities. 
+*   **Content Addressable Storage (CAS)**: for storing of images, documents. Currently this is a private IPFS cluster.
+*   **Communications**: for managing all communications happening between entities (e.g. community to user, user to user) in the platform
+*   **Self Sovereign Identities (SSI)**: for managing digital identies and wallets for Agents
+
+All interactions with the Server are via the GraphQL api, which in turn relies on the Authentication services to ensure the acting Agent is identified.
 
 
 # Security, Decentralization & Identity
