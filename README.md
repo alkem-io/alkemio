@@ -21,7 +21,7 @@ The core concept is a **Challenge**, creating a **shared understanding** of wher
 There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
 
 <p align="center">
-<img src="./docs/images/challenge-shared-representation.jpg" alt="Shared representation" width="600" />
+<img src="./docs/images/visual-challenge-shared-representation.jpg" alt="Shared representation" width="600" />
 </p>
 
 ## Who is involved with Alkemio?

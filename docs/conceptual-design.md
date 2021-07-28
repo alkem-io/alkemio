@@ -11,7 +11,7 @@ The central concept in Alkemio is the *Challenge* - a dissatisfaction with the c
 It is a _*journey*_, whereby those invovled in the challenge will need to work together to realise progress.. 
 
 <p align="center">
-    <img src="images/challenge-journey.jpg" alt="Challenge as a journey towards a desired outcome" width="600" />
+    <img src="images/visual-challenge-journey.jpg" alt="Challenge as a journey towards a desired outcome" width="600" />
 </p>
 
 All other concepts / activities in Alkemio are to support the realisation of Challenges - from the activities on the journey, to the community that builds up around the Challenge, to the collaboration that takes place around the shared representation of the Challenge. 
@@ -21,7 +21,7 @@ All other concepts / activities in Alkemio are to support the realisation of Cha
 And with any journey, having as complete as possible representation of the route to the destination is important to choosing the right next steps - essentially we need a _*Map*_. However at the moment the pieces of the Map are held by different people and not in a joined up representation. The Map helps you know where you are heading as well as finding the right companions for the journey. This needs to be a shared representation.
 
 <p align="center">
-<img src="images/challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
+<img src="images/visual-challenge-shared-representation.jpg" alt="Creating a shared representation of a Challenge to collaborate around" width="600" />
 </p>
 
 It is the placement of the Challenge as being _the_ heart of Alkemio that sets it apart.

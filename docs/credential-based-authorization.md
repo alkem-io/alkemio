@@ -113,12 +113,14 @@ _Case 2_:  The User wishes to update the definition of Challenge 7.
 
 
 ## **Future work**
-The focus thus far has been fully on being able to use Credentials for all Authorizations on the platform. 
+The focus thus far has been fully on being able to use (non-verified) Credentials for all Authorizations on the platform. 
 
 The current setup can be improved in multiple dimensions:
 * Flexibility: particularly regarding the authorization rules that are supported by the platform. The rules currently are fairly rigid and custom; there could be significant benefit in moving to a claims authorization package.
 * Performance: the current implementation is not yet optimized, relying on horizontal scaling
 * Maintainability: making it easier to cascade updates to AuthorizationPolicies to child entities. 
+* External trust sources: usage of Verified Credentials (VCs) issued by third parties and held by agents interacting with the platform.
+* ...
  
 
 ## **Reference**
