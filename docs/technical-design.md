@@ -330,3 +330,76 @@ For this scenario the following was demonstrated:
 * The Agent acting on behalf of the User then stores that VC into its digital wallet (SSI)
 * The logic for the Lifecycle for the Challenge was updated to include a new guard that was executed on all state transitions for a Challenge Lifecycle. 
 * The new guard specified that only Agents with an assigned VC of the above type and tied to the particular Challenge were allowed to update the Challenge state.
+
+# Communications
+The Alkemio Platform supports communications in two modes:
+* **Community-User**: whereby all members of a Community can see messages 
+* **User-User**: whereby Users can directly communicate with each other 
+
+The functionality is provided using an embedded [Matrix Protocol](https://matrix.org/) server. The choice for basing communications on top of Matrix Protocol is primarily due to it being designed from the ground up as a decentralized communications platform.
+
+<p align="center">
+<img src="images/communications-matrix.png" alt="Communications using Matrix Protocol" width="600" />
+</p>
+
+One of the core concepts in Matrix is the notion of a Room, which can have any number of participants. The concept of Rooms is directly exposed on the Alkemio api.
+
+## Community-User Messaging
+Each Community within Alkemio has two Rooms available:
+* **Updates Room**: whereby a User who is authorized can send updates to a community
+* **Discussion Room**: whereby members of the community can broadcast messages to the whole community
+
+Note that there is a Community entity associated with each Ecoverse, Challenge and Opportunity - ensuring that each of these entities can have Community based messaging.
+
+## User-User Messaging
+Each User can also have a private Room with any other User on the platform. 
+
+This is then a secure private channel for their direct communications.
+
+## Current Usage
+The Matrix Protocol provides a rich set of functionality, only a small fraction of which is currently leveraged / exposed by Alkemio. However the choice was made to embed / wrap Matrix in order to ensure that there is a powerful base for further expanding the communications capabilitities of the platform. 
+
+The current setup implies that the embedded Matrix Server has rooms for each Community, as well as direct messaging rooms.
+
+<p align="center">
+<img src="images/communications-matrix-rooms.png" alt="Communications using Matrix Protocol" width="600" />
+</p>
+
+The Matrix Server is **not** directly exposed currently outside of the cluster, so it can only be accessed via the GraphQL api exposed by the Alkemio platform. 
+
+## Future Usage
+The Matrix  ecosystem offers multiple messaging clients and integrations, and it is clearly highly interesting to investigate how best to allow Users to integrate their communications from the Alkemio platform within other messaging clients. 
+
+Further, the conceptual design of Matrix, with the notion of HomeServer and replicated synchronized copies of the communications data is also one that is worth exploring moving forward in terms of how the data held by the Alkemio platform is stored in a decentralized manner.
+
+
+# Communities & User On-boarding
+Each Ecoverse, Challenge and Opportunity has a Community. This Community represents the set of Users and Organisations that are contributing.
+
+Membership of a Community is curated, meaning that there is an explicit step required to become a member of a Community.
+
+Membership is hierarchical, meaning that to be a member of a Challenge the User also needs to be a member of the containing Ecoverse.
+
+Only registered Users can apply i.e. a User needs to have a Profile on the platform to be able to apply (logically enough!).
+
+## User Membership
+There are currently two ways for a User to become a member of a Community:
+* Directly added by an administrator for the Community
+* Apply to become a member
+
+For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requrested to fill out is currently fixed per level (i.e. the same set of questions is used for all Ecoverses, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
+
+The high level flow for applications is shown below.
+
+<p align="center">
+<img src="images/community-applications.png" alt="Community Applications Flow" width="600" />
+</p>
+
+Once a User has applied to join a Community, the administrator for the Community will see a list of open applications on their administration page for that community. The Administrator uses the combination of the Users profile and responses to the application questions to grant / deny the application.
+
+Finally worth highlighting that the Applications process also makes use of the Lifecycle capabilities of the platform highlighted earlier i.e. there is a Lifecycle defined with a set of states / commands etc that each Application has associated with it.
+
+## Future plans
+Applications are currently visible only via the Administration interface for a Community; ideally a range of notification options including email to all registered administrators would be added. 
+
+Near term the platform can hopefully also support Invitations, so that a Community administrator can directly send out invitations to Users. 
