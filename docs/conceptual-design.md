@@ -81,7 +81,7 @@ However all too often Challenges tend to simply fizzle to a halt: there is a lot
 The goal should be to ensure that the Challenge progress can continue and be tracked over the full lifecycle - which is captured under the term _*Continuity*_.
 
 <p align="center">
-<img src="images/challenge-continuity.png" alt="Challenge Continuity" width="400" />
+<img src="images/design-lifecycle-visual.png" alt="Challenge Continuity" width="400" />
 </p>
 
 By managing a representation of the Challenge that is shared by the community of the Challenge, it is easier to keep the continuity as the Challenge progresses.
