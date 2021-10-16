@@ -37,7 +37,7 @@ If at any point you would like more information, or connect more directly to the
 ## How do I get started?
 The easiest way to get started with Alkemio is to see it in action! For that there are a couple of options:
 * **[Demo Environment](https://demo.alkem.io)** - a non-production environment illustrating how multiple organizations / users can host Challenges on a single hub, allowing the community to be shared across all Challenges and users to find Challenges that they want to contribute to. 
-  * If you are interested in having your own Challenges Space on the demo enviornment to try it out please reach out via <community@alkem.io>!.  
+  * If you are interested in having your own Challenges Space on the demo environment to try it out please reach out via <community@alkem.io>!.  
 * **[Try it out locally](https://www.github.com/alkem-io/demo)** - create your own local Alkemio instance and populate it with sample data. Recommended for the more hands on :)
 ## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 

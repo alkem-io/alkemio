@@ -51,7 +51,7 @@ This logical data model attempts to keep to a minimum, at least initially, the s
 The key entities in the model are:
 *   **Challenge:**
     * **Hub**: where Challenges are hosted, facilitated by a hosting organization. 
-    * **Challenge**: the Challenge itself, including the shared understanding, community and tracked collaboratin. 
+    * **Challenge**: the Challenge itself, including the shared understanding, community and tracked collaboration. 
     * **Opportunity**: a potential significant step towards the desired outcomes of the Challenge. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised. 
 *   **Community**:
     *   **User**: The primary way of interacting with the platform    
@@ -125,7 +125,7 @@ All interactions with the Server are via the GraphQL api, which in turn relies o
 This section describes how users interact with the platform in a secure manner. 
 
 The key design goals driving the setup below are:
-* **Security**: security is critical for a platform that is facilitating the collabration between multiple stakeholders: the trust is needed for interactions.
+* **Security**: security is critical for a platform that is facilitating the collaboration between multiple stakeholders: the trust is needed for interactions.
 * **Decentralization ready**: the interaction pattern has to be able to support operating in a decentralized setup. By decentralized in this case we focus on having entities such as Challenges, Opportunities, Users, Organizations being able to interaction *without* being on the same server. The initial implementation does have all entities on the same server, but the interaction pattern has to support being decentralized. 
 * **Extendable**: there are many ways that entities (e.g. users) can authenticate themselves, so the design needs to be flexible in terms of how entities are authenticated.  
 
@@ -143,7 +143,7 @@ The usage of Agents is currently largely invisible to Users - but it is critical
 Note: the text below primarily talks about Users for Authentication and Authorization, but the approach is also applicable for other entities with Agents e.g. Challenges, Organizations etc. 
 
 ## Authentication Providers
-The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After succesful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
+The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After successful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
 
 The platform currently supports [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OIDC so that it is straightforward to integrate external authentications, e.g. Github, Google etc, into the platform. 
 
@@ -177,7 +177,7 @@ Templates support is high up the backlog for the platform, as it is important th
 Key areas where we expect that templates support will be useful include:
 * Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Challenge is approved?
 * Ecosystem Models: what types of actors / values are being exchanged within the ecosystem?
-* Aspects: what are the key aspects for a Challenge / Opportunity that need to be captured within a given Challenge / Opportuntiy?
+* Aspects: what are the key aspects for a Challenge / Opportunity that need to be captured within a given Challenge / Opportunity?
 * Community: what type of community do you intend to create? What User groups make sense?
 * Whiteboards: what collaboration canvases should be available and what is the goal of each canvas?
 * (later) what are custom credentials / actions that can be carried out within a particular context?
@@ -354,7 +354,7 @@ Each User can also have a private Room with any other User on the platform.
 This is then a secure private channel for their direct communications.
 
 ## Current Usage
-The Matrix Protocol provides a rich set of functionality, only a small fraction of which is currently leveraged / exposed by Alkemio. However the choice was made to embed / wrap Matrix in order to ensure that there is a powerful base for further expanding the communications capabilitities of the platform. 
+The Matrix Protocol provides a rich set of functionality, only a small fraction of which is currently leveraged / exposed by Alkemio. However the choice was made to embed / wrap Matrix in order to ensure that there is a powerful base for further expanding the communications capabilities of the platform. 
 
 The current setup implies that the embedded Matrix Server has rooms for each Community, as well as direct messaging rooms.
 
@@ -384,7 +384,7 @@ There are currently two ways for a User to become a member of a Community:
 * Directly added by an administrator for the Community
 * Apply to become a member
 
-For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requrested to fill out is currently fixed per level (i.e. the same set of questions is used for all Hubs, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
+For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requested to fill out is currently fixed per level (i.e. the same set of questions is used for all Hubs, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
 
 The high level flow for applications is shown below.
 
