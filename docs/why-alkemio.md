@@ -5,7 +5,7 @@ Good questions, lets start with the core concept...
 A Challenge is any dissatisfaction with current reality. Where are we now and what would we like to change?
 
 A Challenge requires multiple parties to coordinate their activities over a longer period to make progress. 
-A Challenge is complex, typically spanning multiple organisational boundaries.
+A Challenge is complex, typically spanning multiple organizational boundaries.
 
 Challenges arise from all aspects of society: whether we’re talking about UN Sustainable Development Goals (SDGs), climate change, corporates trying to innovate with purpose for a sustainable future, governments at any level engaging with their citizens, or a local community working together for a common interest.  
 
@@ -38,7 +38,7 @@ Society needs to be able to more effectively collaborate to address the Challeng
 
 The Alkemio Platform manages a shared representation of a Challenge, which has the following core aspects:
 * **What do we want to change?**: the shared representation (**context**) of the desired outcomes and current understanding. 
-* **Who wants to contribute?**: the people and organisations (**community**) that wish to collaborate within the shared context. 
+* **Who wants to contribute?**: the people and organizations (**community**) that wish to collaborate within the shared context. 
 * **How do we effectively collaborate?**: making it easier to work together (**collaboration**) towards the desired outcomes. 
 * **How to we find similar Challenges? Who can help?**: making it easier to find similar Challenges (**connect**) and talent to help make progress. 
 * **How we manage the full lifecycle?**: explicitly managing the phases so that the focus is on the results, not steps on the journey (**continuity**) 
@@ -48,7 +48,7 @@ The Alkemio Platform manages a shared representation of a Challenge, which has t
 </p>
 
 Critically by putting the Challenge central, and managing a portfolio of Challenges via a plaform, this enables the following:
-* **Community & Capabilities**: being able to connect and grow a motivated community around the desired outcomes. Being able to find and connect to the right people who have the capabilities and are motivated to contribute. Ensuring that all citizens or organisations that wish to contribute are able to effectively do so.
+* **Community & Capabilities**: being able to connect and grow a motivated community around the desired outcomes. Being able to find and connect to the right people who have the capabilities and are motivated to contribute. Ensuring that all citizens or organizations that wish to contribute are able to effectively do so.
 * **Collaboration**: make it easy for parties to collaborate towards the desired outcomes. Used the share understanding and community to enable low thresholds to effective collaboration.
 * **Full lifecycle**:  a Challenge is a journey with multiple stages, and needs to be managed as such. The shared representation, community and collaboration all evolve as the Challenge evolves.
 * **Best practices**: the complexity of Challenges means that we need to systematically be able to share patterns and approaches that are demonstrated to work in various situations, from phased approaches through to methods for surfacing up the inherent complexity or coming to an agreed shared understanding.

@@ -36,7 +36,7 @@ Note: the implementation of Credentials is generic, and not tied to Authorizatio
 
 
 ## **Credential Types**
-There are multiple credential types in use within Alkemio. Note that in the text below when we say that "an Organisation holds a Credential", this in fact represents that the Agent acting on behalf of an Organisation holds a Credential.
+There are multiple credential types in use within Alkemio. Note that in the text below when we say that "an Organization holds a Credential", this in fact represents that the Agent acting on behalf of an Organization holds a Credential.
 
 ### **Global Roles**
 These credentials do not have a resource ID specified as they are applicable regardless of context. 
@@ -46,22 +46,22 @@ These credentials do not have a resource ID specified as they are applicable reg
 
 ### **Context Dependent Roles**
 These are roles that are specific to a context (resourceID) on the platform, for example a particular Challenge. 
-* _EcoverseMember_: to identify a User as being a Member of an Ecoverse
-* _EcoverseAdmin_: to identify a User as being an Admin of an Ecoverse
+* _HubMember_: to identify a User as being a Member of a Hub
+* _HubAdmin_: to identify a User as being an Admin of an Hub
 * _ChallengeMember_: to identify a User as being a Member of a Challenge
 * _ChallengeAdmin_: to identify a User as being aa Admin of a Challenge
 * _UserSelfManagement_: to identify the User as being able to manage their own Profile
 
 An example: consider a User that holds the following Credential:
-- Type: EcoverseMember
+- Type: HubMember
 - ResourceID: Challenge6
 
 This User is then a member of Challenge6, but clearly is *not* a member of Challenge7.
 
 ### **Relationships**
 In addition, some key relations are also represented by Credentials. Whilst currently these credentials are used to manage relationships, it is expected that near term that these credentials will also enable certain actions on the platform. 
-* _EcoverseHost_: held by an Organisation to identify that they are the host for a particular Ecoverse
-* _ChallengeLead_: held by an Organisation to identify that they are the host for a particular Challenge.
+* _HubHost_: held by an Organization to identify that they are the host for a particular Hub
+* _ChallengeLead_: held by an Organization to identify that they are the host for a particular Challenge.
 
 ## **AuthorizationPolicy**
 Each entity upon which a User can carry out action on the Alkemio platform has associated with it an AuthorizationPolicy. 
