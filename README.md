@@ -50,6 +50,7 @@ Next steps:
 * **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
 * **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security.md)** 
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
+* **[User Experience (UX) Guidelines - colors used in the various Alkemio user interfaces](docs/ux-guidelines.md)**
 
 ## Copyright & License
 Please see **[Licensing](LICENSES.md)** for a full overview. 
