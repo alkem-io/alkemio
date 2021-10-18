@@ -28,9 +28,9 @@ Note: In addition it should be feasible for Challenge Hosts to extend the set of
 |---	|---	|---	|---	|
 | *Spectator* | Observing without being able to contribute / engage | Can request to be elevated to Contributor; no profile  | ...| 
 | *Contributor* | Approved for membership by the Challenge Host (curation). All other roles with the exception of Spectators are Contributors. | Can engage in one or more teams / challenges; has a profile |   |
-| *Focal Point* | The primary contact point within an organisation or team.  | Interfaces with the rest of the organisation |  |
-| *Stakeholder* | A person who is interested in the challenge and/or  needed for solving the challenge; important for the Challenge success.   | The person can be within one of the organisatins, independent, or represent another organisation; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
-| *Specialist* | Posesses a particular skill set(s).  | Assists one or more challenges; has a profile; either via an organisation or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
+| *Focal Point* | The primary contact point within an organization or team.  | Interfaces with the rest of the organization |  |
+| *Stakeholder* | A person who is interested in the challenge and/or  needed for solving the challenge; important for the Challenge success.   | The person can be within one of the organisatins, independent, or represent another organization; can influence landscape around the challenge; could be critical to stakeholder org support | ... |
+| *Specialist* | Posesses a particular skill set(s).  | Assists one or more challenges; has a profile; either via an organization or individual | Capability (e.g. legal; web; AI;) vs domain (e.g. end user) |
 
 Note: the Challenge Host roles are still to be elaborated
 

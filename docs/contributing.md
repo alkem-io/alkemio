@@ -12,7 +12,8 @@ The key repositories in use by the project are:
 - [**Client.Web**](https://github.com/alkem-io/client.web): browser based interface for interacting with the platfrom.
 - [**Demo**](https://github.com/alkem-io/demo): for createing a demonstration instance of the platform, with data, locally.
 - [**Client.Lib**](https://github.com/alkem-io/client.lib): wrapper around the server api for interacting programmatically with the platform.
-- [**Populator**](https://github.com/alkem-io/populator): for populating an Ecoverse using data loaded from a spreadsheet.
+- [**Populator**](https://github.com/alkem-io/populator): for populating a Challenge Hub using data loaded from a spreadsheet.
+- [**Notifications**](https://github.com/alkem-io/notifications): a separate service that provides notification services, using out of band channels such as email.
 - [**Infrastructure**](https://github.com/alkem-io/infrastructure): additional information related to deploying the platform as a cluster
 
 Each repository itself contains documentation that is specific for that component.

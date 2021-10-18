@@ -49,7 +49,7 @@ For all those participating in a Challenge it is important that the set of Agree
 The Context represents the current understanding of the challenge - so it will evolve. 
 
 ### Community
-Around the Context is the _*Community*_, the people and organisations who wish to contribute to the achieving the desired outcomes. 
+Around the Context is the _*Community*_, the people and organizations who wish to contribute to the achieving the desired outcomes. 
 
 <p align="center">
 <img src="images/challenge-community.png" alt="Challenge Community" width="400" />
@@ -87,22 +87,22 @@ The goal should be to ensure that the Challenge progress can continue and be tra
 By managing a representation of the Challenge that is shared by the community of the Challenge, it is easier to keep the continuity as the Challenge progresses.
 
 
-# **Ecoverse: Challenge Hosting**
-_Ecoverse_ is a contraction of the words "ecosystem" and "universe". It is where Challenges are hosted, providing a shared base context and community as well as facilitating the collaboration within and between hosted Challenges. 
+# **Challenge Hub: Facilitating Collaboration**
+A _Challenge Hub_ is where Challenges are hosted, providing a shared base context and community as well as facilitating the collaboration within and between hosted Challenges. 
 
-The expectation is the the community for the Ecoverse is curated, and provides the hosted Challenges with the right "ingredients"- especially in the early formation stages. 
+The expectation is the the community for the Hub is curated, and provides the hosted Challenges with the right "ingredients"- especially in the early formation stages. 
 
 
 <p align="center">
-<img src="images/ecoverse.png" alt="Ecoverse: Hosting of Challenges" width="600" />
+<img src="images/hub.png" alt="Challenge Hub: Facilitating Challenges" width="600" />
 </p>
 
 
-Note: an Ecoverse is actually also a Challenge, so it inherits also all the building blocks that come together for a Challenge i.e. Shared understanding, community etc.  
+Note: a Hub is actually also a Challenge, so it inherits also all the building blocks that come together for a Challenge i.e. Shared understanding, community etc.  
 
 =================================
 
-__Why do we need an Ecoverse?__
+__Why do we need an Challenge Hub?__
 
 **Challenges are _hard_**
 The analogy here is with the startup world where there is a wealth of resources available to help: fiinancing initiatives, knowledge bases, best practices, incubators etc. However despite all this support, only a small portion of startups actually succeed. 
@@ -112,26 +112,26 @@ Now consider a Challenge, which by its very nature represents multiple types of 
 **Right Ingredients**
 To maximise the changes of realising the desired goals from a Challenge, it is critical to embed the Challenge within a wider community posessing the right balance of skills, drive and understanding to nurture in particular the early stages of the Challenge journey. 
 
-As such the design of Alkemio has at its core the notion of an Ecoverse - a hosting community that helps the formation and early incubation of a Challenge. 
+As such the design of Alkemio has that Challenges are hosted within a Hub, providing a hosting community that helps the formation and early incubation of a Challenge. 
 
 ================================
 
-An additional concept that may help convey the importance of Ecoverse is the notion of DNA - whereby the "DNA" from the Ecoverse host is used to help establish the right ingredients (community) and culture within hosted Challenges. 
+An additional concept that may help convey the importance of Challenge Hub is the notion of DNA - whereby the "DNA" from the Hub  host is used to help establish the right ingredients (community) and culture within hosted Challenges. 
 
 ## Challenge Services
-The Alkemio paltform enables the management of Challenges over their full lifecyle. Challenges are hosted within an Ecoverse - which in turn is hosted by a host organisation. 
+The Alkemio platform enables the management of Challenges over their full lifecyle. Challenges are hosted within a Challenge Hub - which has a host organization that then is expected to facilitate the hosted Challenges. 
 
-The platform provides the full lifecycle management, but there are many other activities / services that can be provided to help Challenges on their journey. These services / activities can be provided directly by the Challenge Host organisation, or by other curated service parties that are active within the Ecoverse.  .
+The platform provides the full lifecycle management, but there are many other activities / services that can be provided to help Challenges on their journey. These services / activities can be provided directly by the facilitating Host organization, or by other curated service parties that are active within the Hub.  .
 
 
-# **Shared Community across Ecoverses**
-The expectation is that over time many Ecoverses are created, each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Ecoverse may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Ecoverse to facilitate Challenges involving public-private cooperation. 
+# **Shared Community across all Challenge Hubs**
+The platform is designed to have many Challenge Hubs, each with their own "ingredients & recipes" for the Challenges that they host. The types of Challenges hosted in each Hub may also differ, e.g. there can be socially driven challenges, or a government could decide to host their own Hub to facilitate Challenges involving public-private cooperation. 
 
-Key is that the community that is engaged on Challenges within a particular Ecoverse is also able to connect to other Challenges hosted in other Ecoverses.
+Key is that the community that is engaged on Challenges within a particular Hub is also able to connect to other Challenges hosted in other Hubs.
 
 
 <p align="center">
-<img src="images/ecoverses-connected.png" alt="Connected Ecoverses" width="600" />
+<img src="images/hubs-connected.png" alt="Connected Hubs" width="600" />
 </p>
 
 

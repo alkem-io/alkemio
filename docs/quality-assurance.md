@@ -121,14 +121,14 @@ Test terminology meaning is based on: ["ISTQB" syllabus](https://www.istqb.org/d
   - [ ] User registration
   - [ ] User profile update
   - [ ] User access to available resources
-    - [ ] Ecoverse page
+    - [ ] Hub page
     - [ ] Challenge page
     - [ ] Opportunity page
     - [ ] Search page
     - [ ] Admin page
-      - [ ] Ecoverses
+      - [ ] Hubs
       - [ ] Users
-      - [ ] Organisations
+      - [ ] Organizations
       - [ ] Authorization
 - [ ] Update scripts: verify no data loss/coruption
 - [ ] Migration scripts: verify no data loss/coruption
