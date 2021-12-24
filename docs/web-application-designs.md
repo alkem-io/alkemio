@@ -53,10 +53,10 @@ Different variations for the design of the user card
 
 ## Legacy designs
 
-### [Cherrytwist Prototype 6d](https://xd.adobe.com/view/09cd710e-81a5-4c37-b7d4-0cd34d583aac-5c9e)
+### [2020 Prototype 6d](https://xd.adobe.com/view/09cd710e-81a5-4c37-b7d4-0cd34d583aac-5c9e)
 
-Cherrytwist full website design with side navigation
+2020 full website design with side navigation
 
-### [Cherrytwist Prototype 7](https://xd.adobe.com/view/eb6c3fc0-8873-44b6-9f63-01b020d4a8dc-be3f)
+### [2020 Prototype 7](https://xd.adobe.com/view/eb6c3fc0-8873-44b6-9f63-01b020d4a8dc-be3f)
 
-Cherrytwist full website with ring navigation and flat pages (lots of scrolling)
+2020 full website with ring navigation and flat pages (lots of scrolling)
