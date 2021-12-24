@@ -5,9 +5,7 @@
 <p align="center"><i><b>Open Innovation Platform.</b></i></p>
 <p align="center"><i>Enabling society to collaborate. Building a better future, together.</i></p>
 
-Alkemio is an open source, open innovation platform. It puts the Challenges central. 
-
-Note: Alkemio used to be called Cherrytwist, so you may still see this name appearing in documentation / code etc. 
+Alkemio is an open source, open innovation platform. It puts the Challenges central.  
 
 <p></p>
 
