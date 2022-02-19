@@ -396,6 +396,16 @@ Once a User has applied to join a Community, the administrator for the Community
 
 Finally worth highlighting that the Applications process also makes use of the Lifecycle capabilities of the platform highlighted earlier i.e. there is a Lifecycle defined with a set of states / commands etc that each Application has associated with it.
 
+# Cluster
+The Alkemio platform is deployed as a cluster. A high-level overview of the cluster is shown below.
+
+<p align="center">
+<img src="images/design-cluster.png" alt="Alkemio Cluster" width="600" />
+</p>
+
+Key is that there are two primary end points offered:
+* Public Graphql api: for non-secured access to information about the platform. For example, meta-data, public configuration data.
+* Private Graphql api: for authenticated access to the platform. This is the api used for all interactions with the domain model.
 ## Future plans
 Applications are currently visible only via the Administration interface for a Community; ideally a range of notification options including email to all registered administrators would be added. 
 
