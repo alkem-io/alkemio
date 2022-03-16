@@ -74,24 +74,15 @@ The above design is very powerful, but also is not "familiar" to most users - so
 The Hub Administrator is able to set preferences related to Community membership on the Hub.
 
 The following are the currently supported preferences for community membership:
-* *Applications allowed*
+* *Allow users to Apply for Membership*
     * Type: boolean, defaults to true
-    * Privileges granted:
-        * If true, grant the COMMUNITY_APPLY privilege to users with RegisteredUser credential. It is not inherited.
-        * Grant the COMMUNITY_APPLY privilege to users with HubMember credential. It is  inherited.
-* *Allow members from the Host organization*
+    * Privileges granted if true: grant the COMMUNITY_APPLY privilege to users with RegisteredUser credential. It is not inherited.
+* *Allow users to directly Join*
     * Type: boolean, defaults to false
-    * Privileges granted:
-        * Grant the COMMUNITY_JOIN privilege to all users that have the OrganizationMember credential for the specified organization(s). It is not inherited.
-* *Allow Hub members to directly join Challenges*
+    * Privileges granted if true: grant the COMMUNITY_JOIN privilege to users with RegisteredUser credential. It is not inherited.
+* *Allow members from the Host organization to directly Join*
     * Type: boolean, defaults to false
-    * Privileges granted:
-        * Grant the COMMUNITY_JOIN privilege to users with the HubMember credential for the particular Hub. It is inherited.
-
-In addition the following rules would need to be added independent of the settings:
-* A privilege rule would need to be added so that any user with the "GRANT" privilege on a Community would also have the COMMUNITY_JOIN / COMMUNITY_LEAVE privileges. This then allows administrators, which have the GRANT privilege, to also assign users to a Community.
-
-
+    * Privileges granted if true: Grant the COMMUNITY_JOIN privilege to all users that have the OrganizationMember credential for the Host organization(s). It is not inherited.
 ## Client Logic
 There is a set of states / actions that the client needs to understand to be able to guide the user on the appropriate actions the user can take.
 
