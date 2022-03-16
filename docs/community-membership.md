@@ -101,6 +101,8 @@ This is in particular visible via the button that is available for each Communit
 * Application Pending (disabled button)
 * Join
 * Apply
+* Join Parent
+* Apply to parent
 * Membership Not Available (disabled button)
 
 The inputs to determine the text to display, as well as the action per text are:
@@ -116,22 +118,22 @@ If there is a parent community the following additional information is needed:
 
 ### Hub Logic
 1. Authenticated = n ==> "Login to Continue"
-2. isMember = y ==> Member
-3. applicationPending = y ==> application pending
-4. joinPrivilege ==> join
-5. applyPrivilege ==> Apply
+2. isMember = y ==> "Member"
+3. applicationPending = y ==> "Application pending
+4. joinPrivilege ==> "Join"
+5. applyPrivilege ==> "Apply"
 6. "Membership not available"
 The client currently has some fairly complex logic that determines when users can apply, what message is shown to them. That needs to be adapted / extended to deal with the above.
 
 ### Challenge Logic
-1. Authenticated = n ==> login
-2. isMember =y ==> Member
-3. applicationPending = y ==> application pending
-4. joinPrivilege ==> join
-5. applyPrivilege ==> Apply
+1. Authenticated = n ==> "Login to Continue"
+2. isMember =y ==> "Member"
+3. applicationPending = y ==> "Application pending"
+4. joinPrivilege ==> "Join"
+5. applyPrivilege ==> "Apply"
 6. parentCommunityMember = Y "==> "Membership not available"
-7. parentCommunityApplyPrivilege ==> Popup + apply on parent (existing)
-8. parentCommunityJoinPrivilege ==> Popup + direct user to first join the parent + advise user to then come back
+7. parentCommunityJoinPrivilege ==> "Join parent" + Popup + inform user to first join the parent + advise user to then come back
+8. parentCommunityApplyPrivilege ==> "Apply to parent" + Popup + apply on parent (existing)
 9. "Membership not available"
 
 
