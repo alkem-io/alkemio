@@ -70,7 +70,7 @@ It is the combination of the credentials held by the user togethr with the AUtho
 
 The above design is very powerful, but also is not "familiar" to most users - so it is not exposed via the api. Instead the domain model maintains a number of "settings" to administrators that then get translated by the server into the authorization policy rules to be applied.
 
-## SetHub Preferences
+## Hub Preferences
 The Hub Administrator is able to set preferences related to Community membership on the Hub.
 
 The following are the currently supported preferences for community membership:
