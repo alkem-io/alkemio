@@ -1,11 +1,59 @@
 # eSSIF Lab: Sovrhd Wallet support
 
+## Trying it out
+If you want to try it out:
+1. Download the Sovrhd wallet on the Apple App Store.
+<p align="center">
+<img src="images/ssi-sovrhd-app.png" alt="SSI Sovrhd App" width="250" />
+</p>
+2. Issue yourself a credential using the  [custom URL](https://denhaag-pilot.ovrhd.nl/link/2c1b4f07-2955-46e6-86e6-c473a2b038c7) 
+3. Ensure that SSI is enabled (SSI_ENABLED env variable is set to true) + that the cluster IP address is set to something callable from an external network
+    * Note ip address for cluster end point needs to be your external ip address as the callback comes from an external server. So on your router you would need to forward to your local machine. That can be done via port forwarding to the ip of your local machine.
+    * To find your external IP, you can write 'what's my IP in Google'. You will be provided with your external IP address.
+    * To set up your callback (webhook) endpoint, you will need to configure ENDPOINT_CLUSTER env variable in your alkemio_server. Configure it with your external IP address.
+    * To set up port forwarding on an e.g. Linksys router, you can do the following:
+      * Go to linksyssmartwifi.com
+<p align="center">
+<img src="images/ssi-sovrhd-port-forward.png" alt="SSI Sovrhd Interaction Flow" width="700" />
+</p>
+      * Go to security settings --> Apps and Gaming
+      * Give a name to the route, external port, select TCP for protocol, and in device IP select the private IP address of your host (on *nix-based systems you can find it with ifconfig, on Windows with ipconfig from command line)
+      * set the ENDPOINT_CLUSTER env variable to your external IP and the port you have provided, e.g. ENDPOINT_CLUSTER=http://[IP FROM WHATS_MY_IP]:3000
+4. Request the postal address credential on the alkemio web client
+    * Select my profile
+<p align="center">
+<img src="images/ssi-sovrhd-my-profile.png" alt="SSI Sovrhd App" width="250" />
+</p>
+    * Select profile settings:
+<p align="center">
+<img src="images/ssi-sovrhd-profile-settings.png" alt="SSI Sovrhd App" width="350" />
+</p>
+    * Select **CREDENTIALS** tab and click **ADD CREDENTIAL**
+<p align="center">
+<img src="images/ssi-sovrhd-add-credentials.png" alt="SSI Sovrhd App" width="600" />
+</p>
+    * Select credential - The Hague Postal Address or the The Hague Hoplr Code - and click generate QR code.
+<p align="center">
+<img src="images/ssi-sovrhd-select-credential.png" alt="SSI Sovrhd App" width="600" />
+</p>
+   * Scan the generated QR code with your sovrhd wallet.
+   * You will be asked to select a credential and proceed in the sovrhd wallet. Select your credential and proceed.
+<p align="center">
+<img src="images/ssi-sovrhd-select-approve.png" alt="SSI Sovrhd App" width="250" />
+</p>
+   * At this stage you should have the first verified credential added to Alkemio. Congratulations!
+<p align="center">
+<img src="images/ssi-sovrhd-my-vcs.png" alt="SSI Sovrhd App" width="600" />
+</p> 
+
+## Interacting with Sovrhd platform
+
+
 <p align="center">
 <img src="images/ssi-sovrhd-interaction.png" alt="SSI Sovrhd Interaction Flow" width="600" />
 </p>
 
 
-## Interacting with Sovrhd platform
 So the steps are:
 - First establish a session with Sovrhd server, supplying the callback URL to be embedded in the token scanned by the client. The URL to send the initial request to is: https://wallet-api.ovrhd.nl/api/v1/register with as JSON body a webhook URL. For example: 
 > curl -X “POST” “https://wallet-api.ovrhd.nl/api/v1/register”
@@ -27,7 +75,7 @@ So the steps are:
 - The Sovrhd server then invokes the callback URL supplied by Alkemio to validate the session
 - The Alkemio server can then use the session it has with the Sovrhd server to request information regarding the credentials on the users mobile
 
-### Interacting with the Sovrhd API
+### Interacting with the Sovrhd Wallet API
 The link to use is: 
 https://wallet-api.ovrhd.nl//api/v1/request
 
@@ -45,15 +93,6 @@ Our code:
 
 To get the meta information for each credential supported by Sovrhd look at the source code for their debugging site:
 ![](https://i.imgur.com/KH5lb18.png)
-
-## Trying it out
-If you want to try it out:
-1. download the Sovrhd wallet (ios store at least), not sure if there on Android. 
-1. issue yourself a credential using the custom URL (https://denhaag-pilot.ovrhd.nl/link/2c1b4f07-2955-46e6-86e6-c473a2b038c7)
-1. ensure that SSI is enabled + that the cluster IP address is set to something callable from an external network
-    * Note ip address for cluster end point needs to be your external ip address as the call back comes from an external server. So on your router you would need to forward to your local machine. 
-1. request the postal address credential on the webclient etc.
-
 
 ## Reference
 - Issuing test credentials: https://attributes.vc
