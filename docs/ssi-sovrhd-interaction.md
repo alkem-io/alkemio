@@ -1,11 +1,16 @@
-# eSSIF Lab: Sovrhd Wallet support
+# eSSIF Lab: Sovrhd wallet support
+<p align="center">
+<img src="images/ssi-sovrhd-logo.png" alt="SSI Sovrhd App" width="250" />
+</p>
 
 ## Trying it out
 If you want to try it out:
 1. Download the Sovrhd wallet on the Apple App Store.
+   
 <p align="center">
 <img src="images/ssi-sovrhd-app.png" alt="SSI Sovrhd App" width="250" />
 </p>
+
 2. Issue yourself a credential using the  [custom URL](https://denhaag-pilot.ovrhd.nl/link/2c1b4f07-2955-46e6-86e6-c473a2b038c7) 
 3. Ensure that SSI is enabled (SSI_ENABLED env variable is set to true) + that the cluster IP address is set to something callable from an external network
     * Note ip address for cluster end point needs to be your external ip address as the callback comes from an external server. So on your router you would need to forward to your local machine. That can be done via port forwarding to the ip of your local machine.
@@ -13,35 +18,47 @@ If you want to try it out:
     * To set up your callback (webhook) endpoint, you will need to configure ENDPOINT_CLUSTER env variable in your alkemio_server. Configure it with your external IP address.
     * To set up port forwarding on an e.g. Linksys router, you can do the following:
       * Go to linksyssmartwifi.com
+  
 <p align="center">
 <img src="images/ssi-sovrhd-port-forward.png" alt="SSI Sovrhd Interaction Flow" width="700" />
 </p>
-      * Go to security settings --> Apps and Gaming
-      * Give a name to the route, external port, select TCP for protocol, and in device IP select the private IP address of your host (on *nix-based systems you can find it with ifconfig, on Windows with ipconfig from command line)
-      * set the ENDPOINT_CLUSTER env variable to your external IP and the port you have provided, e.g. ENDPOINT_CLUSTER=http://[IP FROM WHATS_MY_IP]:3000
-4. Request the postal address credential on the alkemio web client
-    * Select my profile
+
+* Go to security settings --> Apps and Gaming
+* Give a name to the route, external port, select TCP for protocol, and in device IP select the private IP address of your host (on *nix-based systems you can find it with ifconfig, on Windows with ipconfig from command line)
+* set the ENDPOINT_CLUSTER env variable to your external IP and the port you have provided, e.g. ENDPOINT_CLUSTER=http://[IP FROM WHATS_MY_IP]:3000
+4. Select my profile
+  
 <p align="center">
 <img src="images/ssi-sovrhd-my-profile.png" alt="SSI Sovrhd App" width="250" />
 </p>
-    * Select profile settings:
+
+5. Select profile settings:
+  
 <p align="center">
 <img src="images/ssi-sovrhd-profile-settings.png" alt="SSI Sovrhd App" width="350" />
 </p>
-    * Select **CREDENTIALS** tab and click **ADD CREDENTIAL**
+
+6. Select **CREDENTIALS** tab and click **ADD CREDENTIAL**
+  
 <p align="center">
 <img src="images/ssi-sovrhd-add-credentials.png" alt="SSI Sovrhd App" width="600" />
 </p>
-    * Select credential - The Hague Postal Address or the The Hague Hoplr Code - and click generate QR code.
+
+7. Select credential - The Hague Postal Address or the The Hague Hoplr Code - and click generate QR code.
+
 <p align="center">
 <img src="images/ssi-sovrhd-select-credential.png" alt="SSI Sovrhd App" width="600" />
 </p>
-   * Scan the generated QR code with your sovrhd wallet.
-   * You will be asked to select a credential and proceed in the sovrhd wallet. Select your credential and proceed.
+
+8. Scan the generated QR code with your sovrhd wallet.
+9. You will be asked to select a credential and proceed in the sovrhd wallet. Select your credential and proceed.
+
 <p align="center">
 <img src="images/ssi-sovrhd-select-approve.png" alt="SSI Sovrhd App" width="250" />
 </p>
-   * At this stage you should have the first verified credential added to Alkemio. Congratulations!
+
+10. At this stage you should have the first verified credential added to Alkemio. Congratulations!
+  
 <p align="center">
 <img src="images/ssi-sovrhd-my-vcs.png" alt="SSI Sovrhd App" width="600" />
 </p> 
