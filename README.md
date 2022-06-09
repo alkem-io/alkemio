@@ -46,7 +46,8 @@ Next steps:
 * **[Technical Design - How the platform is being built and the core components in the Alkemio Platform](docs/technical-design.md)**
 * **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/alkemio-5ecb98b262ebd9f4aec4194c/board)** 
 * **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
-* **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security.md)** 
+* **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security-overview.md)** 
+* **[Security - reporting a vulnerability / Private Disclosure Process](https://github.com/alkem-io/.github/blob/master/SECURITY.md)**
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 * **[User Experience (UX) Guidelines - colors used in the various Alkemio user interfaces](docs/ux-guidelines.md)**
 
