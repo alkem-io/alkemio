@@ -11,13 +11,13 @@ The logo for Alkemio is shown below:
 The logo uses the following color codes:  
 | Name | RGB | Usage |    
 | - | - |  - |  
-| Deep Blue | ![#2D546A](https://via.placeholder.com/50x20/2d546a/2d546a?text=+) `#2D546A` | Logo text  
-| Pacific Blue | ![#09BCD4](https://via.placeholder.com/50x20/09BCD4/09BCD4?text=+) `#09BCD4` | Logo 
-| Neutral light | ![#F9F9F9](https://via.placeholder.com/50x20/F9F9F9/F9F9F9?text=+) `#F9F9F9` | Background  
-| Blue Grey | ![#44546a](https://via.placeholder.com/50x20/44546a/44546a?text=+) `#44546a` | Background  
-| Off white | ![#e0f5fe](https://via.placeholder.com/50x20/e0f5fe/e0f5fe?text=+) `#e0f5fe` | Background  
-| Light green | ![#eaf0e0](https://via.placeholder.com/50x20/eaf0e0/eaf0e0?text=+) `#eaf0e0` | Background  
-| Darkblue | ![#181828](https://via.placeholder.com/50x20/181828/181828?text=+) `#181828` | Text    
+| Deep Blue | ![](https://placehold.jp/2D546A/ffffff/50x20.png?text=%20) `#2D546A` | Logo text  
+| Pacific Blue | ![](https://placehold.jp/09BCD4/ffffff/50x20.png?text=%20) `#09BCD4` | Logo 
+| Neutral light | ![#F9F9F9](https://placehold.jp/F9F9F9/ffffff/50x20.png?text=%20) `#F9F9F9` | Background  
+| Blue Grey | ![#44546a](https://placehold.jp/44546a/ffffff/50x20.png?text=%20) `#44546a` | Background  
+| Off white | ![#e0f5fe](https://placehold.jp/e0f5fe/ffffff/50x20.png?text=%20) `#e0f5fe` | Background  
+| Light green | ![#eaf0e0](https://placehold.jp/eaf0e0/ffffff/50x20.png?text=%20) `#eaf0e0` | Background  
+| Darkblue | ![#181828](https://placehold.jp/181828/ffffff/50x20.png?text=%20) `#181828` | Text    
   
 These colors are used also in certain places in the user interface. However for accessibilty (i.e. contrast) the Pacific Blue color in particular is swapped in text for the Primary color above.   
   
@@ -26,15 +26,15 @@ These are the colors currently defined in the web application and their usage:
   
 | Name | Color | Usage |  
 | -------- | -------- | -------- |  
-| Primary     | ![#068293](https://via.placeholder.com/50x20/068293/068293?text=+) `#068293`    | Buttons, Large text  |  
-| Secondary     | ![#00a88f](https://via.placeholder.com/50x20/00a88f/00a88f?text=+) `#00a88f`   | buttons, medium-large text  |  
-| Positive     | ![#00D4B4](https://via.placeholder.com/50x20/00D4B4/00D4B4?text=+) `#00D4B4`    | Tags  |  
-| Negative    | ![#D40062](https://via.placeholder.com/50x20/D40062/D40062?text=+) `#D40062`     | Errors  |  
-| Neutral     | ![#181828](https://via.placeholder.com/50x20/181828/181828?text=+) `#181828`     | Small text and shadows  |  
-| Neutral Medium    | ![#9e9e9e](https://via.placeholder.com/50x20/9e9e9e/9e9e9e?text=+) `#9e9e9e`     | Tags, Text  |  
-| Neutral Light     | ![#F9F9F9](https://via.placeholder.com/50x20/F9F9F9/F9F9F9?text=+) `#F9F9F9`     | Background  |  
-| Text     | ![#181828](https://via.placeholder.com/50x20/181828/181828?text=+) `#181828`    | Text  |  
-| Background     | ![#FFFFFF](https://via.placeholder.com/50x20/FFFFFF/FFFFFF?text=+) `#FFFFFF`    | Background  |
+| Primary     | ![#068293](https://placehold.jp/068293/ffffff/50x20.png?text=%20) `#068293`    | Buttons, Large text  |  
+| Secondary     | ![#00a88f](https://placehold.jp/00a88f/ffffff/50x20.png?text=%20) `#00a88f`   | buttons, medium-large text  |  
+| Positive     | ![#00D4B4](https://placehold.jp/00D4B4/ffffff/50x20.png?text=%20) `#00D4B4`    | Tags  |  
+| Negative    | ![#D40062](https://placehold.jp/D40062/ffffff/50x20.png?text=%20) `#D40062`     | Errors  |  
+| Neutral     | ![#181828](https://placehold.jp/181828/ffffff/50x20.png?text=%20) `#181828`     | Small text and shadows  |  
+| Neutral Medium    | ![#9e9e9e](https://placehold.jp/9e9e9e/ffffff/50x20.png?text=%20) `#9e9e9e`     | Tags, Text  |  
+| Neutral Light     | ![#F9F9F9](https://placehold.jp/F9F9F9/ffffff/50x20.png?text=%20) `#F9F9F9`     | Background  |  
+| Text     | ![#181828](https://placehold.jp/181828/ffffff/50x20.png?text=%20) `#181828`    | Text  |  
+| Background     | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) `#FFFFFF`    | Background  |
 
 The above colors are also used with an opacity applied in various locations in the user experience. For example, the divider color is primary with 40% opacity.
 
