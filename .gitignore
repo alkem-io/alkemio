@@ -1,0 +1,7 @@
+# compiled output
+/dist
+/node_modules
+
+/docs/
+# Ignores homeserver.db file
+**/diagrams/.$*
