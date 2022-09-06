@@ -41,14 +41,24 @@ There are multiple credential types in use within Alkemio. Note that in the text
 ### **Global Roles**
 These credentials do not have a resource ID specified as they are applicable regardless of context. 
 * _RegisteredUser_: for users that are registered on the platform
-* _GlobalAdmin_: for the platform administrators
-* _GlobalCommunityAdmin_: for platform community administrators
+* _GlobalAdmin_: for the platform administrators, including management of global credentials
+* _GlobalAdminHubs_: for platform administration of hubs
+* _GlobalAdminCommunity_: for platform administration of contributors
+
+Note that the root role is Global Admin, which is able to manage the other global roles (Global Admin Hubs, Global Admin Community) and is a pure superset of the privileges assigned to those roles. The expected usage is that there is a small set of Global Admins, with potentially a larger set of Global Admin Hubs that facilitate usage of the platform by helping Hub Admins.  
 
 ### **Context Dependent Roles**
-These are roles that are specific to a context (resourceID) on the platform, for example a particular Challenge. 
-* _HubMember_: to identify a User as being a Member of a Hub
+These are roles that are specific to a context (resourceID) on the platform. Some of the roles are only applicable to e.g. Organizations, but others are applicable to both Users and Organizations. In that case we use the term Contributor.
+
+Example roles: 
+* _HubMember_: to identify a Contributor as being a Member of a Hub
+* _HubHost_: to identify a Contributor as being a Host of a Hub. 
 * _HubAdmin_: to identify a User as being an Admin of an Hub
-* _ChallengeMember_: to identify a User as being a Member of a Challenge
+* _ChallengeMember_: to identify a Contributor as being a Member of a Challenge
+* _ChallengeLead_: to identify a Contributor as being aa Lead of a Challenge
+* _ChallengeAdmin_: to identify a User as being aa Admin of a Challenge
+* _OpportunityMember_: to identify a Contributor as being a Member of a Opportunity
+* _OpportunityLead_: to identify a Contributor as being a Lead of a Opportunity
 * _ChallengeAdmin_: to identify a User as being aa Admin of a Challenge
 * _UserSelfManagement_: to identify the User as being able to manage their own Profile
 
@@ -60,28 +70,35 @@ This User is then a member of Challenge6, but clearly is *not* a member of Chall
 
 ### **Relationships**
 In addition, some key relations are also represented by Credentials. Whilst currently these credentials are used to manage relationships, it is expected that near term that these credentials will also enable certain actions on the platform. 
-* _HubHost_: held by an Organization to identify that they are the host for a particular Hub
+* _HubHost_: when held by an Organization, it is used to identify that they are the host for a particular Hub
 * _ChallengeLead_: held by an Organization to identify that they are the host for a particular Challenge.
 
 ## **AuthorizationPolicy**
-Each entity upon which a User can carry out action on the Alkemio platform has associated with it an AuthorizationPolicy. 
+Each entity upon which a User can carry out action on the Alkemio platform has associated with it an AuthorizationPolicy. Each AuthorizationPolicy contains a set of **rules** that determine what Privileges are granted to a particular agent. The set of rule types include:
+* _Credential Rules_: Grant a set of privileges if an agent has a Credential matching the criteria
+* _Verified Credential Rules_: Grant a set of privileges if an agent has a VerifiedCredential matching the criteria
+* _Privilege Rules_: Grant a set of privileges if the previous rules have already resulted in the agent being granted a particular Privilege. E.g. Grant the user the Privilege to CREATE_CANVAS if the user has the Privilege CREATE.
+
+As can be seen, when an action is to take place the first step is to determine what Privileges are assigned to an Agent based on the Credentials held by the Agent - and then check if the required Privilege is included in the assigned set of Privileges. 
+
+Finally, each rule in an AuthorizationPolicy can also be inherited by child entities. 
 
 ### Credential Rules
 An AuthorizationPolicy contains a set of CredentialRules. Each CredentialRule specifies:
 * Criteria for a Credential to match e.g. the type of the Credential and if appropriate the resourceID to which the Credential needs to be bound
 * Granted Privileges: if a User can present a Credential that satisfies the criteria, then that user is granted one or more AuthorizationPrivileges for usage *within the context of a particular action*
 
-A sample authorization rules:
+A sample authorization policy rules:
 cerdentialRules: [
     {
         type: challenge-admin,
         resourceID: '1234',
-        authorizations: ['read', 'update'],
+        grantedPrivileges: ['read', 'update'],
     },
     {
         type: global-admin,
         resourceID: '',
-        authorizations: ['create', 'read', 'update', 'delete'],
+        grantedPrivileges: ['create', 'read', 'update', 'delete'],
     }
 ]
 
