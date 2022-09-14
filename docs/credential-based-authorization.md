@@ -98,7 +98,7 @@ cerdentialRules: [
     {
         type: global-admin,
         resourceID: '',
-        grantedPrivileges: ['create', 'read', 'update', 'delete'],
+        grantedPrivileges: ['create', 'grant', 'read', 'update', 'delete', 'authorization_reset'],
     }
 ]
 
