@@ -38,7 +38,7 @@ These are the colors currently defined in the web application and their usage:
 
 The above colors are also used with an opacity applied in various locations in the user experience. For example, the divider color is primary with 40% opacity.
 
-# New User Interface Color Palette
+### New User Interface Color Palette
 These are the colours that will soon be defined in the web application: 
 
 | Name | Color | Usage |  
