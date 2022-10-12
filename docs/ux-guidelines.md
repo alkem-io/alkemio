@@ -38,6 +38,23 @@ These are the colors currently defined in the web application and their usage:
 
 The above colors are also used with an opacity applied in various locations in the user experience. For example, the divider color is primary with 40% opacity.
 
+### New User Interface Color Palette
+These are the colours that will soon be defined in the web application: 
+
+| Name | Color | Usage |  
+| -------- | -------- | -------- |  
+| Primary     | ![#065F6B](https://placehold.jp/065F6B/ffffff/50x20.png?text=%20) `#065F6B`    | Challenges, buttons, large text  |  
+| Secondary     | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) `#1D384A`   | Hubs, dark text for Opportunities  |  
+| Positive     | ![#A2D2DB](https://placehold.jp/A2D2DB/ffffff/50x20.png?text=%20) `#A2D2DB`    | Opportunities, for text only to be used in combination with 'Secondary', not with white  |  
+| Light    | ![#DEEFF6](https://placehold.jp/DEEFF6/ffffff/50x20.png?text=%20) `#DEEFF6`     | Background  |  
+| Negative    | ![#B30000](https://placehold.jp/B30000/ffffff/50x20.png?text=%20) `#B30000`     | Errors  |  
+| Neutral     | ![#181828](https://placehold.jp/181828/ffffff/50x20.png?text=%20) `#181828`     | Small text and shadows  |  
+| Neutral Medium    | ![#9e9e9e](https://placehold.jp/9e9e9e/ffffff/50x20.png?text=%20) `#9e9e9e`     | Tags, Text  |  
+| Neutral Light     | ![#F9F9F9](https://placehold.jp/F9F9F9/ffffff/50x20.png?text=%20) `#F9F9F9`     | Background  |  
+| Text     | ![#181828](https://placehold.jp/181828/ffffff/50x20.png?text=%20) `#181828`    | Text  |  
+| Background     | ![#FFFFFF](https://placehold.jp/FFFFFF/ffffff/50x20.png?text=%20) `#FFFFFF`    | Background  |
+
+
 ## Typography
 
 The typography that is currently defined in the web application
