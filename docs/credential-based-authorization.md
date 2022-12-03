@@ -79,6 +79,11 @@ Each entity upon which a User can carry out action on the Alkemio platform has a
 * _Verified Credential Rules_: Grant a set of privileges if an agent has a VerifiedCredential matching the criteria
 * _Privilege Rules_: Grant a set of privileges if the previous rules have already resulted in the agent being granted a particular Privilege. E.g. Grant the user the Privilege to CREATE_CANVAS if the user has the Privilege CREATE.
 
+The high level logical model for the Authorization Policyis shown below. 
+<p align="center">
+<img src="images/security-authorization-policy-rules.png" alt="Alkemio Authorization Policy" width="600" />
+</p>
+
 As can be seen, when an action is to take place the first step is to determine what Privileges are assigned to an Agent based on the Credentials held by the Agent - and then check if the required Privilege is included in the assigned set of Privileges. 
 
 Finally, each rule in an AuthorizationPolicy can also be inherited by child entities. 
