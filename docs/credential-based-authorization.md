@@ -79,6 +79,11 @@ Each entity upon which a User can carry out action on the Alkemio platform has a
 * _Verified Credential Rules_: Grant a set of privileges if an agent has a VerifiedCredential matching the criteria
 * _Privilege Rules_: Grant a set of privileges if the previous rules have already resulted in the agent being granted a particular Privilege. E.g. Grant the user the Privilege to CREATE_CANVAS if the user has the Privilege CREATE.
 
+The high level logical model for the Authorization Policyis shown below. 
+<p align="center">
+<img src="images/security-authorization-policy-rules.png" alt="Alkemio Authorization Policy" width="600" />
+</p>
+
 As can be seen, when an action is to take place the first step is to determine what Privileges are assigned to an Agent based on the Credentials held by the Agent - and then check if the required Privilege is included in the assigned set of Privileges. 
 
 Finally, each rule in an AuthorizationPolicy can also be inherited by child entities. 
@@ -128,7 +133,18 @@ _Case 2_:  The User wishes to update the definition of Challenge 7.
 - The execution of the request to update the Challenge passes both the Credentials held by the User and the Authorization Policy to the AuthorizationEngine, together with the required privilege: "UPDATE"
 - The AuthorizationEngine evaluates the request and returns false.
 
+## Populating Authorization Policies
+The Authorization Policy for each _Authorizable_ entity is cascaded through the containment hierarchy.
 
+There is a root level Platform Authorization Policy.
+
+The AuthorizationPolicy for a Hub is determined by the service 'HubAuthorizationService'. It takes the Platform Authorization, and extends the Authorization Policy with a combination of Credential Rules, Verified Credential Rules and Privilege Rules.
+
+The Hub Authorizaton Policy is then cascaded through to contained entities, such as the Community entity or Challenges, which take the Hub Authorization Policy and extend it as needed for that context.
+
+This process continues down through the containment hierarchy.
+
+A similar process takes place for other top level entities such as Organizations and Users. 
 ## **Future work**
 The focus thus far has been fully on being able to use (non-verified) Credentials for all Authorizations on the platform. 
 
