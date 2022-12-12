@@ -54,17 +54,18 @@ Alkemio uses the following text styles:
 
 ![](./images/ux-fonts.png)
 
-| Name     | Used as                                              | Font            | Style               | Weight | Size | Line Height | Paragraph Spacing |
-| -------- | ---------------------------------------------------- |:--------------- |:------------------- | ------ | ---- | ----------- | ----------------- |
-| H1       | Platform Title                                       | Montserrat      | Bold                | 700    | 25   | 40          |                   |
-| H2       | Plage Title                                          | Montserrat      | Bold                | 700    | 18   | 20          |                   |
-| H3       | Block Title                                          | Montserrat      | Regular             | 400    | 15   | 20          |                   |
-| H4       | Section Title inside block                           | Montserrat      | Regular             | 400    | 12   | 20          |                   |
-| Subtitle | Tagline                                              | Montserrat      | Italic              | 400    | 16   | 20          |                   |
-| Body1    | Regular body text                                    | Source Sans Pro | Regular             | 400    | 14   | 20          | 10                |
-| Body2    | Body text on a card                                  | Source Sans Pro | Regular             | 400    | 12   | 20          | 10                |
-| Buttons  | Buttons                                              | Montserrat      | Medium, Capitalized | 500    | 12   | 20          |                   |
-| Caption  | Captions, descriptions, automatically generated text | Montserrat      | Regular             | 400    | 12   | 20          |                   |
+| Name           | Used as                                                 | Font            | Style               | Weight | Size | Line Height | Paragraph Spacing |
+| -------------- | ----------------------------------------------------    |:--------------- |:------------------- | ------ | ---- | ----------- | ----------------- |
+| H1             | Platform Title                                          | Montserrat      | Bold                | 700    | 25   | 40          |                   |
+| H2             | Plage Title                                             | Montserrat      | Bold                | 700    | 18   | 20          |                   |
+| H3             | Block Title                                             | Montserrat      | Regular             | 400    | 15   | 20          |                   |
+| H4             | Section Title inside block                              | Montserrat      | Regular             | 400    | 12   | 20          |                   |
+| Subtitle       | Tagline                                                 | Montserrat      | Italic              | 400    | 16   | 20          |                   |
+| Body1          | Regular body text                                       | Source Sans Pro | Regular             | 400    | 14   | 20          | 10                |
+| Body2          | Body text on a card                                     | Source Sans Pro | Regular             | 400    | 12   | 20          | 10                |
+| Buttons        | Buttons                                                 | Montserrat      | Medium, Capitalized | 500    | 12   | 20          |                   |
+| Caption        | Captions, descriptions, automatically generated text    | Montserrat      | Regular             | 400    | 12   | 20          |                   |
+| Caption Italic | More-buttons, automatically generated text that needs subtile emphasis | Montserrat | Italic    | 400    | 10   | 20          |                   |
 
 ## Colors
 
