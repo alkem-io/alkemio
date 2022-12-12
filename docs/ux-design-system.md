@@ -1,7 +1,10 @@
 # Alkemio's Design System
+Alkemio uses a gridsystem to align the sections of each page:
+* Horizontally: each page uses a number of columns
+* Vertically: all heights are a multiple of an underlying step size, which is 20px. 
 
 ## Composition
-Alkemio uses a gridsystem to align the sections of each page. Information is displayed in blocks on the page. These blocks take a fixed amount of columns. 
+Information is displayed in blocks on the page. Each block takes a fixed amount of columns. 
 
 ### Global Grid
 
@@ -38,7 +41,7 @@ Alkemio uses a gridsystem to align the sections of each page. Information is dis
 | 600+              | Wide block Cards | 9       | 20px                 | Auto | 20px                 |
 
 ### Visualization
-![](https://i.imgur.com/m9lAmGl.png)
+![](./images//ux-grids.png)
 
 
 
@@ -49,7 +52,7 @@ Scroll bars go inside the right margin of the page or block. The width is 0.75% 
 ## Fonts
 Alkemio uses the following text styles:
 
-![](https://i.imgur.com/1h1AE8m.png)
+![](./images/ux-fonts.png)
 
 | Name     | Used as                                              | Font            | Style               | Weight | Size | Line Height | Paragraph Spacing |
 | -------- | ---------------------------------------------------- |:--------------- |:------------------- | ------ | ---- | ----------- | ----------------- |
@@ -107,9 +110,9 @@ Alkemio uses the following text styles:
 | On Opportunity        | #1D384A | ![#1D384A](https://placehold.jp/1D384A/ffffff/50x20.png?text=%20) | Text/items on elements with an Opportunity color |
 
 
-![](https://i.imgur.com/ui28rgw.png)
+![](./images/ux-colors.png)
 
-## Basic Styleguide
+## Basic Style Guide
 Alkemio uses a variety of components which can be found in the Figma Library (link will follow). The main elements of the most used components are specified below.
 
 |                  | Block    | Card     | Contained Button | Outlined Button | Text Button |
@@ -125,4 +128,3 @@ Alkemio uses a variety of components which can be found in the Figma Library (li
 ## Components and customizations
 The web application uses a component library that is built on top of the [Material UI principles](https://material.io/). The library is https://mui.com/. All components that are used in the application and style overrides need to be listed. Designs should be based on the component library for easier adaptation during the development phase.
 
-### TBD - component definitions
