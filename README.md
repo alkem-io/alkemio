@@ -50,7 +50,7 @@ Next steps:
 * **[Security - reporting a vulnerability / Private Disclosure Process](https://github.com/alkem-io/.github/blob/master/SECURITY.md)**
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 * **[User Experience (UX) Design System - layout, colors, fonts etc that are  used in the various Alkemio user interfaces](docs/ux-design-system.md)**
-* **[Translation Guidelines - how to contribute to page translations](docs/translation-guidelines.md)**
+* **[Translation Guidelines - how to contribute to page translations](docs/translation-helping-out.md)**
 
 ## Copyright & License
 Please see **[Licensing](LICENSES.md)** for a full overview. 

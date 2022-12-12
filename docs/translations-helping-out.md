@@ -1,12 +1,12 @@
 # Wisdom of the community: help us translate! 
-![](https://i.imgur.com/H9Jjvth.png)
+![](./images/translations-banner.png)
 
 ## Contributing to the platform
 Alkemio is all about building something together: not only a better future for society, but also a platform that can facilitate these journeys. We are fully open source, which means that your contributions to the platform are very valuable and welcome. 
 
 To make our platform accessible to anyone, we support multiple languages. Currently, this includes English, Dutch, Ukrainian, Bulgarian and Spanish. As our platform develops in a high pace, new features that need to be translated emerge frequently. Our international team does its best to keep up, but your help is very welcome! 
 
-In this blog we will show you how to help in keeping our platform translations up-to-date! 
+In this document log we will show you how to help in keeping our platform translations up-to-date! 
 <br/>
 
 ## How to contribute to the translations?
@@ -19,12 +19,12 @@ We're using a tool called [Crowdin](https://crowdin.com/), a crowdsourcing tool 
 2. (Optional) Update your profile on the [this page](https://crowdin.com/settings#account).
 3. Go to the Alkemio project by searching in the top search bar, or by directly going to [our page](https://crowdin.com/project/alkemio).
 4. Click the green 'Join' button to join the Alkemio project and select the language that you want to translate to (from English)
-<img src="https://i.imgur.com/7vj6NnI.png" alt="drawing" width="500"/>
+<img src="./images/translations-crowd-in1.png" alt="drawing" width="500"/>
 5. Hit the green "Translate All" button to get started and click through the tutorial.
-![](https://i.imgur.com/iBLrWHr.png)
+![](./images/translations-crowdin-2.png)
 7. You're ready to start translating! See the screenshot below how to!
 
-![](https://i.imgur.com/KLhLaI0.png)
+![](./images/translations-crowdin-3.png)
 
 7. That's all! Easy, right?
 <br/>
@@ -36,7 +36,7 @@ We want to assure that the translations meet our standards and match with our te
 **Did you know?**
 You can also use Crowdin to improve translations! Just use the "Search strings" and type in the string that you want to change: 
 
-![](https://i.imgur.com/mNV2lsm.png)
+![](./images/translations-crowdin-4.png)
 
 <br/>
 
