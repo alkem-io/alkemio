@@ -21,4 +21,5 @@ Where a user is active when it made any contribution on the platform, where cont
 Numbers 1 – 5 are active contributions, as they reflect the addition of knowledge to the ecosystem. Taking part in a Hub, Challenge or Opportunity can also be seen as a contribution: a user therewith grows the visible community on that topic and increases its exposure to other users. 
 
 #### Tracking the North Star Metric
-The North Star Metric will be tracked using Kibana. Every four weeks, the MAU will be presented in the organisation’s sprint review. It will be compared to the MAU of the past months. 
+The North Star Metric will be tracked on the platform level, and also for each Hub. 
+
