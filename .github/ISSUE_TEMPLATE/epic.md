@@ -24,3 +24,8 @@ Describe who needs to be kept up-to-date about this Epic, included in discussion
 
 ## Timeline
 What's the timeline for this Epic, what resources are needed, and what might potentially block this from hitting the projected end date.
+
+## Design
+Figma file:
+_Comments are highly appreciated. When commenting in Figma, please also leave a note in the comments box below this issue to notify us_
+
