@@ -55,6 +55,8 @@ Next steps:
 ## Copyright & License
 Please see **[Licensing](LICENSES.md)** for a full overview. 
 
+This project is tested with BrowserStack.
+
 
 
 
