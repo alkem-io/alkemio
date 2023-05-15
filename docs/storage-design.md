@@ -6,7 +6,7 @@ This document is created to capture the design requirements and decisions made f
 ## Requirements
 The following are high priority desired functionalities related to document management on Alkemio:
 * **Secure Access**: Allow uploading and having links to documents that are protected by Alkemio's authorization framework
-* **Management**: Allow admins to see documents that have been uploaded in their hub, as well as meta information about thos documents
+* **Management**: Allow admins to see documents that have been uploaded in their Space, as well as meta information about thos documents
 * **Secure**: Be able to track who uploaded a file and when, plus potentially additional meta information (e.g. upload IP)
 * **Uploading rights per context**: Allow users to upload documents where they have relevant authorization privileges
 * **Accessible via a URL**: the files need to be requestable via a http request whereby the response is the actual document
