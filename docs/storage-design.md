@@ -44,7 +44,7 @@ In addition there are then derived properties such as:
 The Storage Bucket is also then the place where there can be both quotas on the total amount of storage being used, as well as allowing control to Space admins 
 for a given Storage Bucket to adjust:
 * What file types can be stored 
-* The maximum file size can be uploaded
+* The maximum file size that can be uploaded
 
 Note also each "community scope" will essentially need its own Storage Bucket. In particular, a Challenge will need to have its own StorageBucket as the Documents 
 contained in it will be subject to different access rules than Documents in the containing Hub. 
