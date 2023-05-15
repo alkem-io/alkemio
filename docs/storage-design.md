@@ -17,7 +17,7 @@ The following non-functional requirements apply:
 * **Performant**: The files access should be as fast as feasible given we are serving the content from our own servers. 
   
 The following security requirements should be designed for:
-* **Encryption at rest**: allowing the files to be encrypted at Rest
+* **Encryption when stored**: allowing the files to be encrypted when stored in the external storage.
 
 ### Out of Scope
 An important consideration is that File **contents** are *not modified* after they are uploaded. This means that we do not consider in the work 
@@ -65,7 +65,7 @@ A Document has the following properties:
 * ...
 
 Other properties that can be added to expand the capabilities of storage / security around storage include:
-* Encrypted at rest or not
+* Encrypted when stored in the extrenal storage or not
 * Uploading source IP
 * ...
 
@@ -102,7 +102,7 @@ This does mean that usage of image uploading or adding files are references depe
   * This raises the potential issue of two users uploading the same Document, and one deletes it. If we immediately deleted the file on IPFS then the second user's document contents would no longer be accessible
   * For now we do *not* delete the file directly on IPFS if a Document is deleted, but would need to add in a check if another Document has the same externalID or not before removing it. Once we have ensured there is no direct access to 
   the file via IPFS (directly) then we can consider also removig the file on IPFS after a check. 
-  * Note: if the file is encrypted at rest in IPFS then this will also impact this, meaning the risk would not go across StorageBuckets - but the real solution is to move to another storage mechanism than IPFS.
+  * Note: if the file is encrypted when stored in IPFS then this will also impact this, meaning the risk would not go across StorageBuckets - but the real solution is to move to another storage mechanism than IPFS.
   
 ### Encryption at rest (later)
 For files that are to be protected via the API, the contents of the files should:
@@ -110,8 +110,6 @@ For files that are to be protected via the API, the contents of the files should
 * decrypted as part of returning the response to the http request
 
 Key management for this encryption is a topic to be taken carefully.
-
-In the first version the suggestion is to not take on encryption at rest, but to rely on potential access to need the actual IPFS identifier for the file. 
 
 So the Document itself stores the identifier in IPFS, but that would never be exposed via the API or otherwise. Then the access to the document goes through the REST API which retrieves the document from IPFS and serves it out. A follow on step would then be to have the document encrypted / decrypted by the containing Storage Bucket. 
 
@@ -143,7 +141,8 @@ The following future work streams have been identified:
 * Moving to another storage mechanism that IPFS
 * Migrate Whiteboard storage to be via Documents
     * This would drastically shrink the production database
-* Encrypting the documents at rest
+* Encrypting the documents when stored
     * Key management is clearly a topic that requires due attention; in a first instance the suggestion is to have an encryption / decryption key per Storage Bucket. 
 * Putting limits on each Storage Bucket that the platform enforces
     * This is obviously also a key subscription adjustment point
+* Removing the contents from the external store when the containing Document is deleted. 
