@@ -47,7 +47,7 @@ for a given Storage Bucket to adjust:
 * The maximum file size that can be uploaded
 
 Note also each "community scope" will essentially need its own Storage Bucket. In particular, a Challenge will need to have its own StorageBucket as the Documents 
-contained in it will be subject to different access rules than Documents in the containing Hub. 
+contained in it will be subject to different access rules than Documents in the containing Space. 
 
 
 ### Document
