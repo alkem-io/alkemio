@@ -27,8 +27,8 @@ In general there should be one issue per feature branch.
 In addition the following environments are used for the release management of the platform:
 - **[dev](https://dev.alkem.io)**: for the continual deployment from the _develop_ branch, from Server and client repos.
 - **[test](https://test.alkem.io)**: for carrying out performance / load testing, or just simply having an environment whereby particular issues can be reviewed
-- **[acc](https://acc.alkem.io)**: for verification of new builds before they are deployed to production environments
-- **[demo](https://demo.alkem.io)**: a semi-production environment where the capabilities fo the platform can be evaluated
+- **[sandbox](https://sandbox.alkem.io)**: a production like environment where the capabilities fo the platform can be evaluated
+- **[acc](https://acc.alkem.io)**: for verification of new builds before they are deployed to production environments. It matches as far as possible the production setup
 - **[prod](https://hub.alkem.io)**: the production open innovation hub. 
 
 The _dev_ environment exposes the following end points:
