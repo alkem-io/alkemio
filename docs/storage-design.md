@@ -105,7 +105,7 @@ This does mean that usage of image uploading or adding files are references depe
   * Note: if the file is encrypted at rest in IPFS then this will also impact this, meaning the risk would not go across StorageBuckets - but the real solution is to move to another storage mechanism than IPFS.
   
 ### Encryption at rest (later)
-For files that are to be protected via the api, the contents of the files should:
+For files that are to be protected via the API, the contents of the files should:
 * be encrypted at rest
 * decrypted as part of returning the response to the http request
 
