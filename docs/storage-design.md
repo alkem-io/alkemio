@@ -113,7 +113,7 @@ Key management for this encryption is a topic to be taken carefully.
 
 In the first version the suggestion is to not take on encryption at rest, but to rely on potential access to need the actual IPFS identifier for the file. 
 
-So the Document itself stores the identifier in IPFS, but that would never be exposed via the api or otherwise. Then the access to the document goes through the Rest api which retrieves the document from IPFS and serves it out. A follow on step would then be to have the document encrypted / decrypted by the containing Storage Bucket. 
+So the Document itself stores the identifier in IPFS, but that would never be exposed via the API or otherwise. Then the access to the document goes through the REST API which retrieves the document from IPFS and serves it out. A follow on step would then be to have the document encrypted / decrypted by the containing Storage Bucket. 
 
 ### Storage of Documents
 In the first version of Storage Buckets it is expected that the content will simply be stored on IPFS.
