@@ -1,7 +1,7 @@
 # Alkemio - Technical Design Introduction
 This document provides an introduction to the technical design for Alkemio. It is assumed that the reader has already read the [Conceptual Design](./conceptual-design.md) document. 
 
-The architecture is described along the following aspects:
+The architecture is described along the following posts:
 *   Design Principles
 *   Logical Data Model
 *   Logical Design, and core components
@@ -27,14 +27,14 @@ The following high level choices guide the technical design:
     *   The initiative is still learning and evolving, so it is deemed prudent to avoid establishing long term dependencies that may not be the right choice.
 *   **Regulated value (e.g. money) out of band i.e. via familiar channels / units**
     *   In case the platform should enable the transfer of regulated value then a whole range of obligations fall on any organization deploying a Alkemio instance - e.g. KYC, AML, insurance etc.
-    *   It is worth noting that the Host Organization for a Hub could later play a role in this scenario as facilitator of the regulated value exchange e.g. hold money in escrow for stakeholders + then pay parties based on signals from the platform that a Project has completed successfully
+    *   It is worth noting that the Host Organization for a Space could later play a role in this scenario as facilitator of the regulated value exchange e.g. hold money in escrow for stakeholders + then pay parties based on signals from the platform that a Project has completed successfully
 *   **Formalise Trust**
     *   This implies making explicit how agreements are made between actors of the platform, and how the representation of those interactions can be trusted. 
     *   The shared context gives a base of understanding, defining the change to be achieved. For Users or Organizations joining a Challenge they can then as part of the application process confirm that they agree to any particular terms / agreements that are used by the parties collaborating around that Challenge. 
 *   **Simple to operate**
     *   The platform should be easy to configure, deploy and run - also implying that the number of external dependencies needs to be very carefully managed. 
 
-It is worth noting that some of these choices, especially regarding having an Organization in the Hub Host role for facilitating Challenges, is made in the context of getting a first version of Alkemio deployable. The expectation is fully that these aspects can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
+It is worth noting that some of these choices, especially regarding having an Organization in the Space Host role for facilitating Challenges, is made in the context of getting a first version of Alkemio deployable. The expectation is fully that these posts can be decentralised as the platform and wider context within which it is used matures - and indeed the architecture is set up to ensure that this is feasible in an incremental manner.
 
 # Logical Data Model
 
@@ -50,29 +50,29 @@ This logical data model attempts to keep to a minimum, at least initially, the s
 
 The key entities in the model are:
 *   **Challenge:**
-    * **Hub**: where Challenges are hosted, facilitated by a hosting organization. 
+    * **Space**: where Challenges are hosted, facilitated by a hosting organization. 
     * **Challenge**: the Challenge itself, including the shared understanding, community and tracked collaboration. 
     * **Opportunity**: a potential significant step towards the desired outcomes of the Challenge. Likely that multiple Opportunities are identified in the context of the Challenge, each with their own lifecycle & that need to be ranked / prioritised. 
+    * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
 *   **Community**:
     *   **User**: The primary way of interacting with the platform    
     *   **UserGroup**: To allow the aggregation of users into groups, which may or may not have a focal point that is in charge of the group
     *   **Organization**: To reflect legal entities that interact with the platform via one or more users.   
-    *   **Profile**: a shared entity across Users, UserGroups and Organizations to represent their Profile in a consistent way. It manages the avatar of the entity, tagsets giving meta-data about the entity (e.g. industry, skill sets, intersts) and references for links related to the entity (e.g. website of an organization, linkedin profile for a user etc)
 *   **Context**: 
-    * **Context**: The shared understanding, at either Hub, Challenge or Opportunity level. 
+    * **Context**: The shared understanding, at either Space, Challenge or Opportunity level. 
     * **Ecosystem Model**: A representation (model) of the different types of **ActorGroups + Actors**, plus later the value types each receives / brings into the Ecosystem. 
-    * **Aspects**: The aspects to solutions being worked on in the context of the Challenge
 *   **Collaboration**: 
-    * **Project**: a defined outcome, formalised as an agreement between parties collaborating in the context an Opportunity. Potentially multiple projects needed to deliver an Opportunity.
+    * **Callouts**: How to engage the members of a Community to get their wisdom on issues faced, solutions, others to engage, network etc.  
+    * **Posts**: The posts to allow members to contribute
     * **Relation**: an interaction to be tracked between two Users / Organizations / Groups related to a particular Opportunity
-*   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organizations, Challenges, Hub etc. 
+*   **Agents**: representing an entity in the platform in interactions with other entities. Entities with Agents include: Users, Organizations, Challenges, Space etc. 
     * **Credentials**: a list of credentials held by the Agent. Important to note is that there are two types of credentials that can be associated with an Agent (a) simple credentials, which are managed by the platform (b) verified credentials, which are familiar W3C Verified Credentials. 
 *   **Authorization Policy**: representing the authorization rules that grant privileges to agents that are interacting with the entity.  
     * **Privilege**: a list of potential Privileges such as Create, Read, Update, Delete, Grant that can be required in any particular interaction. 
 
-To facilitate flexible usages of this data model, most key entities have **Tagsets** associated with them, allowing for easy filtering + connecting
-*   Tags allow for a fairly unstructured entity relationship model to be used in a variety of ways.
-*   Tags are held in Tagsets that are named collections of Tags. 
+In addition there are some key shared entities that are re-used across the domain model:
+* **Profile**: a shared entity across to represent Profiles in a consistent way. It manages tagsets, references, visuals, tagline, description of the entity, providing a flexible way to associated meta-information for the entity. 
+  * E.g. tagsets giving meta-data about the entity (e.g. industry, skill sets, intersts) and references for links related to the entity (e.g. website of an organization, linkedin profile for a user etc)
 
 There is also a *physical data model* that is how the logical data model is stored in the underlying datastore. However for using the system that should be hidden from normal usage.
 
@@ -113,7 +113,6 @@ The core sub-components for the platform are as follows:
 *   **Server**: for managing the entities in the domain model, and facilitating the usage of other services
 *   **Authentication**: for managing the authentication of Users that are interacting with the platform
 *   **Sql Storage**: for storing of databases, including the domain model from the Alkemio server, wallets from SSI, Communications and Identities. 
-*   **Content Addressable Storage (CAS)**: for storing of images, documents. Currently this is a private IPFS cluster.
 *   **Communications**: for managing all communications happening between entities (e.g. community to user, user to user) in the platform
 *   **Self Sovereign Identities (SSI)**: for managing digital identies and wallets for Agents
 
@@ -134,7 +133,7 @@ The target interaction pattern is the Actor Model, whereby entities are represen
 
 Core autonomous entities in the platform have an **Agent** that represents that entity in platform interactions. 
 
-Entities with Agents currently are: User, Organization, Hub, Challenge & Opportunity. 
+Entities with Agents currently are: User, Organization, Space, Challenge & Opportunity. 
 
 Each Agent has _Credentials_ which can interact on behalf of the user / entity with other elements of the platform. 
 
@@ -145,7 +144,7 @@ Note: the text below primarily talks about Users for Authentication and Authoriz
 ## Authentication Providers
 The Authentication of users is handled by Authentication Providers, a pluggable mechanism whereby multiple types of Authentication can be supported by the platform. After successful Authentication, the platform retrieves the Agent for the User and that Agent is then used to carry out actions on behalf of the User. 
 
-The platform currently supports [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OIDC so that it is straightforward to integrate external authentications, e.g. Github, Google etc, into the platform. 
+The platform currently supports [Ory Kratos and Ory Oathkeeper](https://ory.sh) for Authentication. The Ory platform is an open source, enterprise class Identity Provider. Note that the platform supports OIDC so that it is straightforward to integrate external authentications, e.g. GitSpace, Google etc, into the platform. 
 
 <p align="center">
 <img src="images/security-authentication-ory.png" alt="Security: Ory Authentication" width="600" />
@@ -172,19 +171,18 @@ Worth noting that this approach also allows for Credentials to be later held out
 # Templates
 A key design goal for Alkemio is the sharing of best practices, so the platform needs to be customizable. This is achieved with Templates.
 
-Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Hub, Challenge, Opportunity, Project etc) can be instantiated based on a particular template. 
+Templates support is high up the backlog for the platform, as it is important that key entities (e.g. Space, Challenge, Opportunity, Project etc) can be instantiated based on a particular template. 
 
 Key areas where we expect that templates support will be useful include:
 * Lifecycles: what is the lifecycle (also sometimes referred to as process) that your entities should follow? What do each of the states mean? What actions should be triggered e.g. if a Challenge is approved?
-* Ecosystem Models: what types of actors / values are being exchanged within the ecosystem?
-* Aspects: what are the key aspects for a Challenge / Opportunity that need to be captured within a given Challenge / Opportunity?
+* Posts: what are the key posts for a Challenge / Opportunity that need to be captured within a given Challenge / Opportunity?
 * Community: what type of community do you intend to create? What User groups make sense?
 * Whiteboards: what collaboration canvases should be available and what is the goal of each canvas?
 * (later) what are custom credentials / actions that can be carried out within a particular context?
 
-The management of Templates needs to be both at the global level (global catalog), as well as locally controllable i.e. that a Hub can provide a defined set of options (e.g. what Lifecycles can be used).
+The management of Templates needs to be both at the global level (global catalog), as well as locally controllable i.e. that a Space can provide a defined set of options (e.g. what Lifecycles can be used).
 
-Currently there is only limited global templates support; if you have suggestions or wish to work with us on this aspect please engage!
+Currently there is only limited global templates support; if you have suggestions or wish to work with us on this post please engage!
 
 # Identifiers + Names
 
@@ -197,7 +195,7 @@ This is the primary means for identifying entities within the platform.
 In addition, the platform also uses a human readable identifier for certain entities. This is in addition to the UUID for the entity. 
 
 The NameID is used for the following purposes:
-* **Client side URLs**: it is used to generate the URL that uniquely can navigate to that entity e.g. https://hub.alkem.io/hub1/challenge1
+* **Client URLs**: it is used to generate the URL that uniquely can navigate to that entity e.g. https://Space.alkem.io/space1/challenge1
 * **Human readable**: making it easier to refer to particular entities
 * **Automation**: it makes populating of data on the platform easier
 
@@ -207,14 +205,14 @@ Each NameID is unique within a certain scope. The following table shows which en
 | ----------- | ----------- |
 | User      | Global amongst Users       |
 | Organization   | Global amongst Organizations        |
-| Hub   | Global amongst Hubs        |
-| Challenge   | Within containing Hub         |
-| Opportunity   | Within containing Hub         |
-| Project   | Within containing Hub         |
+| Space   | Global amongst Spaces        |
+| Challenge   | Within containing Space         |
+| Opportunity   | Within containing Space         |
+| Project   | Within containing Space         |
 
 Notes:
-* This implies that within a particular Hub that the NameIDs for all Challenges, Opportunities and Projects need to be unique. 
-* The combination of (Hub.NameID, Challenge.NameID) is sufficient to universally identify a particular Challenge using human friendly names. 
+* This implies that within a particular Space that the NameIDs for all Challenges, Opportunities and Projects need to be unique. 
+* The combination of (Space.NameID, Challenge.NameID) is sufficient to universally identify a particular Challenge using human friendly names. 
 
 The following rules apply to the creation / usage of a NameID:
 * 25 character limit
@@ -223,10 +221,10 @@ The following rules apply to the creation / usage of a NameID:
 NameIDs logically **can** be updated (not initially), but with a warning re URLs being affected etc.
 
 
-# Lifecycles
+# Innovation Flows
 As described in the Conceptual Design, the collaboration around a Challenge starts with a shared understanding ('Context'). A key element of that shared understanding is understanding where the Challenge (or other entity) is in terms of its maturity. 
 
-The term used within the Alkemio platform for the managing the maturity of Challenges (+ other entities), as well as to enforce processes / workflows, is **Lifecycle**. 
+The term used within the Alkemio platform for the managing the maturity of Challenges (+ other entities), as well as to enforce processes / workflows, is **Innovation Flow**. 
 
 State based representations are widely used, with Finite State Machines (FSMs) being a formalism whereby a system can be in exactly one from a defined set of states, with clearly defined criteria / rules for when a transition can take place. Examples include Kanban boards, RFCs as well as more formally business process modeling approaches. 
 
@@ -306,8 +304,7 @@ This is visualized in the platform as follows:
 If you are curious you can also cut and paste the above definition into the [official XState Visualization service](https://xstate.js.org/viz/) and see their visualization of the same definition. 
 
 ## Usage
-The platform currently uses Lifcycles on the following entities:
-* User Applications
+The platform currently uses Innovation Flows on the following entities:
 * Challenges
 * Opportunities
 
@@ -319,6 +316,11 @@ However the expectation is to expand the usage significantly as soon as resource
 * Expanding the set of Commands / guards e.g. to allow notifications
 * ...
 
+In addition, the underlying state machine representation ('Lifecycle') is also used on:
+* Applications: to control the states of the application process
+* OrganizationVerification: to control whether Organizations are verified or not
+* Whiteboard Lock: to control whether the Whiteboard is checked out or not    
+
 ## SSI Demonstrator
 There is already a demonstrator to illustrate the power of this approach, and how it can be integrated with SSI / VCs.
 
@@ -329,8 +331,10 @@ For this scenario the following was demonstrated:
 * The new guard specified that only Agents with an assigned VC of the above type and tied to the particular Challenge were allowed to update the Challenge state.
 
 # Communications
-The Alkemio Platform supports communications in two modes:
+The Alkemio Platform supports communications in the following way:
 * **Community-User**: whereby all members of a Community can see messages 
+
+Later the platform will support the following interaction:
 * **User-User**: whereby Users can directly communicate with each other 
 
 The functionality is provided using an embedded [Matrix Protocol](https://matrix.org/) server. The choice for basing communications on top of Matrix Protocol is primarily due to it being designed from the ground up as a decentralized communications platform.
@@ -346,7 +350,7 @@ Each Community within Alkemio has two Rooms available:
 * **Updates Room**: whereby a User who is authorized can send updates to a community
 * **Discussion Room**: whereby members of the community can broadcast messages to the whole community
 
-Note that there is a Community entity associated with each Hub, Challenge and Opportunity - ensuring that each of these entities can have Community based messaging.
+Note that there is a Community entity associated with each Space, Challenge and Opportunity - ensuring that each of these entities can have Community based messaging.
 
 ## User-User Messaging
 Each User can also have a private Room with any other User on the platform. 
@@ -371,11 +375,11 @@ Further, the conceptual design of Matrix, with the notion of HomeServer and repl
 
 
 # Communities & User On-boarding
-Each Hub, Challenge and Opportunity has a Community. This Community represents the set of Users and Organizations that are contributing.
+Each Space, Challenge and Opportunity has a Community. This Community represents the set of Users and Organizations that are contributing.
 
 Membership of a Community is curated, meaning that there is an explicit step required to become a member of a Community.
 
-Membership is hierarchical, meaning that to be a member of a Challenge the User also needs to be a member of the containing Hub.
+Membership is hierarchical, meaning that to be a member of a Challenge the User also needs to be a member of the containing Space.
 
 Only registered Users can apply i.e. a User needs to have a Profile on the platform to be able to apply (logically enough!).
 
@@ -384,7 +388,7 @@ There are currently two ways for a User to become a member of a Community:
 * Directly added by an administrator for the Community
 * Apply to become a member
 
-For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requested to fill out is currently fixed per level (i.e. the same set of questions is used for all Hubs, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
+For the latter, the user can fill out a simple form to apply to become a member. The set of questions users are requested to fill out is currently fixed per level (i.e. the same set of questions is used for all Spaces, and for all Challenges) - however once Templates are available these questions will be configurable per Community.
 
 The high level flow for applications is shown below.
 

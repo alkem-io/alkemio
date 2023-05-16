@@ -33,9 +33,10 @@ If at any point you would like more information, or connect more directly to the
 
 ## How do I get started?
 The easiest way to get started with Alkemio is to see it in action! For that there are a couple of options:
-* **[Demo Environment](https://demo.alkem.io)** - a non-production environment illustrating how multiple organizations / users can host Challenges on a single hub, allowing the community to be shared across all Challenges and users to find Challenges that they want to contribute to. 
+* **[Demo Space](https://alkem.io)** - a Space on the production environment, but that is marked as Demonstration and may have some functionalities limited. 
   * If you are interested in having your own Challenges Space on the demo environment to try it out please reach out via <community@alkem.io>!.  
 * **[Try it out locally](https://www.github.com/alkem-io/demo)** - create your own local Alkemio instance and populate it with sample data. Recommended for the more hands on :)
+  * Note: this is as of Q2 2023 very out of date and a refresh is due, please contact us if you wish to have your own local setup. 
 ## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 
 
@@ -47,6 +48,7 @@ Next steps:
 * **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
 * **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security-overview.md)** 
 * **[Security - reporting a vulnerability / Private Disclosure Process](https://github.com/alkem-io/.github/blob/master/SECURITY.md)**
+* **[Storage - details of how files are stored and managed on Alkemios](docs/storage-design.md)**
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 * **[User Experience (UX) Design System - layout, colors, fonts etc that are  used in the various Alkemio user interfaces](docs/ux-design-system.md)**
 * **[Translation Guidelines - how to contribute to page translations](docs/translation-helping-out.md)**
