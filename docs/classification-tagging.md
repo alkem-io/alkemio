@@ -37,7 +37,7 @@ The Collaboration entity uses a TagsetTemplateSet to hold the TagsetTemplates to
     * DisplayLocation: type = singleSelect, for specifying the placement of the Callout within the display of the Space
     * States: type = singleSelect for the set of visible states from the InnovationFlow
 
-Then each time a Callout is added to the Collaboration, it's profile will have the above Tagsets created as well as the Default tagset.  
+Then each time a Callout is added to the Collaboration, its profile will have the above Tagsets created as well as the Default tagset.  
 
 ### **Mutations**
 The Tagset entity is authorizable, so we can consider also having specific Privileges being required for updating particular Tagsets. To be explored more later. 
