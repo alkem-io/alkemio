@@ -34,7 +34,7 @@ The Collaboration entity uses a TagsetTemplateSet to hold the TagsetTemplates to
     * DisplayLocation: type = singleSelect, for specifying the palcement of the Callout within the display of the Space
 * Challenge: 
     * Default: type = freeform, for allowing any tags to be added    
-    * DisplayLocation: type = singleSelect, for specifying the palcement of the Callout within the display of the Space
+    * DisplayLocation: type = singleSelect, for specifying the placement of the Callout within the display of the Space
     * States: type = singleSelect for the set of visible states from the InnovationFlow
 
 Then each time a Callout is added to the Collaboration, it's profile will have the above Tagsets created as well as the Default tagset.  
