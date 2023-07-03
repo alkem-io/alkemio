@@ -55,5 +55,5 @@ This does mean that the Collaboration entity needs to know what "Tagset Template
 It is expected that the set of values in a single / multiple select Tagset do not change frequently. 
 
 For example the set of displayLocation values is fairly fixed for the Space and Challenge. 
-When the set of allowedValues does need to change, for example if the InnovationFlow lifecycle being used changes, then the business logic will need to ensure that relevant TagsetTemplate is updated - plus ensuring that the selected value is one of th evalues in the set of allowedValues. 
+When the set of allowedValues does need to change, for example, if the InnovationFlow lifecycle being used changes, then the business logic will need to ensure that the relevant TagsetTemplate is updated - plus ensuring that the selected value is one of the values in the set of allowedValues. 
 
