@@ -49,6 +49,8 @@ Next steps:
 * **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security-overview.md)** 
 * **[Security - reporting a vulnerability / Private Disclosure Process](https://github.com/alkem-io/.github/blob/master/SECURITY.md)**
 * **[Storage - details of how files are stored and managed on Alkemios](docs/storage-design.md)**
+* **[Classification + Tagging - details of how content on the platform is tagged](docs/classification-tagging.md)**
+* **[Statecharts - how processes and logic flows are managed on the platform](docs/state-machines.md)**
 * **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
 * **[User Experience (UX) Design System - layout, colors, fonts etc that are  used in the various Alkemio user interfaces](docs/ux-design-system.md)**
 * **[Translation Guidelines - how to contribute to page translations](docs/translation-helping-out.md)**
