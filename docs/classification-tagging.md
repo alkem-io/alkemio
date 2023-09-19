@@ -34,10 +34,10 @@ The Collaboration entity uses a TagsetTemplateSet to hold the TagsetTemplates to
     * DisplayLocation: type = singleSelect, for specifying the palcement of the Callout within the display of the Space
 * Challenge: 
     * Default: type = freeform, for allowing any tags to be added    
-    * DisplayLocation: type = singleSelect, for specifying the palcement of the Callout within the display of the Space
+    * DisplayLocation: type = singleSelect, for specifying the placement of the Callout within the display of the Space
     * States: type = singleSelect for the set of visible states from the InnovationFlow
 
-Then each time a Callout is added to the Collaboration, it's profile will have the above Tagsets created as well as the Default tagset.  
+Then each time a Callout is added to the Collaboration, its profile will have the above Tagsets created as well as the Default tagset.  
 
 ### **Mutations**
 The Tagset entity is authorizable, so we can consider also having specific Privileges being required for updating particular Tagsets. To be explored more later. 
@@ -55,5 +55,5 @@ This does mean that the Collaboration entity needs to know what "Tagset Template
 It is expected that the set of values in a single / multiple select Tagset do not change frequently. 
 
 For example the set of displayLocation values is fairly fixed for the Space and Challenge. 
-When the set of allowedValues does need to change, for example if the InnovationFlow lifecycle being used changes, then the business logic will need to ensure that relevant TagsetTemplate is updated - plus ensuring that the selected value is one of th evalues in the set of allowedValues. 
+When the set of allowedValues does need to change, for example, if the InnovationFlow lifecycle being used changes, then the business logic will need to ensure that the relevant TagsetTemplate is updated - plus ensuring that the selected value is one of the values in the set of allowedValues. 
 
