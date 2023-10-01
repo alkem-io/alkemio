@@ -71,32 +71,32 @@ Other properties that can be added to expand the capabilities of storage / secur
 
 Important to note is that the platform in essence adds a bunch of meta data around the underlying storage of the file. 
 
-### Accessing the Files
-The files will be accessed via Rest requests.
+## Design
+Each Profile has a StorageBucket. That is what is used for actually storing Documents. 
 
-The Rest api for documents will then check the request matches the 
+Each StorageBucket on a Profile then has a aggregating (parent) StorageBucket, which is where its storage usage is aggregated. 
 
-### Usage
-The following entities in the Alkemio domain model are expected to have a Storage Bucket:
-* Hub
+This does mean that there is a separate hierarchy of relations between the StorageBuckets, but this was chosen as the most effective way to ensure storage usage could be aggregarded while still being able to store the Documents in a Storage Bucket tied to the actual entity that the content is for. 
+
+## Aggregating Storage Buckets
+The following entities in the Alkemio domain model are then used to act as aggregators for the StorageBuckets on Profiles:
+* Space
 * Challenge: essentially a child of the parent Space Storage Bucket.
 * Platform
 * Library
 * Organization
+* User
 
-In the first version of Storage Bucket usage there are no quotas on files that are uploaded, but the 
-Note that Platform and Library are essentially non-managed storage Buckets; we can look later if we need 
-to put restrictions around content that is stored there.  
+Currently there are no quotes applied to Storage Buckets, but as the documents are tracked with meta data this can be later enforced. In essence as we now have an audit trail of who uploaded each file we can also easily aggregate to see how much content each user is uploading if so desired.
 
-**Note**: as part of this we would allow all Registered users to be able to upload files on their Profile, which then 
-uses the Platform StorageBucket. This is somewhat of a risk (and the reason we did not support this initially) in terms of providing unlimited resource accessibility, but a key 
-difference is that we now have an audit trail of who uploaded each file - so we can also easily aggregate to see how much content each user is uploading if so desired.
+There are limits on the size of files that can be uploaded as well as the types of files that can be uploaded.  
 
-### Knowing the StorageBucket to use ==> Profile
-The Storage Bucket to use is tied to each Profile entity. This is chosen as that is where visuals are uploaded, and also references are essentially how we currently work with attachments.
+The rational for having a StorageBucket on each Profile is so that access to content, such as images in a Whiteboard, can be controlled using an AuthorizationPolicy that is derived from the authorization policy of the entity whose Profile is being used.
 
-This does mean that usage of image uploading or adding files are references depends on Profile entity - which means we should only use Visual entities as part of a Profile. This has implications for e.g. InnovationBucket usage with its Branding. It maybe this needs to use a Profile internally and expose the visual logically via Branding entity on the api.
+### Accessing the Files
+The files will be accessed via Rest requests.
 
+The Rest api for documents will then check the request matches the 
 ## Known issues
 * Deletion of files: a side effect of content addressed storage is that if two users upload the same document then it will get the same externalID. 
   * This raises the potential issue of two users uploading the same Document, and one deletes it. If we immediately deleted the file on IPFS then the second user's document contents would no longer be accessible
@@ -140,7 +140,7 @@ Note that we can consider having a "virtual" folder structure displayed based on
 The following future work streams have been identified: 
 * Moving to another storage mechanism that IPFS
 * Migrate Whiteboard storage to be via Documents
-    * This would drastically shrink the production database
+    * A potential middle ground here is to have the images in a Whiteboard stored as Documents, and then the JSON itself is fine to keep storing in the database.
 * Encrypting the documents when stored
     * Key management is clearly a topic that requires due attention; in a first instance the suggestion is to have an encryption / decryption key per Storage Bucket. 
 * Putting limits on each Storage Bucket that the platform enforces
