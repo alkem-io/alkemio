@@ -1,0 +1,79 @@
+<mxfile host="Electron" modified="2023-07-02T11:09:38.509Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="oawG2WWe25smGNDfKg4y" version="21.5.0" type="device">
+  <diagram name="Page-1" id="5ZBt2RfdUKwCuBqO6AlL">
+    <mxGraphModel dx="2300" dy="1158" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G33QBiFhpF1nUaqg09G5-9" value="eventOnXXX&lt;br&gt;- check auth privilege (normal style)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="590" width="120" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-10" value="&lt;b&gt;pre-processing&lt;/b&gt; of event&lt;br&gt;- enrich context with authorization policy, agentInfo etc&lt;br&gt;- pass in guards + commands&lt;br&gt;&lt;br&gt;Awaits handling of event by Lifecycle&lt;br&gt;- which does NOT mean that effect of events have completed&lt;br&gt;&lt;br&gt;&lt;b&gt;post-processing&lt;/b&gt; of event:&lt;br&gt;Re-loads entity + returns result" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="590" width="176" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-12" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="330" y="290" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-7" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="G33QBiFhpF1nUaqg09G5-12" vertex="1">
+          <mxGeometry width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-4" value="xxxGuards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;" parent="G33QBiFhpF1nUaqg09G5-12" vertex="1">
+          <mxGeometry x="24" y="98" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-8" value="xxxCommands" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;" parent="G33QBiFhpF1nUaqg09G5-12" vertex="1">
+          <mxGeometry x="180" y="98" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-11" value="XXXProvider&lt;br&gt;- Specific to each usage&lt;br&gt;- pre-processing of event&lt;br&gt;- post-processing of event" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="G33QBiFhpF1nUaqg09G5-12" vertex="1">
+          <mxGeometry x="70" width="186" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-14" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="330" y="80" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="G33QBiFhpF1nUaqg09G5-14" vertex="1">
+          <mxGeometry width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-2" value="instantiated Machine Definition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;" parent="G33QBiFhpF1nUaqg09G5-14" vertex="1">
+          <mxGeometry x="30" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-3" value="local Machine State" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;" parent="G33QBiFhpF1nUaqg09G5-14" vertex="1">
+          <mxGeometry x="180" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-13" value="Lifecycle&amp;nbsp;&lt;br&gt;- shared across all usages" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="G33QBiFhpF1nUaqg09G5-14" vertex="1">
+          <mxGeometry x="90" y="20" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-15" value="XXXMutationService" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="540" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-16" value="XXXProvider" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="344" y="540" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="G33QBiFhpF1nUaqg09G5-9" target="G33QBiFhpF1nUaqg09G5-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="640" as="sourcePoint" />
+            <mxPoint x="470" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-18" value="&lt;b&gt;processing &lt;/b&gt;of event:&amp;nbsp;&lt;br&gt;sendEventToMachine&lt;br&gt;- restores machine def + state&lt;br&gt;- triggers event into machine&lt;br&gt;&lt;br&gt;Note: sending of event to machine is NOT synchronous&lt;br&gt;&lt;br&gt;Note: no result returned&lt;br&gt;- results of event are determined by machine execution" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="617" y="590" width="223" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.03;entryY=0.471;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="G33QBiFhpF1nUaqg09G5-10" target="G33QBiFhpF1nUaqg09G5-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="640" as="sourcePoint" />
+            <mxPoint x="470" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-20" value="Note: commands + guards depend on additional data (e.g. agentInfo) that is put into the event&lt;br&gt;&lt;br&gt;&lt;br&gt;Context for event handling can also be stored in the machine definition + hence state (e.g. additional IDs)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="800" width="580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-21" value="Lifecycle Service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="630" y="540" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-26" value="Both are JSON files&lt;br&gt;- stored as strings" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="680" y="180" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G33QBiFhpF1nUaqg09G5-27" value="Code blocks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="680" y="380" width="150" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,53 +1,70 @@
-# CherryTwist
-Welcome to CherryTwist - an open source infractructure for multi-stakeholder collaboration leveraging digital ecosystems.
 
-This repository is for coordination around the project - still in the startup phase but aiming to get the basics right from the get go so please do share any feedback / observations / suggestions you have!
+<p align="center">
+  <a href="https://alkemio.org/" target="blank"><img src="https://alkemio.org/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
+</p>
+<p align="center"><i>Next level collaboration. Making progress together. Safely.</i></p>
 
-## Community Guidelines
-- Contributing: please read the **[guidelines](https://github.com/cherrytwist/.github/blob/master/CONTRIBUTING.md)** and check the **[project backlogs](https://github.com/orgs/cherrytwist/projects)** for open issues. Note: the project boards are empty at the moment but aiming to populate soon!
-- Security: the project is enforcing 2FA, and our **[security process](https://github.com/cherrytwist/.github/blob/master/SECURITY.md)** details out what to do in the event of a vulnerability being detected
-- Licensing: all contributors to the project are required to sign a **[Contributor License Agreement (CLA)](https://github.com/cherrytwist/.github/blob/master/CLA.md)** to ensure that the contents of the repository are covered from a legal perspective. The CLA process is enforced for all contributions.
+Alkemio is an open source, open innovation platform - enabling you to work together with AI to achieve shared goals.  
 
-And last but not least, please feel free to reach out and **[ask us for support!](https://github.com/cherrytwist/.github/blob/master/SUPPORT.md)**
+<p></p>
 
-# Introduction
-So what is a "Digital Ecosystem" and why do we need a new infrastructure?
+## Why Alkemio?
+Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. 
 
-## Digital Ecosystem
-Gartner defines a Digital Ecosystem as: *“Digital ecosystems leverage an interdependent group of actors (enterprises, people and things) sharing digital platforms to achieve a mutually beneficial purpose.”*.
+Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
 
-In a digital first world, it is clear that “Digital has revolutionized the level and intensity of connections among business partners, customers and all others who participate in the creations, delivery and capture of value. Digital connections and advanced technology change how value is exchanged, what value can be exchanged (e.g.,monetary, data, tokens for any kind of value), the speed at which it is exchanged, and where and with whom it can be exchanged.”
+The core concept is a **Space**, combining a 
+* **topic you care about** 
+* with a **community** 
+* that wants to start making progress **towards** a new reality. 
+But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
 
-But to fully realise this value we need an infrastructure designed with open innovation and digital collaboration in mind - hence CherryTwist!
+There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
 
-## Targetted Functionalities
-The solution space is still being actively framed / captured - but some aspects are already clear:
-- Initiate, set-up and broadcast your challenge to the world
-- Find and add stakeholders with an interest for adoption
-- Grow social graphs around your challenge (knowledge, capability, capacity)
-- Find and add contributors that can help build solutions, from individuals to teams to companies to governments
-- Clarify and formalise agreements between multiple contributors (potentially via new entities, joint statements)
-- Collectively govern projects to achieve common goals
-- Collectively resource, including using bounties to incentivise contributors to deliver milestones
-- Collectively manage work products generated, including IP generated, trademarks etc.
-- Facilitating communication and interactions around the challenge
-...and likely many more. There are many aspects that can play into this.
+<p align="center">
+<img src="./docs/images/visual-challenge-shared-representation.jpg" alt="Shared representation" width="600" />
+</p>
 
-And of course to do this while leveraging the latest technical capabilityes such as Self Sovereign Identity, verified credentials (trust, reputation), formalised agreements etc etc - without exposing those details to the end user!
+## Who is involved with Alkemio?
+The Alkemio Platform is fully open source, and relies on a combination of core development team and volunteer contributors. 
 
-No small challenge - but one that can deliver huge value...a step change in how we collaborate!
+For additional details on project partners and supporters please look at our [website](https://alkem.io). 
 
-If you are interested in getting involved please reach out and connect via <info@cherrytwist.org>!
+Alkemio is backed by **[Alkemio Foundation](https://alkemio.org)**. 
 
-# Developers
-Want to contribute to CherryTwist? The best place to start is by looking at the Developer.md file located in the [Developer Folder](https://github.com/cherrytwist/Coordination/blob/Dev_Doc/Developers/README.md) in this repo.
+Alkemio has implemented **[Steward Ownership](https://purpose-economy.org/en/)** to guarantee the purpose, for details please look at the **[structure overview](https://alkemio.org/structure). 
 
-## Thank you to the following contributors
-- wordsmyth73
-- aaitor
-- eruizgar91
-- GhostOnTheFiber
-- ReneHonig
+## How do I get started?
+The easiest way to get started with Alkemio is to see it in action! Please visit **[https://alkem.io](https://alkem.io)**.
+
+To try out a Space, please reach out via <community@alkem.io>!.  
+
+As Alkemio is open source, you can of course try it out locally. The documentation for this is as of Q2 2024 out of date and a refresh is due, please contact us if you wish to have your own local setup. 
+
+## How do I contribute to Alkemio?
+There is a huge amount to be done so all contributions are much appreciated! 
+
+Next steps:
+* **[Guidelines for contributing](docs/contributing.md)** 
+* **[Conceptual Design - The key concepts used within the Alkemio Platform](docs/conceptual-design.md)**
+* **[Technical Design - How the platform is being built and the core components in the Alkemio Platform](docs/technical-design.md)**
+* **[Backlog - Checkout out our backlog for the actual epics and issues being worked.](https://app.zenhub.com/workspaces/alkemio-5ecb98b262ebd9f4aec4194c/board)** 
+* **[Development Setup - The Development guidelines that are operating in the project](docs/development-guidelines.md)**
+* **[Security - an overview of our approach to security, from principles / approach through to authentication and authorization](docs/security-overview.md)** 
+* **[Security - reporting a vulnerability / Private Disclosure Process](https://github.com/alkem-io/.github/blob/master/SECURITY.md)**
+* **[Storage - details of how files are stored and managed on Alkemios](docs/storage-design.md)**
+* **[Classification + Tagging - details of how content on the platform is tagged](docs/classification-tagging.md)**
+* **[Statecharts - how processes and logic flows are managed on the platform](docs/state-machines.md)**
+* **[Quality Assurance - how we approach ensuring a stable and high quality platform](docs/quality-assurance.md)**
+* **[User Experience (UX) Design System - layout, colors, fonts etc that are  used in the various Alkemio user interfaces](docs/ux-design-system.md)**
+* **[Translation Guidelines - how to contribute to page translations](docs/translation-helping-out.md)**
+* **[Northstar Metric - how activity is tracked on the platform](docs/north-star-metric.md)**
+
+## Copyright & License
+Please see **[Licensing](LICENSES.md)** for a full overview. 
+
+This project is tested with BrowserStack.
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 name: User Story
-about: A valuable increment of functionality, testable by the users 
+about: A valuable increment of functionality, testable by the users
 title: ''
 labels: ''
 assignees: ''
@@ -18,5 +18,4 @@ So that <some business value>
 - [ ] …
 
 ## Additional Context
-
-
+Screen shots / UX designs / data that are relevant.
