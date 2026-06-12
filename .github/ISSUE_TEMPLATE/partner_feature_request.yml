@@ -1,0 +1,94 @@
+name: Partner Feature Request
+description: Log a feature request raised by a partner
+labels: ["Partner request"]
+body:
+  - type: input
+    id: partner_name
+    attributes:
+      label: Partner
+      placeholder: 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Feature Request
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the request
+      description: What is the partner asking for? Be specific.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_needed
+    attributes:
+      label: Why is this needed
+      description: What problem does it solve, or what opportunity does it unlock?
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_used
+    attributes:
+      label: How will this be used
+      description: Describe a concrete use case or workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline / Key Dates
+      description: Any deadlines or dates that make this urgent — contract renewal, go-live, committed demo, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this for the partner? What's the impact if we don't deliver it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: also_requested_by
+    attributes:
+      label: Also requested by
+      description: Any other partners who have raised this. Add names as more come in.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: workaround
+    attributes:
+      label: Is there a workaround today?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround_details
+    attributes:
+      label: Workaround details
+      description: If a workaround exists, describe it here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation_notes
+    attributes:
+      label: Implementation Notes
+      description: "To be filled in later: technical context, constraints, or considerations relevant to building this."
+    validations:
+      required: false
