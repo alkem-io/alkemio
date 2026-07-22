@@ -49,7 +49,6 @@ client| x   |y
 - [ ] Obtain approval from stakeholders.
 ---
 - [ ] All linked issues and pull requests are merged.
-- [ ] Client is updated with the latest Crowdin translation (if applicable)
 - [ ] The pre-deployment checklist is done.
 - [ ] Release is deployed to Acceptance.
 - [ ] The post-deployment checklist is done.
