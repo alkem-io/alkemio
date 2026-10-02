@@ -1,8 +1,8 @@
 
 <p align="center">
-  <a href="https://alkemio.org/" target="blank"><img src="https://alkemio.org/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
+  <a href="https://alkem.io/" target="blank"><img src="https://alkemio.org/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
 </p>
-<p align="center"><i>Next level collaboration. Making progress together. Safely.</i></p>
+<p align="center"><i>Collaboration in the spaces between organisations</i></p>
 
 Alkemio is an open source, open innovation platform - enabling you to work together with AI to achieve shared goals.  
 
@@ -11,7 +11,7 @@ Alkemio is an open source, open innovation platform - enabling you to work toget
 ## Why Alkemio?
 Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. 
 
-Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
+Alkemio is a European digital platform for collaboration in the spaces between organisations.
 
 The core concept is a **Space**, combining a 
 * **topic you care about** 
@@ -30,7 +30,7 @@ The Alkemio Platform is fully open source, and relies on a combination of core d
 
 For additional details on project partners and supporters please look at our [website](https://alkem.io). 
 
-Alkemio is backed by **[Alkemio Foundation](https://alkemio.org)**. 
+Alkemio's purpose is safeguarded by **[Alkemio Foundation](https://alkemio.org)**, which governs the company. 
 
 Alkemio has implemented **[Steward Ownership](https://purpose-economy.org/en/)** to guarantee the purpose, for details please look at the **[structure overview](https://alkemio.org/structure). 
 
@@ -40,6 +40,13 @@ The easiest way to get started with Alkemio is to see it in action! Please visit
 To try out a Space, please reach out via <community@alkem.io>!.  
 
 As Alkemio is open source, you can of course try it out locally. The documentation for this is as of Q2 2024 out of date and a refresh is due, please contact us if you wish to have your own local setup. 
+
+## Community
+* **Website:** [alkem.io](https://alkem.io)
+* **LinkedIn:** [linkedin.com/company/alkemio](https://www.linkedin.com/company/alkemio)
+* **Bluesky:** [@alkem.io](https://bsky.app/profile/alkem.io)
+* **Documentation:** [alkem.io/documentation](https://alkem.io/documentation)
+* **Contributing:** [Guidelines for contributing](docs/contributing.md)
 
 ## How do I contribute to Alkemio?
 There is a huge amount to be done so all contributions are much appreciated! 
