@@ -1,8 +1,8 @@
 
 <p align="center">
-  <a href="https://alkemio.org/" target="blank"><img src="https://alkemio.org/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
+  <a href="https://alkemio.org/" target="blank"><img src="https://alkem.io/logo.png" width="400" alt="Alkemio Logo" /></a>
 </p>
-<p align="center"><i>Next level collaboration. Making progress together. Safely.</i></p>
+<p align="center"><i>Collaboration in the spaces between organisations</i></p>
 
 Alkemio is an open source, open innovation platform - enabling you to work together with AI to achieve shared goals.  
 
@@ -11,7 +11,7 @@ Alkemio is an open source, open innovation platform - enabling you to work toget
 ## Why Alkemio?
 Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. 
 
-Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Enabling society to collaborate. Building a better future, together."</i>
+Creating an open innovation platform is a pragmatic offering in the context of the wider vision: <i>"Collaboration in the spaces between organisations"</i>
 
 The core concept is a **Space**, combining a 
 * **topic you care about** 
