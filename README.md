@@ -1,57 +1,27 @@
 
 <p align="center">
-  <a href="https://alkem.io/" target="blank"><img src="https://alkemio.org/uploads/logos/alkemio-logo.svg" width="400" alt="Alkemio Logo" /></a>
+  <a href="https://alkem.io/" target="blank"><img src="https://alkem.io/logo.png" width="400" alt="Alkemio Logo" /></a>
 </p>
 <p align="center"><i>Collaboration in the spaces between organisations</i></p>
 
-Alkemio is an open source, open innovation platform - enabling you to work together with AI to achieve shared goals.  
+Alkemio is an open-source, European digital platform for collaboration in the spaces between organisations. Ecosystems, networks, coalitions, public-sector teams, universities and funders use it to convene, co-create, decide, document and deliver across organisational boundaries.
 
-<p></p>
+Alkemio is [steward-owned](https://alkemio.org/structure), hosted in Europe and licensed under the [EUPL-1.2](https://opensource.org/licenses/EUPL-1.2).
 
-## Why Alkemio?
-Alkemio is about enabling open innovation, across all aspects of society. Connecting. Aligning. Sharing. 
+### Start here
 
-Alkemio is a European digital platform for collaboration in the spaces between organisations.
+- **Website and platform:** [alkem.io](https://alkem.io)
+- **Documentation:** [alkem.io/documentation](https://alkem.io/documentation)
+- **Contribute:** read [CONTRIBUTING.md](https://github.com/alkem-io/.github/blob/master/CONTRIBUTING.md)
+- **Security:** [report a vulnerability](https://github.com/alkem-io/.github/blob/master/SECURITY.md)
 
-The core concept is a **Space**, combining a 
-* **topic you care about** 
-* with a **community** 
-* that wants to start making progress **towards** a new reality. 
-But making progress in a hyper connected society is simply hard: there are typically multiple stakeholders that need to be involved. Hence out belief that a lot more innovation is needed in how we collaborate.
+### Follow along
 
-There is plenty more to tell - so please do **[check out a more in-depth explanation of why we need to innovate in how we collaborate, and how we hope an open innovation platform can help.](./docs/why-alkemio.md)**. 
+- [LinkedIn](https://www.linkedin.com/company/alkemio): product and research updates
+- [Bluesky](https://bsky.app/profile/alkem.io)
+- [Blog](https://blog.alkem.io)
 
-<p align="center">
-<img src="./docs/images/visual-challenge-shared-representation.jpg" alt="Shared representation" width="600" />
-</p>
-
-## Who is involved with Alkemio?
-The Alkemio Platform is fully open source, and relies on a combination of core development team and volunteer contributors. 
-
-For additional details on project partners and supporters please look at our [website](https://alkem.io). 
-
-Alkemio's purpose is safeguarded by **[Alkemio Foundation](https://alkemio.org)**, which governs the company. 
-
-Alkemio has implemented **[Steward Ownership](https://purpose-economy.org/en/)** to guarantee the purpose, for details please look at the **[structure overview](https://alkemio.org/structure). 
-
-## How do I get started?
-The easiest way to get started with Alkemio is to see it in action! Please visit **[https://alkem.io](https://alkem.io)**.
-
-To try out a Space, please reach out via <community@alkem.io>!.  
-
-As Alkemio is open source, you can of course try it out locally. The documentation for this is as of Q2 2024 out of date and a refresh is due, please contact us if you wish to have your own local setup. 
-
-## Community
-* **Website:** [alkem.io](https://alkem.io)
-* **LinkedIn:** [linkedin.com/company/alkemio](https://www.linkedin.com/company/alkemio)
-* **Bluesky:** [@alkem.io](https://bsky.app/profile/alkem.io)
-* **Documentation:** [alkem.io/documentation](https://alkem.io/documentation)
-* **Contributing:** [Guidelines for contributing](docs/contributing.md)
-
-## How do I contribute to Alkemio?
-There is a huge amount to be done so all contributions are much appreciated! 
-
-Next steps:
+### More detailed information
 * **[Guidelines for contributing](docs/contributing.md)** 
 * **[Conceptual Design - The key concepts used within the Alkemio Platform](docs/conceptual-design.md)**
 * **[Technical Design - How the platform is being built and the core components in the Alkemio Platform](docs/technical-design.md)**
