@@ -2,7 +2,7 @@
 Here you can find details of requirements for contributing to the project, an overview of key repositories as well as how coordination takes place.
 
 ## Licensing
-All contributors to the project are required to sign a **[Contributor License Agreement (CLA)](https://github.com/alkem-io/.github/blob/master/CLA.md)** to ensure that the contents of the repository are covered from a legal perspective. The CLA process is enforced for all contributions.
+Contributions to the project are made under the **[Developer Certificate of Origin 1.1 (DCO)](https://developercertificate.org/)** to ensure that the contents of the repository are covered from a legal perspective. Every commit must carry a `Signed-off-by` trailer (add it with `git commit -s`); this is enforced as a required check on all pull requests. Historical contributions made before the DCO cut-over remain covered by the retired [Contributor License Agreement](https://github.com/alkem-io/.github/blob/master/CLA.md).
 
 
 ## Repositories
