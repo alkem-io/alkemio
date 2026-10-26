@@ -16,6 +16,7 @@ in any order causes a temporary failure, write it down as a risk, not as a seque
 ### **Release date**: <TBD> · Acceptance: <TBD> · Risk: **<Low / Medium / High>**
 
 ### Scope
+
 | image | old | new | notes |
 |---|---|---|---|
 | `server` | `vX` | **`vY`** | `release/NN` |
@@ -32,6 +33,7 @@ Unchanged: <other services and their versions>
 
 ### Risk Profile
 <!-- Only risks that need an action or a decision. Business sign-off is required when Risk is High. -->
+
 | Risk | Likelihood | Impact | Remediation | Residual Risk |
 |---|---|---|---|---|
 | <risk> | Low/Med/High | Low/Med/High | <action> | Low/Med/High |
