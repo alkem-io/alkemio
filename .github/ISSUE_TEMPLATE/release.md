@@ -49,6 +49,6 @@ Unchanged: <other services and their versions>
 - [ ] Production smoke check.
 
 ### Stakeholders
-- **Delivery Lead**: [@simonezaza](https://github.com/simonezaza)
+- **Delivery Lead**: [@larssondenise](https://github.com/larssondenise)
 - **Release Lead**: [@bobbykolev](https://github.com/bobbykolev)
 - **Quality Lead**: [@Comoque1](https://github.com/comoque1)
